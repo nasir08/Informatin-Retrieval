@@ -1,0 +1,41 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=BWbcECA3GT76ELa7O0AW1uOm8Arrn-O0D2srWxVnAjbcB0KwgEAEYASDj2_8BKAI4AFC0qY33BWC3vIOF9DCgAf7Yh9gDsgEad3d3LndlYmRldmVsb3BlcnNub3Rlcy5jb23IAQHaAUZodHRwOi8vd3d3LndlYmRldmVsb3BlcnNub3Rlcy5jb20vaG93LWRvLWkvaW5zdGFsbC1teXNxbC13aW5kb3dzLTcucGhwyALa2Z4XqAMB9QMAAADE9QMAAAAQiAYB&amp;num=1&amp;cid=5GjG8ILWcGSiUaVRpiHf-p7M&amp;sig=AOD64_0ld343JLqXIj72MOJSxDVczk4iWg&amp;client=ca-pub-1043128618639037&amp;adurl=http://www.microsoft.com/click/services/Redirect2.ashx%3FCR_CC%3D200091786%26CR_EAC%3D300038393"; 
+google_ad.visible_url = "microsoft.live.com"; 
+google_ad.line1 = "Get Genuine Windows 7"; 
+google_ad.line2 = "Almost Secure,is Simply Not Secure!"; 
+google_ad.line3 = "Benefit today from free Anti-Virus."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=BpuKVCA3GT76ELa7O0AW1uOm8AoOWy5UCq6eNqCSv7Z_aFJCDGRACGAIg49v_ASgCOABQvozNp_3_____AWC3vIOF9DCgAY25hucDsgEad3d3LndlYmRldmVsb3BlcnNub3Rlcy5jb23IAQHaAUZodHRwOi8vd3d3LndlYmRldmVsb3BlcnNub3Rlcy5jb20vaG93LWRvLWkvaW5zdGFsbC1teXNxbC13aW5kb3dzLTcucGhwwAIEqAMB9QMAAADE9QMAAAAQiAYB&amp;num=2&amp;cid=5GjG8ILWcGSiUaVRpiHf-p7M&amp;sig=AOD64_05U_gK_lGaYPuUfBHlvWxAIY9fTg&amp;client=ca-pub-1043128618639037&amp;adurl=http://www.gnbo.com.ng/%3Futm_source%3DMatomy%26utm_medium%3DGDN%26utm_term%3DNG-EN%26utm_content%3DCTG%26utm_campaign%3Dwww.webdevelopersnotes.com-Text-100534"; 
+google_ad.visible_url = "www.gnbo.com.ng"; 
+google_ad.line1 = "Business Owner?"; 
+google_ad.line2 = "Get a Free and Professional Looking"; 
+google_ad.line3 = "Website for your Business. Try Now!"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.webdevelopersnotes.com/how-do-i/install-mysql-windows-7.php%26hl%3Den%26client%3Dca-pub-1043128618639037%26adU%3Dmicrosoft.live.com%26adT%3DGet%2BGenuine%2BWindows%2B7%26adU%3Dwww.gnbo.com.ng%26adT%3DBusiness%2BOwner%253F%26gl%3DNG\x26usg\x3dAFQjCNGv9K0sxx7fa83LTEmWyGVDf2i6lg";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

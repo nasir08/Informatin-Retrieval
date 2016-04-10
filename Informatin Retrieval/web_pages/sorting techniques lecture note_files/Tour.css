@@ -1,0 +1,36 @@
+﻿.tour_what_you_get { color: #315091; font-family: Arial,Helvetica,Verdana,sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 18px; margin: 26px 0 18px; }
+	.tour_what_you_get small { color: #323C3B; font-size: 13px; font-weight: normal; line-height: 26px; }
+	.tour_what_you_get h2 a:link, 
+.tour_what_you_get h2 a:visited,
+.tour_what_you_get h2 a:hover,
+.tour_what_you_get h2 a:active,
+.tour_what_you_get small a:link, 
+.tour_what_you_get small a:visited, 
+.tour_what_you_get small a:hover, 
+.tour_what_you_get small a:active { color: #DE7E02; text-decoration: underline; }
+.tour_sign_up_link { margin-bottom: 8px; }
+	.tour_sign_up_link a:link, 
+.tour_sign_up_link a:visited, 
+.tour_sign_up_link a:hover, 
+.tour_sign_up_link a:active { font-family: Georgia,"Palatino",serif; font-size: 16px; font-style: italic; padding: 16px 0 6px 30px; color: #DE7E02; text-decoration: underline; }
+.tour_sign_up_link_small a:link, 
+.tour_sign_up_link_small a:visited, 
+.tour_sign_up_link_small a:hover, 
+.tour_sign_up_link_small a:active { font-family: Georgia,"Palatino",serif; font-size: 13px; font-style: italic; padding: 16px 0 6px 30px; color: #DE7E02; text-decoration: underline; }
+.tour_bullet { background:white url(http: //s3.amazonaws.com/cramster-image/Bullet/bullet.gif) no-repeat scroll 0 0; color: #605D55; padding: 0 0 16px 30px; width: 515px; }
+	.tour_bullet h3 { font-weight: bold; color: #3C8381; font-size: 16px; line-height: 20px; margin-bottom: 2px; }
+.tour_blue_bullet { background:white url(http: //s3.amazonaws.com/cramster-image/Bullet/small_blue_bullet.gif) no-repeat scroll 0 0; color: #605D55; font-family: Arial; font-weight: bold; font-size: 12px; padding: 0 0 10px 24px; margin-left: 40px; margin-top: 4px; width: 515px; }
+.tour_hr_line { border-bottom: 1px solid #DCD9D3; width: 580px; height: 1px; margin-bottom: 18px; overflow: hidden; }
+.tour_bullet .see_more a:link, 
+.tour_bullet .see_more a:visited, 
+.tour_bullet .see_more a:hover, 
+.tour_bullet .see_more a:active { color: #DE7E02; text-decoration: underline; }
+.sub_headers { font-family: Arial; font-size: 14px; font-style: italic; font-weight: bold; }
+.tutoring_image { color: #605D55; padding: 0 0 16px 0px; float: left; }
+	.tutoring_image h3 { color: #3C8381; font-size: 16px; font-weight: bold; line-height: 20px; margin-bottom: 2px; }
+.tutoring__hr { background-color: #938953; height: 6px; margin-bottom: 26px; }
+.tutorial_main_column { width: 300px; color: #5C5C5C; font-size: 13px; line-height: 20px; float: left; }
+	.tutorial_main_column h1 { color: #2B313D; font-family: Georgia,'Palatino',serif; font-size: 26px; line-height: 30px; margin-bottom: 10px; }
+	.tutorial_main_column p { width: 290px; }
+.sign_up_now { padding: 30px 0 0 120px; margin-bottom: -35px; }
+.tour_mainbar_semi .intro { margin-left: -18px; }

@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure -->
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="wait"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./10 kinds of sorting in data structure_files/widget76.css" media="all"><script src="./10 kinds of sorting in data structure_files/cb=gapi.loaded0" async=""></script>
+	
+	<meta name="generator" content="ede482a281ad47e2b09758ec14c09bf0">
+	<title>10 kinds of sorting in data structure</title>
+	
+	<meta name="abtest" content="mode_id=15118">
+<meta name="robots" content="index,follow">
+	
+	
+<!-- Start head block f6f795b710591582618d098caade873e -->
+<meta rel="shortcut icon" href="/favicon.ico?v=acafcaf">
+<!-- sbid:rx-web07.nj1.afcv.net 1332890042 -->
+<meta property="og:site_name" content="Answers.com">
+<meta property="fb:app_id" content="120979621248655">
+<link rel="canonical" href="./10 kinds of sorting in data structure_files/10 kinds of sorting in data structure.htm">
+<meta property="og:title" content="Answer to: 10 kinds of sorting in data structure?">
+<meta property="og:description" content="1.Bubble Sort 2.Insertion Sort 3.Shell Sort 4.Merge Sort 5.Heap Sort 6.Quick Sort 7.Bucket Sort 8.Radix Sort 9.Distribution Sort 10.Shuffle Sort.">
+<meta property="og:image" content="/includes/icons/a-icon.png">
+<meta property="og:url" content="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure">
+<meta property="og:type" content="article">
+<!-- End head block f6f795b710591582618d098caade873e -->
+<!-- Start head block 4a6e0d1f25c3f7e991e4d2e3c58cd18c -->
+<script type="text/javascript">
+			var jwgData = {config:{},flag:{},articleData:{},metrics:{},runtime:{}};
+			
+			jwgData.lpos = "NotLgd_AnsQPg";
+			jwgData.rightbar_lpos = "NotLgd_RightBar_Ans";
+			jwgData.flag.logTrack = false;
+
+			jwgData.isLoggedIn = 0;
+			jwgData.config.wgLoginLoc = "https://en.secure.answers.com/secure";
+			jwgData.config.wgServer = "http://wiki.answers.com";
+			jwgData.config.wgStaticFilesServer = "";
+			jwgData.runtime.secure = 0;
+			jwgData.raStaticFileServer = 'site.answcdn.com/main85756';
+			
+			jwgData.articleData.hasAnswer = 1;
+			jwgData.config.versionNo = "?v=acafcaf";
+			jwgData.flag.debugAjaxFetcher = "0";
+			jwgData.config.wgLocale = "en_US";
+			jwgData.isSuper = 0;
+			jwgData.userName = "";
+			jwgData.photoUrl = "/templates/images/FB-profile-defaulticon.png";
+
+			jwgData.hasUnreadMessages = 0;
+			jwgData.waQuestionUrl = "10_kinds_of_sorting_in_data_structure";
+			jwgData.numNIFlags = "0";
+			jwgData.adSnipStaging = 0;
+			jwgData.adSnipScript = "http://snipjs.answcdn.com/static/adsnip.js";
+			jwgData.pageType = "question"; // hardcoded until other cases exist
+			jwgData.adSnipCategories = "Technology &gt; Computers &gt; Computer Programming &gt; C Programming";
+			jwgData.adqVal = "4.44";
+			jwgData.abFlavor = "15118";
+			jwgData.user = "ID1384141322";
+			jwgData.sip = "10.16.10.166";
+			// awaiting Rubix for Answers support for Google ads
+			jwgData.gadchannel = 'todo: google_ad_channel';
+			jwgData.gadclient = 'todo: google_ad_client';
+			jwgData.radlinks_client = "ca-gurunet_wikianswers_radlinks_js";
+			jwgData.radlinks_channel = 'todo: {googleChannel}_ad_links{channelCat}';
+			
+			jwgData.questionId = "75898186";
+			jwgData.runtime.media = 'screen';
+			jwgData.runtime.skin = 'DEFAULT';
+		</script>
+<!-- End head block 4a6e0d1f25c3f7e991e4d2e3c58cd18c -->
+<script src="./10 kinds of sorting in data structure_files/head.cjs" type="text/javascript"></script><script type="text/javascript" async="" src="./10 kinds of sorting in data structure_files/ga.js"></script><script type="text/javascript" src="http://snip.answers.com/init.php?cc=cGFyYW00PTQuNDM3NjcmcGFyYW0xPVRlY2hub2xvZ3klMjAlM0UlMjBDb21wdXRlcnMlMjAlM0UlMjBDb21wdXRlciUyMFByb2dyYW1taW5nJTIwJTNFJTIwQyUyMFByb2dyYW1taW5nJmxheW91dF9tb2RlX2lkPTE1MTE4JnBhcmFtMj1mYWxzZSZwYXJhbTM9cXVlc3Rpb24ma2V5d29yZD0xMCUyMGtpbmRzJTIwb2YlMjBzb3J0aW5nJTIwaW4lMjBkYXRhJTIwc3RydWN0dXJlJnBhcmFtNj03NTg5ODE4NiZwYXJhbTU9SUQxMzg0MTQxMzIyJnJlZj0mdXJsPWh0dHAlM0EvL3dpa2kuYW5zd2Vycy5jb20vUS8xMF9raW5kc19vZl9zb3J0aW5nX2luX2RhdGFfc3RydWN0dXJlJmphdmFzY3JpcHRfZW5hYmxlZD0xJndpbmRvd193aWR0aD0xMzY2JndpbmRvd19oZWlnaHQ9NjgxJnNjcmVlbl93aWR0aD0xMzY2JnNjcmVlbl9oZWlnaHQ9NzY4JnNjcmVlbl9jb2xvcl9kZXB0aD0zMiZ0aW1lem9uZV9vZmZzZXQ9LTEmbmF2aWdhdG9yX3BsYXRmb3JtPVdpbjMyJm5hdmlnYXRvcl9sYW5ndWFnZT1lbi1VUyZoaXN0b3J5X2xlbmd0aD0xJnNlcnZlcl9hZGRyPTEwLjE2LjEwLjE2Ng==&callback=adsnip_jsonp_1332890063602_9050"></script><script type="text/javascript" src="./10 kinds of sorting in data structure_files/init.js" id="undefined"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/document_iterator.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/find_proxy.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/get_html_text.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/global_constants.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/name_injection_builder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/number_injection_builder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/string_finder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/change_sink.js"></script><meta name="document_iterator.js"><meta name="find_proxy.js"><meta name="get_html_text.js"><meta name="global_constants.js"><meta name="name_injection_builder.js"><meta name="number_injection_builder.js"><meta name="string_finder.js"><meta name="change_sink.js"><script async="" type="text/javascript" src="./10 kinds of sorting in data structure_files/enable.js" id="_GPL_a20c9"></script><script type="text/javascript" id="detect1" src="./10 kinds of sorting in data structure_files/saved_resource"></script><script type="text/javascript" onload="" onreadystatechange="" onerror="" src="./10 kinds of sorting in data structure_files/componentConduit.js"></script><link class="undefined" style="display: block; " type="text/css" rel="stylesheet" href="./10 kinds of sorting in data structure_files/mclassicb.css" media="screen"><style type="text/css" media="screen"></style><style type="text/css" media="screen"></style><style type="text/css" media="screen"></style><script type="text/javascript" src="./10 kinds of sorting in data structure_files/feed.php"></script><script type="text/javascript" src="./10 kinds of sorting in data structure_files/feed(1).php"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size: 11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size: 24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size: 14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yO/r/_j03izEX40U.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size: 12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size: 12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size: 16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{position:relative;display:-moz-inline-block;display:inline-block}
+.fb_iframe_widget iframe{position:relative;vertical-align:text-bottom}
+.fb_iframe_widget span{position:relative}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_button_simple,
+.fb_button_simple_rtl{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yH/r/eIpbnVKI9lR.png);background-repeat:no-repeat;cursor:pointer;outline:none;text-decoration:none}
+.fb_button_simple_rtl{background-position:right 0}
+.fb_button_simple .fb_button_text{margin:0 0 0 20px;padding-bottom:1px}
+.fb_button_simple_rtl .fb_button_text{margin:0 10px 0 0}
+a.fb_button_simple:hover .fb_button_text,
+a.fb_button_simple_rtl:hover .fb_button_text,
+.fb_button_simple:hover .fb_button_text,
+.fb_button_simple_rtl:hover .fb_button_text{text-decoration:underline}
+.fb_button,
+.fb_button_rtl{background:#29447e url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/FGFbc80dUKj.png);background-repeat:no-repeat;cursor:pointer;display:inline-block;padding:0 0 0 1px;text-decoration:none;outline:none}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text{background:#5f78ab url(http://static.ak.fbcdn.net/rsrc.php/v1/yL/r/FGFbc80dUKj.png);border-top:solid 1px #879ac0;border-bottom:solid 1px #1a356e;color:#fff;display:block;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;padding:2px 6px 3px 6px;margin:1px 1px 0 21px;text-shadow:none}
+a.fb_button,
+a.fb_button_rtl,
+.fb_button,
+.fb_button_rtl{text-decoration:none}
+a.fb_button:active .fb_button_text,
+a.fb_button_rtl:active .fb_button_text,
+.fb_button:active .fb_button_text,
+.fb_button_rtl:active .fb_button_text{border-bottom:solid 1px #29447e;border-top:solid 1px #45619d;background:#4f6aa3;text-shadow:none}
+.fb_button_xlarge,
+.fb_button_xlarge_rtl{background-position:left -60px;font-size: 24px;line-height:30px}
+.fb_button_xlarge .fb_button_text{padding:3px 8px 3px 12px;margin-left:38px}
+a.fb_button_xlarge:active{background-position:left -99px}
+.fb_button_xlarge_rtl{background-position:right -268px}
+.fb_button_xlarge_rtl .fb_button_text{padding:3px 8px 3px 12px;margin-right:39px}
+a.fb_button_xlarge_rtl:active{background-position:right -307px}
+.fb_button_large,
+.fb_button_large_rtl{background-position:left -138px;font-size: 13px;line-height:16px}
+.fb_button_large .fb_button_text{margin-left:24px;padding:2px 6px 4px 6px}
+a.fb_button_large:active{background-position:left -163px}
+.fb_button_large_rtl{background-position:right -346px}
+.fb_button_large_rtl .fb_button_text{margin-right:25px}
+a.fb_button_large_rtl:active{background-position:right -371px}
+.fb_button_medium,
+.fb_button_medium_rtl{background-position:left -188px;font-size: 11px;line-height:14px}
+a.fb_button_medium:active{background-position:left -210px}
+.fb_button_medium_rtl{background-position:right -396px}
+.fb_button_text_rtl,
+.fb_button_medium_rtl .fb_button_text{padding:2px 6px 3px 6px;margin-right:22px}
+a.fb_button_medium_rtl:active{background-position:right -418px}
+.fb_button_small,
+.fb_button_small_rtl{background-position:left -232px;font-size: 10px;line-height:10px}
+.fb_button_small .fb_button_text{padding:2px 6px 3px;margin-left:17px}
+a.fb_button_small:active,
+.fb_button_small:active{background-position:left -250px}
+.fb_button_small_rtl{background-position:right -440px}
+.fb_button_small_rtl .fb_button_text{padding:2px 6px;margin-right:18px}
+a.fb_button_small_rtl:active{background-position:right -458px}
+.fb_share_count_wrapper{position:relative;float:left}
+.fb_share_count{background:#b0b9ec none repeat scroll 0 0;color:#333;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center}
+.fb_share_count_inner{background:#e8ebf2;display:block}
+.fb_share_count_right{margin-left:-1px;display:inline-block}
+.fb_share_count_right .fb_share_count_inner{border-top:solid 1px #e8ebf2;border-bottom:solid 1px #b0b9ec;margin:1px 1px 0 1px;font-size: 10px;line-height:10px;padding:2px 6px 3px;font-weight:bold}
+.fb_share_count_top{display:block;letter-spacing:-1px;line-height:34px;margin-bottom:7px;font-size: 22px;border:solid 1px #b0b9ec}
+.fb_share_count_nub_top{border:none;display:block;position:absolute;left:7px;top:35px;margin:0;padding:0;width:6px;height:7px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yU/r/bSOHtKbCGYI.png)}
+.fb_share_count_nub_right{border:none;display:inline-block;padding:0;width:5px;height:10px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yX/r/i_oIVTKMYsL.png);vertical-align:top;background-position:right 5px;z-index:10;left:2px;margin:0 2px 0 0;position:relative}
+.fb_share_no_count{display:none}
+.fb_share_size_Small .fb_share_count_right .fb_share_count_inner{font-size: 10px}
+.fb_share_size_Medium .fb_share_count_right .fb_share_count_inner{font-size: 11px;padding:2px 6px 3px;letter-spacing:-1px;line-height:14px}
+.fb_share_size_Large .fb_share_count_right .fb_share_count_inner{font-size: 13px;line-height:16px;padding:2px 6px 4px;font-weight:normal;letter-spacing:-1px}
+.fb_share_count_hidden .fb_share_count_nub_top,
+.fb_share_count_hidden .fb_share_count_top,
+.fb_share_count_hidden .fb_share_count_nub_right,
+.fb_share_count_hidden .fb_share_count_right{visibility:hidden}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size: 13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size: 11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}
+</style></head><body id="pageBody" class="index_question_answered wait"><div id="itxtexclude"><script src="http://answers.us.intellitxt.com/v4/chunk?ck=26497:3c74b81df7a5647cb44910ca5b99ced6:A16F1D6B48674579ACFCDA7BA769A6B6:&cn=0&cd=%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A1%2Cc%3A%221.Bubble%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A2%2Cc%3A%222.Insertion%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A3%2Cc%3A%223.Shell%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A4%2Cc%3A%224.Merge%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A5%2Cc%3A%225.Heap%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A6%2Cc%3A%226.Quick%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A7%2Cc%3A%227.Bucket%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A8%2Cc%3A%228.Radix%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A9%2Cc%3A%229.Distribution%20Sort%22%7D%2C%7Bt%3A%22std%22%2Cp%3A1%2Cn%3A10%2Cc%3A%2210.Shuffle%20Sort%22%7D%5D%7D%5D%7D%5D%7D%5D%7D%2C%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bt%3A%22std%22%2Cn%3A11%2Cc%3A%22First%20answer%20by%22%7D%5D%7D%2C%7Bx%3A%5B%7Bt%3A%22std%22%2Cn%3A12%2Cc%3A%22Last%20edit%20by%22%7D%5D%7D%2C%7Bx%3A%5B%7Bt%3A%22std%22%2Cn%3A13%2Cc%3A%22Contributor%22%7D%2C%7Bt%3A%22std%22%2Cn%3A14%2Cc%3A%22%3A%205%20%5B%22%7D%5D%7D%2C%7Bx%3A%5B%7Bt%3A%22std%22%2Cn%3A15%2Cc%3A%22Question%22%7D%5D%7D%5D%7D%5D%7D%5D%7D%5D%7D%2C%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bx%3A%5B%7Bp%3A1%2Cx%3A%5B%7Bx%3A%5B%7Bt%3A%22std%22%2Cn%3A16%2Cc%3A%22A%20structure%20is%20not%20a%20data%20type.%20A%20structure%20is%20more%20of%20a%20collection%20if%20data%20types%20that%20can%20be%20referenced%20conveniently.%20Mainly%20we%20humans%20can%20keep%20on%20top%20of%20it%2C%20the%20computer%20does%20not%20care.%20struct%20foo%20...%22%7D%5D%7D%5D%7D%5D%7D%2C%7Bx%3A%5B%7Bp%3A1%2Cx%3A%5B%7Bx%3A%5B%7Bt%3A%22std%22%2Cn%3A17%2Cc%3A%22array%2C%20file%2C%20record%2C%20table%2C%20the%22%7D%2C%7Bt%3A%22std%22%2Cn%3A18%2Cc%3A%22and%20so%20on%22%7D%5D%7D%5D%7D%5D%7D%2C%7Bx&jscallback=$iTXT.js.callback1" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/init" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/ui_1331809593.js" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/tmpl_1330682824.js" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/metrics_1329390699.js" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/itxt_1329390699.js" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/fx_1331056366.js" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/debug_1329390699.js" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/data_1331056366.js" type="text/javascript"></script><script src="./10 kinds of sorting in data structure_files/core_1330447584.js" type="text/javascript"></script><link id="itxtcss" href="./10 kinds of sorting in data structure_files/itxtcss_1331809593.css" type="text/css" rel="stylesheet"></div><div id="predictad_div" class="predictad" style="display: none; left: 0px; top: 0px; width: 0px; "></div><div style="position: absolute; "><object id="_GPL_swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="1" height="1"><param name="movie" value="http://d1nfmblh2wz0fd.cloudfront.net/it/swf/f.swf"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="flashVars" value="keywordsURL=http%3A//www.textsrv.com/kwd.php%3Fc%3DTkc6MDU6TGFnb3M6d2lraS5hbnN3ZXJzLmNvbTp6LTEwNjMtMTQ3Mjk%253D%26cb%3D_GPL.items.a652c.displayKeywords&amp;keywords=search%7Csettings%7Ctop%20contributors%7Chelp%20center%7Cask%7Canswer%7Center%20question%20or%20phrase%7Cbrowse%7Ckinds%20of%20sorting%20in%20data%20structure%7Cimprove%7Cbubble%20sort%7Cinsertion%20sort%7Cshell%20sort%7Cmerge%20sort%7Cheap%20sort%7Cquick%20sort%7Cbucket%20sort%7Cradix%20sort%7Cdistribution%20sort%7Cshuffle%20sort%7Cfirst%20answer%20by%7Clast%20edit%20by%7Ccontributor%7Crecommended%7Ca%20structure%7Cnot%20a%20data%20type%7Cmore%20of%20a%20collection%20if%20data%20types%20that%20can%20be%20referenced%20conveniently%7Cmainly%20we%20humans%20can%20keep%20on%20top%20of%7Cthe%20computer%20does%20not%20care%7Cstruct%20foo%7Carray%7Cfile%7Crecord%7Ctable%7Cthe%20tree%20and%20so%20on%7Ca%20data%20structure%7Ca%20collection%20of%20more%20than%20one%20elementary%20item%7Cin%20some%20kind%20of%20aggregate%20organization%7Can%20array%7Ca%20type%20of%20structure%20where%20more%20than%20one%20item%20of%20the%20same%20type%20are%20arranged%7Cdata%20mining%20in%7Csign%20in%20using%7Canswers%7Ccom%20members%7Cjoin%20using%7Cjoin%20answers%7Calready%20a%20member%7Cwhy%20join%7Cjoining%7Cfree%20and%20easy%7Cyou%20can%20still%20be%20anonymous%7Cjust%20choose%20any%20username%20and%20password%7Cget%20notified%20about%20updated%20answers%7Cfollow%20your%20favorite%20categories%7Cget%20credit%20for%20your%20contributions%7Ccustomize%20your%20profile%7Canswer%20questions%20more%20easily%7Clost%20your%20password%7Cwe%20need%20your%20email%20address%7Cwe%20will%20use%20your%20email%20address%20to%20send%20you%20updates%7Cif%20you%20request%20them%7Cabout%20questions%20you%20ask%7Canswer%20or%20track%7Cand%20to%20help%20you%20retrieve%20your%20password%20if%20you%20forget%7Cyour%20email%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20without%20your%20permission%7Calready%20have%20an%20answers%7Ccom%20account%7Cconnect%20your%20accounts%7Cby%20doing%20so%7Cyou%20include%20all%20of%20your%20history%7Cmessages%7Cfrom%20your%20answers%7Ccom%20account%20in%20your%7Cfacebook%7Cconnect%20accounts%7Cyour%20new%20account%20will%20be%20starting%20from%20scratch%7Cterms%20of%20use%7Cprivacy%20policy%7Cissues%7Cdisclaimer%7Cguidelines%7Creputation%7Croles%7Cwatchlist%7Ccopyright%7C2012%20answers%20corporation%7Ctwitter%7Cyoutube%7Cblog"><!--[if !IE]> <--> <object id="_GPL_swf" data="http://d1nfmblh2wz0fd.cloudfront.net/it/swf/f.swf" width="1" height="1" type="application/x-shockwave-flash"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="flashVars" value="keywordsURL=http%3A//www.textsrv.com/kwd.php%3Fc%3DTkc6MDU6TGFnb3M6d2lraS5hbnN3ZXJzLmNvbTp6LTEwNjMtMTQ3Mjk%253D%26cb%3D_GPL.items.a652c.displayKeywords&amp;keywords=search%7Csettings%7Ctop%20contributors%7Chelp%20center%7Cask%7Canswer%7Center%20question%20or%20phrase%7Cbrowse%7Ckinds%20of%20sorting%20in%20data%20structure%7Cimprove%7Cbubble%20sort%7Cinsertion%20sort%7Cshell%20sort%7Cmerge%20sort%7Cheap%20sort%7Cquick%20sort%7Cbucket%20sort%7Cradix%20sort%7Cdistribution%20sort%7Cshuffle%20sort%7Cfirst%20answer%20by%7Clast%20edit%20by%7Ccontributor%7Crecommended%7Ca%20structure%7Cnot%20a%20data%20type%7Cmore%20of%20a%20collection%20if%20data%20types%20that%20can%20be%20referenced%20conveniently%7Cmainly%20we%20humans%20can%20keep%20on%20top%20of%7Cthe%20computer%20does%20not%20care%7Cstruct%20foo%7Carray%7Cfile%7Crecord%7Ctable%7Cthe%20tree%20and%20so%20on%7Ca%20data%20structure%7Ca%20collection%20of%20more%20than%20one%20elementary%20item%7Cin%20some%20kind%20of%20aggregate%20organization%7Can%20array%7Ca%20type%20of%20structure%20where%20more%20than%20one%20item%20of%20the%20same%20type%20are%20arranged%7Cdata%20mining%20in%7Csign%20in%20using%7Canswers%7Ccom%20members%7Cjoin%20using%7Cjoin%20answers%7Calready%20a%20member%7Cwhy%20join%7Cjoining%7Cfree%20and%20easy%7Cyou%20can%20still%20be%20anonymous%7Cjust%20choose%20any%20username%20and%20password%7Cget%20notified%20about%20updated%20answers%7Cfollow%20your%20favorite%20categories%7Cget%20credit%20for%20your%20contributions%7Ccustomize%20your%20profile%7Canswer%20questions%20more%20easily%7Clost%20your%20password%7Cwe%20need%20your%20email%20address%7Cwe%20will%20use%20your%20email%20address%20to%20send%20you%20updates%7Cif%20you%20request%20them%7Cabout%20questions%20you%20ask%7Canswer%20or%20track%7Cand%20to%20help%20you%20retrieve%20your%20password%20if%20you%20forget%7Cyour%20email%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20without%20your%20permission%7Calready%20have%20an%20answers%7Ccom%20account%7Cconnect%20your%20accounts%7Cby%20doing%20so%7Cyou%20include%20all%20of%20your%20history%7Cmessages%7Cfrom%20your%20answers%7Ccom%20account%20in%20your%7Cfacebook%7Cconnect%20accounts%7Cyour%20new%20account%20will%20be%20starting%20from%20scratch%7Cterms%20of%20use%7Cprivacy%20policy%7Cissues%7Cdisclaimer%7Cguidelines%7Creputation%7Croles%7Cwatchlist%7Ccopyright%7C2012%20answers%20corporation%7Ctwitter%7Cyoutube%7Cblog"></object> <!----> <!--[endif]----> </object></div><div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000; " id="_atssh"><iframe id="_atssh134" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; left: 0px; top: 0px; " src="./10 kinds of sorting in data structure_files/sh74.htm"></iframe></div><div id="fb-root" class=" fb_reset"><script async="" src="./10 kinds of sorting in data structure_files/all.js"></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px; "></div></div>
+<!-- Start head block 7bf3fa4ad93c4d4a226b76a1bae15867 -->
+<script type="text/javascript">
+		cv = {};
+		hbx.acct="DM570305I4NC";
+		pn = encodeURI("Computer Programming");
+		mlc = "/NotLgd/question/Technology/Computers/Computer Programming";
+		_answ_hbxInit(hbx.acct,pn,mlc);
+		</script>
+<!-- End head block 7bf3fa4ad93c4d4a226b76a1bae15867 -->
+<!-- Start head block 77a90f57ad433a84b9a8ede7983fae48 -->
+<script src="./10 kinds of sorting in data structure_files/adsnip.js" type="text/javascript" charset="utf-8"></script>
+<!-- End head block 77a90f57ad433a84b9a8ede7983fae48 -->
+<link href="./10 kinds of sorting in data structure_files/compactor.ccss" rel="stylesheet" type="text/css" media="all">
+
+
+		
+
+
+
+	<div id="page" class="bp3">
+	<div class="wheader">
+		<div id="header">
+			<div class="bin">
+				
+<div class="module tracking_googleanalytics">
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-273774-7']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+	if(Adsnip.config.feeds.google_afc !== undefined){
+		_gaq.push(['_setCustomVar',
+			1,
+			'ChannelID',  
+			Adsnip.config.feeds.google_afc.meta.channel.match('(Questions_[0-9]+)')[0],     
+			2             
+		]);
+	}
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == window.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+	window.google_analytics_uacct = 'UA-273774-7';
+</script>
+</div>
+
+<div class="module header">
+<!--  google_ad_section_start(weight=ignore) -->
+<span class="altsBG">
+<div class="upper">
+	<div class="logos">
+		<a href="http://www.answers.com/" class="logo" track="Logo_hdr" title="Home of Wiki &amp; Reference Answers, the world&#39;s leading Q&amp;A site">Answers.com</a>
+				<a href="http://wiki.answers.com/" class="wiki_logo" track="wikiLogo_hdr" title="Wiki Answers" onclick="track(&#39;wikiLogo_hdr&#39;)">WikiAnswers</a>
+			</div>
+	<ul class="tools">
+		<li class="home tool">
+			<a track="home_tools/PAGE" title="Answers.com home" href="http://www.answers.com/">Home</a>
+		</li>
+		<li class="search tool">
+			<span title="Search" track="srch_tools/PAGE" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9TcGVjaWFsOnNlYXJjaA==&#39;)">Search</span>
+		</li>
+		<li class="settings tool">
+			<span title="Settings" track="settings_tools/PAGE" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9TcGVjaWFsOnByZWZlcmVuY2Vz&#39;)">Settings</span>
+		</li>
+		<li class="top_contributors tool">
+			<span title="Top contributors" track="LdrLnkldrboard_tools/PAGE" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9TcGVjaWFsOnRvcHM=&#39;)">Top Contributors</span>
+		</li>
+		<li class="help_center tool">
+			<span title="Help center" track="help_tools/PAGE" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vaGVscC9oZWxwX2NlbnRlcg==&#39;)">Help Center</span>
+		</li>
+		<li id="langMenu" class="language_menu">
+			<a id="languageMenuTrigger" class="ab3 current_language" track="lang_tools/PAGE" title="International Sites">English▼</a>
+			<ul id="languageMenu" class="languages ui-menu ui-widget ui-widget-content ui-corner-all" style="display: none; " role="listbox">
+				<li class="ui-menu-item language" role="menuitem">
+					<a class="link" track="Header_Link_en/PAGE" href="http://wiki.answers.com/">English</a>
+				</li>
+				<li class="ui-menu-item language" role="menuitem">
+					<a class="ui-corner-all link" track="Header_Link_fr/PAGE" href="http://fr.answers.com/">Français</a>
+				</li>
+				<li class="ui-menu-item language" role="menuitem">
+					<a class="ui-corner-all link" track="Header_Link_de/PAGE" href="http://de.answers.com/">Deutsch</a>
+				</li>
+				<li class="ui-menu-item language" role="menuitem">
+					<a class="ui-corner-all link" track="Header_Link_it/PAGE" href="http://it.answers.com/">Italiano</a>
+				</li>
+				<li class="ui-menu-item language" role="menuitem">
+					<a class="ui-corner-all link" track="Header_Link_es/PAGE" href="http://es.answers.com/">Español</a>
+				</li>
+				<li class="ui-menu-item language" role="menuitem">
+					<a class="ui-corner-all link" track="Header_Link_tl/PAGE" href="http://tl.answers.com/">Tagalog</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class="lower">
+	<div class="tabs">
+		<ul id="ask-answer-nav" class="ask_answer_nav">
+			<li class="ask" track="askTab/header" onclick="Header.change_header_tab(&#39;ask&#39;);">
+				Ask
+			</li>
+			<li class="answer" track="answTab/header" onclick="Header.change_header_tab(&#39;answer&#39;);">
+				Answer
+			</li>
+		</ul>
+	</div>
+	<div class="forms">
+		<div class="ask_form form">
+			<form id="lookup1" action="http://wiki.answers.com/search">
+				<div class="row_1">
+					<div class="title">
+						<span id="header_title">Enter question or phrase...</span>
+					</div>
+					<div class="options">
+						<div class="pre_label option">
+							<span>Search:</span>
+						</div>
+						<div class="all option">
+							<input track="SearchDropDownAll/PAGE" type="radio" name="corpus" value="all" id="ask_all" class="corpus" checked=""><label for="ask_all">All sources</label>
+						</div>
+						<div class="wa option">
+							<input track="SearchDropDownWA/PAGE" type="radio" name="corpus" value="wa" id="ask_wa" class="corpus"><label for="ask_wa">Community Q&amp;A</label>
+						</div>
+						<div class="ra option">
+							<input track="SearchDropDownRA/PAGE" type="radio" name="corpus" value="ra" id="ask_ra" class="corpus"><label for="ask_ra">Reference topics</label>
+						</div>
+					</div>
+				</div>
+				<div class="row_2">
+					<div class="query">
+						<input id="head_ask" class="search_input" type="text" maxlength="200" name="q" value="" autocomplete="off" widdit="on">
+					</div>
+					<div class="submit">
+						<input track="go/AskTab" type="button" value=" " class="search_submit">
+					</div>
+				</div>
+			</form>
+			<ul class="browse_links">
+				<li class="label">Browse:</li>
+				<li><a track="Brws_unAnsQs/AskTab" href="http://wiki.answers.com/Q/NEWQ">Unanswered questions</a></li>
+				<li class="seperator">|</li>
+				<li><a track="RecentQs/AskTab" href="http://wiki.answers.com/Q/Special:RecentQ">New questions</a></li>
+				<li class="seperator">|</li>
+				<li><a track="RecentAs/AskTab" href="http://wiki.answers.com/Q/Special:RecentA">New answers</a></li>
+				<li class="seperator">|</li>
+				<li><a track="ReferenceLibrary/AskTab" href="http://www.answers.com/main/what_content.jsp">Reference library</a></li>
+			</ul>
+		</div>
+		<div class="answer_form form" style="display: none; ">
+			<form id="search_form_unanswered" action="http://wiki.answers.com/Q/Special:search" method="post">
+				<div class="row_1">
+					<div class="title">
+						<span>Search unanswered questions...</span>
+					</div>
+				</div>
+				<div class="row_2">
+					<div class="query ">
+						<input id="head_search" class="search_input_unanswered" type="text" maxlength="200" name="q" autocomplete="off" widdit="on">
+					</div>
+					<div class="submit">
+						<input track="go/AnsTab" type="button" value=" " class="unanswered_search_submit">
+					</div>
+				</div>
+			</form>
+			<ul class="browse_links">
+				<li>Browse:</li>
+				<li><a track="Brws_unAnsQs/AnsTab" href="http://wiki.answers.com/Q/NEWQ">Unanswered questions</a></li>
+				<li class="seperator">|</li>
+				<li><a track="RecentQs/AnsTab" href="http://wiki.answers.com/Q/Special:RecentQ">Most-recent questions</a></li>
+				<li class="seperator">|</li>
+				<li><a track="ReferenceLibrary/AnsTab" href="http://www.answers.com/main/what_content.jsp">Reference library</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</span>
+<!-- google_ad_section_end -->
+	
+</div>
+			</div>
+		</div>
+	</div>
+	<div class="wdrawer">
+		<div id="drawer">
+			<div class="bin">	
+							</div>
+		</div>
+	</div>
+	<div id="wrapper">
+	    <div id="outer1">
+	        <div id="outer2">
+	            <div id="outer3">
+	                <div id="middle">
+					
+						<div class="top">
+														<div id="errorMessage" class="hide"></div>
+						</div>
+						
+						<div class="columns">
+		                    <div class="center">
+		                    	<div class="center_top">
+			                        
+<div class="module breadcrumb_category">
+<div class="frame">
+		<div class="contents">
+		<div xmlns:v="http://rdf.data-vocabulary.org/#">
+			<span typeof="v:Breadcrumb"><a title="Answers.com" property="v:title" rel="v:url" href="http://www.answers.com/" track="bc_Answers.com/PAGE">Answers.com</a></span>
+			<span class="sep">&gt;</span>
+			<span typeof="v:Breadcrumb"><a title="Wiki Answers" property="v:title" rel="v:url" href="http://wiki.answers.com/" track="bc_Wiki Answers/PAGE">Wiki Answers</a></span>
+						<span class="sep">&gt;</span>
+			<span typeof="v:Breadcrumb"><a title="Categories" property="v:title" rel="v:url" href="http://wiki.answers.com/Q/FAQ/" track="bc_Categories/PAGE">Categories</a></span>
+						<span class="sep">&gt;</span>
+			<span typeof="v:Breadcrumb"><a title="Technology" property="v:title" rel="v:url" href="http://wiki.answers.com/Q/FAQ/3776" track="bc_Technology/PAGE">Technology</a></span>
+						<span class="sep">&gt;</span>
+			<span typeof="v:Breadcrumb"><a title="Computers" property="v:title" rel="v:url" href="http://wiki.answers.com/Q/FAQ/458" track="bc_Computers/PAGE">Computers</a></span>
+						<span class="sep">&gt;</span>
+			<span typeof="v:Breadcrumb"><a title="Computer Programming" property="v:title" rel="v:url" href="http://wiki.answers.com/Q/FAQ/2096" track="bc_Computer Programming/PAGE">Computer Programming</a></span>
+						<span class="sep">&gt;</span>
+			<span typeof="v:Breadcrumb"><a title="C Programming" property="v:title" rel="v:url" href="http://wiki.answers.com/Q/FAQ/3353" track="bc_C Programming/PAGE">C Programming</a></span>
+			<span class="sep">&gt;</span>
+			<span typeof="v:Breadcrumb">10 kinds of sorting in data structure?</span>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="module question_detail">
+<div class="frame">
+			<div id="statusMessage" class="hide"></div>	
+<!-- google_ad_section_start -->
+	<div class="contents" id="questionContainer">
+		<span id="WikiAnswers" data-title="10_kinds_of_sorting_in_data_structure" data-etag="20091004212402"></span>
+		<h1 id="pageTitle">10 kinds of sorting in data structure?</h1>
+		<div id="questionSubContainer">
+			<div id="preserved" class="question_state " title="Preserved"></div>
+						<div id="questionImproveLinkContainer" class="improve_question">
+						</div>
+			<div class="categories">
+				<span class="categoryLabel">In:</span>
+				<span id="catsList">
+									<a class="waCategory" data-category-id="wiki/C Programming" href="http://wiki.answers.com/Q/FAQ/3353-8" track="catTitle/PAGE">C Programming</a>, 									<a class="waCategory" data-category-id="wiki/C++ Programming" href="http://wiki.answers.com/Q/FAQ/6804-1" track="catTitle/PAGE">C++ Programming</a>								</span>
+							[<a id="categoriesEdit" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#" class=" edit_categories" track="recat_center/PAGE" onclick="RecategorizeCats(&#39;10_kinds_of_sorting_in_data_structure&#39;); return false;">Edit categories</a>]
+						</div>
+		</div>
+			</div>
+	<div id="editError"></div>
+<!-- google_ad_section_end -->		
+	</div>
+
+
+</div>
+
+<div class="module html">
+			<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1950137992623068";
+/* rubix_question_top_728x90_a */
+google_ad_slot = "6954079871";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./10 kinds of sorting in data structure_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" frameborder="0" height="90" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+=&#39;.call&#39;;setTimeout(h,0)}else if(h.match){i+=&#39;.nav&#39;;w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" scrolling="no" vspace="0" width="728" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>	
+	
+</div>
+
+<div class="module question_flags">
+<div id="waFlagsWrap" class="hide">
+</div>
+
+</div>
+		                        </div>
+		                        <div class="center_mid">
+			                        
+<div class="module question_answer_detail answer">
+<div class="frame">
+		<div class="contents" id="answerContainer">
+		<div class="answer_label ansTitle">Answer:</div>
+		<div class="improve" id="answerImproveLinkContainer">&nbsp;
+										<span class="ui-orange icon-pencil smallBtn wysiwygEdit auth_link ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" custom_metrics="EditAnsSmall" callback="redirect" track="Btn/EditAns" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure&amp;action=edit" role="button" style="display: inline-block; "><span class="ui-button-icon-primary ui-icon ui-icon-pencil"></span><span class="ui-button-text">Improve</span></span>
+					</div>
+		<!-- google_ad_section_start -->
+		<div class="answer_text" id="editorText"><br>
+<br>
+1.Bubble Sort
+<br>
+2.Insertion Sort
+<br>
+3.Shell Sort
+<br>
+4.Merge Sort
+<br>
+5.Heap Sort
+<br>
+6.Quick Sort
+<br>
+7.Bucket Sort
+<br>
+8.Radix Sort
+<br>
+9.Distribution Sort
+<br>
+10.Shuffle Sort</div>
+		<!-- google_ad_section_end -->
+	</div>
+	</div>
+
+</div>
+
+<div class="module html">
+			<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1950137992623068";
+/* rubix_question_middle_336x280_a */
+google_ad_slot = "2662897393";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript" src="./10 kinds of sorting in data structure_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px"><iframe allowtransparency="true" frameborder="0" height="280" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+=&#39;.call&#39;;setTimeout(h,0)}else if(h.match){i+=&#39;.nav&#39;;w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" scrolling="no" vspace="0" width="336" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>	
+	
+</div>
+
+<div class="module question_toolbar">
+<div class="frame">
+		<div class="contents answerButtonsBar">
+								<a class="auth_link improve" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure&action=edit" track="EditAns/Btn_PAGE"></a>
+				<ul class="social_options">
+					<li class="noLeftMargin social_option first">
+ 				<div id="cancelUpdates" class="answerFollowButton unfollow hide" title="Click here to unfollow this question." onclick="return questionPageFetcher.unFollow();"></div>
+				<div id="getUpdates" class="answerFollowButton follow " title="Click here to register and follow this question for new answers." onclick="return questionPageFetcher.follow();"></div>
+			</li>
+							<li class="social_option"><a href="http://wiki.answers.com/Q/Discuss:10_kinds_of_sorting_in_data_structure" class="answerDiscussBtn" track="DiscussQ2/WTC_PAGE"></a></li>
+				
+					<li class="social_option"><a class="addthis_button_compact answerShareBtn at300m" addthis:title="10 kinds of sorting in data structure?" rel="nofollow" track="social_button/AQ" title="Share question" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#"><span class="at300bs at15nc at15t_compact"></span></a></li>
+							<li class="social_option"><a class="addthis_button_facebook answerFacebookBtn at300b" title="Share on Facebook" track="share_fb/AQ" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#"><span class="at300bs at15nc at15t_facebook"></span></a></li>
+							<li class="social_option"><a class="addthis_button_twitter answerTwitterBtn at300b" addthis:title="10 kinds of sorting in data structure?" title="Share on Twitter" track="share_tw/AQ" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#"><span class="at300bs at15nc at15t_twitter"></span></a></li>
+				</ul>
+	</div>
+	</div>
+
+</div>
+
+<div class="module question_answer_userdata">
+<div class="frame">
+		<div id="postAnswerMessage" class="hide"></div>
+	<div class="contents qInfoStats">
+		<span class="first_answer">
+					First answer by <span class="user_link"><a href="http://wiki.answers.com/Q/User:Naithee">Naithee</a></span>.
+			
+		</span>  
+		<span class="last_edit">
+			
+			Last edit by <span class="user_link"><a href="http://wiki.answers.com/Q/User:Naithee">Naithee</a></span>.
+			
+		</span>
+
+				<span class="contributer_trust">
+			Contributor <a href="http://wiki.answers.com/help/trust_points" track="view_trust">trust</a>: 5 
+										[<a href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#" class="rec_user_QMain" track="rec_user_QMain" onclick="recommendUser(&#39;Naithee&#39;, &#39;10_kinds_of_sorting_in_data_structure&#39;); return false;">recommend contributor</a>
+				<span id="recommendSpanC" class="hide">recommended</span>].
+					</span>
+		
+		<span class="popularity">
+			Question <a href="http://wiki.answers.com/help/question_popularity">popularity</a>: 
+			<span id="questionInfoStatsPopularity">7</span> 
+									[<a id="recommendQuestionLink" class="rec_Q_center " track="rec_Q_center" href="javascript:void(0);" onclick="recommendQuestion(&#39;10_kinds_of_sorting_in_data_structure&#39;); return false;">recommend question</a>].
+					</span>
+
+				<div id="reportAbuseContainer" class="minimal">
+					[<a onclick="return questionPageFetcher.openEditFlagsDialog()" class="report" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#report_abuse" track="report_abuse" id="reportAbuseLink">report abuse</a>]
+				</div>
+	</div>
+	</div>
+
+</div>
+
+<div class="module social_like">
+<div class="frame">
+		<div class="contents">
+				<div class="gplus">
+			<div id="___plusone_0" style="height: 24px; width: 38px; display: inline-block; text-indent: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial; "><iframe allowtransparency="true" frameborder="0" hspace="0" id="I1_1332890065252" marginheight="0" marginwidth="0" name="I1_1332890065252" scrolling="no" src="./10 kinds of sorting in data structure_files/fastbutton.htm" style="width: 38px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; height: 24px; position: static; left: 0px; top: 0px; visibility: visible; " tabindex="0" vspace="0" width="100%" title="+1"></iframe></div>
+		</div>
+						<div class="fb_like">
+						<fb:like href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure" ref="AQ" layout="standard" show_faces="false" width="700" action="like" font="arial" colorscheme="light" class=" fb_edge_widget_with_comment fb_iframe_widget">
+		<span><iframe id="f60f8e784" name="f3904361f" scrolling="no" style="border-width: initial; border-color: initial; overflow-x: hidden; overflow-y: hidden; width: 700px; height: 24px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; border-image: initial; " title="Like this content on Facebook." class="fb_ltr" src="./10 kinds of sorting in data structure_files/like.htm"></iframe></span></fb:like></div>
+			</div>
+		<div class="clear"></div>
+</div>
+</div>
+		                        </div>
+		                        <div class="center_bot">
+			                        
+<div class="module question_related_unanswered_category rel_cat_questions">
+<div class="frame">
+    <div class="hgroup">
+        <h2>Can you answer these <a href="http://wiki.answers.com/Q/Special:UnAnsweredQ&tid=3353" track="AnsOtherQs_center/AnsQPg_Bot">C Programming</a> questions?</h2>
+    </div>
+    <div class="contents">
+                <table class="questions">
+                        <tbody><tr class="question">
+                <td class="bullet_cell">
+                    <a class="ico" track="AnsOtherQs_Q_Icon15118/PAGE" sub_referrer="170|What_is_The_symbol_in_an_input_mask_that_is_replaced_as_you_type_data_into_the_field" title="Answer this question!" href="http://wiki.answers.com/Q/What_is_The_symbol_in_an_input_mask_that_is_replaced_as_you_type_data_into_the_field"></a>
+                </td>
+                <td class="question">
+                    <a track="AnsOtherQs_Q15118/PAGE" sub_referrer="20|What_is_The_symbol_in_an_input_mask_that_is_replaced_as_you_type_data_into_the_field" href="http://wiki.answers.com/Q/What_is_The_symbol_in_an_input_mask_that_is_replaced_as_you_type_data_into_the_field">
+                        What is The symbol in an input mask that is replaced as you type data into the field?                    </a>
+                </td>
+                <td class="answer_it">
+                    <a href="http://wiki.answers.com/Q/What_is_The_symbol_in_an_input_mask_that_is_replaced_as_you_type_data_into_the_field&action=edit" class="smallBtn ui-orange ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="AnsOtherQs_Q_Button15118/PAGE" sub_referrer="171|What_is_The_symbol_in_an_input_mask_that_is_replaced_as_you_type_data_into_the_field" role="button" style="display: inline-block; "><span class="ui-button-text">
+                        <span class="ui-button-text">Answer it!</span>
+                    </span></a>
+                </td>
+            </tr>
+                        <tr class="question">
+                <td class="bullet_cell">
+                    <a class="ico" track="AnsOtherQs_Q_Icon15118/PAGE" sub_referrer="170|How_do_you_write_a_code_to_modify_the_numbers_of_mobile_phone_using_arrays_in_c_programming_language" title="Answer this question!" href="http://wiki.answers.com/Q/How_do_you_write_a_code_to_modify_the_numbers_of_mobile_phone_using_arrays_in_c_programming_language"></a>
+                </td>
+                <td class="question">
+                    <a track="AnsOtherQs_Q15118/PAGE" sub_referrer="20|How_do_you_write_a_code_to_modify_the_numbers_of_mobile_phone_using_arrays_in_c_programming_language" href="http://wiki.answers.com/Q/How_do_you_write_a_code_to_modify_the_numbers_of_mobile_phone_using_arrays_in_c_programming_language">
+                        How do you write a code to modify the numbers of mobile phone using arrays in c programming language?                    </a>
+                </td>
+                <td class="answer_it">
+                    <a href="http://wiki.answers.com/Q/How_do_you_write_a_code_to_modify_the_numbers_of_mobile_phone_using_arrays_in_c_programming_language&action=edit" class="smallBtn ui-orange ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="AnsOtherQs_Q_Button15118/PAGE" sub_referrer="171|How_do_you_write_a_code_to_modify_the_numbers_of_mobile_phone_using_arrays_in_c_programming_language" role="button" style="display: inline-block; "><span class="ui-button-text">
+                        <span class="ui-button-text">Answer it!</span>
+                    </span></a>
+                </td>
+            </tr>
+                        <tr class="question">
+                <td class="bullet_cell">
+                    <a class="ico" track="AnsOtherQs_Q_Icon15118/PAGE" sub_referrer="170|How_java_and_c_are_similar" title="Answer this question!" href="http://wiki.answers.com/Q/How_java_and_c_are_similar"></a>
+                </td>
+                <td class="question">
+                    <a track="AnsOtherQs_Q15118/PAGE" sub_referrer="20|How_java_and_c_are_similar" href="http://wiki.answers.com/Q/How_java_and_c_are_similar">
+                        How java and c are similar?                    </a>
+                </td>
+                <td class="answer_it">
+                    <a href="http://wiki.answers.com/Q/How_java_and_c_are_similar&action=edit" class="smallBtn ui-orange ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="AnsOtherQs_Q_Button15118/PAGE" sub_referrer="171|How_java_and_c_are_similar" role="button" style="display: inline-block; "><span class="ui-button-text">
+                        <span class="ui-button-text">Answer it!</span>
+                    </span></a>
+                </td>
+            </tr>
+                        <tr class="question">
+                <td class="bullet_cell">
+                    <a class="ico" track="AnsOtherQs_Q_Icon15118/PAGE" sub_referrer="170|How_can_you_easily_write_a_programs_in_c_language" title="Answer this question!" href="http://wiki.answers.com/Q/How_can_you_easily_write_a_programs_in_c_language"></a>
+                </td>
+                <td class="question">
+                    <a track="AnsOtherQs_Q15118/PAGE" sub_referrer="20|How_can_you_easily_write_a_programs_in_c_language" href="http://wiki.answers.com/Q/How_can_you_easily_write_a_programs_in_c_language">
+                        How can you easily write a programs in c language?                    </a>
+                </td>
+                <td class="answer_it">
+                    <a href="http://wiki.answers.com/Q/How_can_you_easily_write_a_programs_in_c_language&action=edit" class="smallBtn ui-orange ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="AnsOtherQs_Q_Button15118/PAGE" sub_referrer="171|How_can_you_easily_write_a_programs_in_c_language" role="button" style="display: inline-block; "><span class="ui-button-text">
+                        <span class="ui-button-text">Answer it!</span>
+                    </span></a>
+                </td>
+            </tr>
+                        <tr class="question">
+                <td class="bullet_cell">
+                    <a class="ico" track="AnsOtherQs_Q_Icon15118/PAGE" sub_referrer="170|Why_we_use_percent_you_in_c_language" title="Answer this question!" href="http://wiki.answers.com/Q/Why_we_use_percent_you_in_c_language"></a>
+                </td>
+                <td class="question">
+                    <a track="AnsOtherQs_Q15118/PAGE" sub_referrer="20|Why_we_use_percent_you_in_c_language" href="http://wiki.answers.com/Q/Why_we_use_percent_you_in_c_language">
+                        Why we use percent you in c language?                    </a>
+                </td>
+                <td class="answer_it">
+                    <a href="http://wiki.answers.com/Q/Why_we_use_percent_you_in_c_language&action=edit" class="smallBtn ui-orange ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="AnsOtherQs_Q_Button15118/PAGE" sub_referrer="171|Why_we_use_percent_you_in_c_language" role="button" style="display: inline-block; "><span class="ui-button-text">
+                        <span class="ui-button-text">Answer it!</span>
+                    </span></a>
+                </td>
+            </tr>
+                    </tbody></table>
+    </div>
+    </div>
+</div>
+
+<div class="module question_related_answers listul related_answers_icon">
+<div class="frame">
+
+		<div class="hgroup">
+		<h2>Relevant answers:</h2>
+	</div>
+		
+	<div class="contents">
+		<ul>
+														<li id="148861717" data-rc="-1">
+				    
+				    <a href="http://wiki.answers.com/Q/What_kind_of_data_type_is_a_structure" title="Read this answered question" track="RelAns_WA_0/PAGE" sub_referrer="20|What_kind_of_data_type_is_a_structure"><span class="ico"></span></a>
+					<span>
+						<a href="http://wiki.answers.com/Q/What_kind_of_data_type_is_a_structure" title="Read this answered question" track="RelAns_WA_0/PAGE" sub_referrer="20|What_kind_of_data_type_is_a_structure">
+							What <strong class="ans_hl">kind</strong> of <strong class="ans_hl">data</strong> type is a <strong class="ans_hl">structure</strong>?						</a>
+					</span>
+
+										<p class="answerSnippet">
+						<span class="snippet">A structure is not a data type. A structure is more of a collection if data types that can be referenced conveniently. Mainly we humans can keep on top of it, the computer does not care. struct foo {...</span>
+						
+												
+					</p>
+										
+				</li>
+															<li id="184350195" data-rc="-1">
+				    
+				    <a href="http://wiki.answers.com/Q/How_many_kinds_of_search_in_data_structure" title="Read this answered question" track="RelAns_WA_1/PAGE" sub_referrer="20|How_many_kinds_of_search_in_data_structure"><span class="ico"></span></a>
+					<span>
+						<a href="http://wiki.answers.com/Q/How_many_kinds_of_search_in_data_structure" title="Read this answered question" track="RelAns_WA_1/PAGE" sub_referrer="20|How_many_kinds_of_search_in_data_structure">
+							How many <strong class="ans_hl">kinds</strong> of search in <strong class="ans_hl">data</strong> <strong class="ans_hl">structure</strong>?						</a>
+					</span>
+
+										<p class="answerSnippet">
+						<span class="snippet">array, file, record, table, the <a title="Powered by Text-Enhance" id="_GPLITA_2" style="text-decoration:underline" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#" in_rurl="http://www.textsrv.com/click?v=Tkc6MTcyNTU6Mjk1OnRyZWU6YTVmNTNiMGQyOTBmYWI4ZDNmNjY2NTdhMDA1ODJjM2M6ei0xMDYzLTE0NzI5Ondpa2kuYW5zd2Vycy5jb20%3D">tree</a> and so on</span>
+						
+												
+					</p>
+										
+				</li>
+															<li id="100893326" data-rc="-1">
+				    
+				    <a href="http://wiki.answers.com/Q/What_is_data_structure_why_is_an_array_called_a_data_structure_which_are_the_other_data_structures" title="Read this answered question" track="RelAns_WA_2/PAGE" sub_referrer="20|What_is_data_structure_why_is_an_array_called_a_data_structure_which_are_the_other_data_structures"><span class="ico"></span></a>
+					<span>
+						<a href="http://wiki.answers.com/Q/What_is_data_structure_why_is_an_array_called_a_data_structure_which_are_the_other_data_structures" title="Read this answered question" track="RelAns_WA_2/PAGE" sub_referrer="20|What_is_data_structure_why_is_an_array_called_a_data_structure_which_are_the_other_data_structures">
+							What is <strong class="ans_hl">data</strong> <strong class="ans_hl">structure</strong> why is an array called a <strong class="ans_hl">data</strong> <strong class="ans_hl">structure</strong> which are the other <strong class="ans_hl">data</strong> <strong class="ans_hl">structures</strong>?						</a>
+					</span>
+
+										<p class="answerSnippet">
+						<span class="snippet">A data structure is a collection of more than one elementary item, in some kind of aggregate organization. An array is a type of structure where more than one item of the same type are arranged...</span>
+						
+												
+					</p>
+										
+				</li>
+															<li id="185995603" data-rc="-1">
+				    
+				    <a href="http://wiki.answers.com/Q/What_sorting_algorithm_is_used_to_sort_a_queue_data_structure" title="Read this answered question" track="RelAns_WA_3/PAGE" sub_referrer="20|What_sorting_algorithm_is_used_to_sort_a_queue_data_structure"><span class="ico"></span></a>
+					<span>
+						<a href="http://wiki.answers.com/Q/What_sorting_algorithm_is_used_to_sort_a_queue_data_structure" title="Read this answered question" track="RelAns_WA_3/PAGE" sub_referrer="20|What_sorting_algorithm_is_used_to_sort_a_queue_data_structure">
+							What <strong class="ans_hl">sorting</strong> algorithm is used to sort a queue <strong class="ans_hl">data</strong> <strong class="ans_hl">structure</strong>?						</a>
+					</span>
+
+										<p class="answerSnippet">
+						<span class="snippet">Data Mining in C++</span>
+						
+												
+					</p>
+										
+				</li>
+															<li id="150689738" data-rc="-1">
+				    
+				    <a href="http://wiki.answers.com/Q/Which_sorting_methode_is_more_fast_in_data_structure" title="Read this answered question" track="RelAns_WA_4/PAGE" sub_referrer="20|Which_sorting_methode_is_more_fast_in_data_structure"><span class="ico"></span></a>
+					<span>
+						<a href="http://wiki.answers.com/Q/Which_sorting_methode_is_more_fast_in_data_structure" title="Read this answered question" track="RelAns_WA_4/PAGE" sub_referrer="20|Which_sorting_methode_is_more_fast_in_data_structure">
+							Which <strong class="ans_hl">sorting</strong> methode is more fast in <strong class="ans_hl">data</strong> <strong class="ans_hl">structure</strong>?						</a>
+					</span>
+
+										<p class="answerSnippet">
+						<span class="snippet">Quick Sort</span>
+						
+												
+					</p>
+										
+				</li>
+									</ul>
+	</div>
+	
+		
+</div>
+
+</div>
+
+<div class="module html">
+			<script type="text/javascript"><!--
+google_ad_client = "ca-pub-1950137992623068";
+/* rubix_question_bottom_728x90_a */
+google_ad_slot = "5215235232";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./10 kinds of sorting in data structure_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" frameborder="0" height="90" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+=&#39;.call&#39;;setTimeout(h,0)}else if(h.match){i+=&#39;.nav&#39;;w.location.replace(h)}s.log&amp;&amp;s.log.push(i)}" scrolling="no" vspace="0" width="728" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins>	
+	
+</div>
+		                        </div>
+		                    </div>  
+		                    <div class="left">
+		                        
+<div class="module user_login">
+<!-- google_ad_section_start(weight=ignore) -->
+<div id="loginPod" class="article frame">
+	<div class="dsContent">
+		<center id="wholePopup">
+			<div id="loginPopupSignInMode" class="loginPopupClass sign_in" style="display: block; background-color: rgb(0, 51, 153); ">
+				<div class="socialNetworkButtons">
+					<div class="title">Sign in using:</div>
+					<a track="LoginWithFB/loginPopup" href="javascript:loginpopup.openLoginDialog(loginpopup.reloadpage,null,1);" class="loginWithFB" title="Sign in using Facebook"></a>
+				</div>
+				<form id="loginform" action="javascript:dologin('input#username', 'input#password', 'input#wpRemember', '#loginform', 1);" method="post">
+					<div class="errorSection"></div>
+					<div class="title">Answers.com members:</div>
+					<div class="mainFormDiv">
+						<div class="field username">
+							<label class="separateLine" for="username">Username</label>
+							<input type="text" id="username" name="username" tabindex="1">
+						</div>
+						<div class="field lost_password">
+							<a track="LostPword/PAGE" class="lostPassword" href="javascript:switchLoginMode('lost', true, false);" tabindex="4">Lost password?</a>
+							<label class="separateLine" for="password">Password</label>
+						</div>
+						<div class="field password">
+							<input type="password" id="password" name="password" tabindex="2">
+						</div>
+						<div class="field remember_me">
+							<input type="checkbox" id="wpRemember" name="wpRemember" tabindex="3" checked="checked"><label class="rememberMeLabel" for="wpRemember">Remember me</label>
+						</div>
+					</div>
+					<div class="submitButtonAndLink">
+						<button track="signInButton/PAGE" class="ui-orange submit ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="submit" tabindex="5" title="Sign in" role="button"><span class="ui-button-text">Sign in</span></button>
+						<a class="create_account" track="createAccountLink/PAGE" href="javascript:switchLoginMode("join", false, true);" tabindex="6">Create account</a>
+					</div>
+				</form>	
+			</div>
+		<div id="loginPopupJoinMode" class="loginPopupClass join">
+	<div class="socialNetworkButtons">
+		<div class="title">Join using:</div>
+		<a href="javascript:loginpopup.openLoginDialog(loginpopup.reloadpage,null,1);" class="loginWithFB" track="JoinFB/loginPopup" title="Join using Facebook"></a>
+	</div>
+	<form id="joinform" action="javascript:doregister('#joinform', 1);">
+		<div class="errorSection"></div>
+		<div class="title">
+			Join Answers.com: 
+			<a track="whyRegister/PAGE" href="javascript:showLoginTooltip('#joinTooltip');" class="aquaTooltip"></a>
+		</div>
+		<div class="mainFormDiv">
+			<div class="field username">
+				<label class="separateLine" for="username">Username</label>
+				<input type="text" id="username" name="username" maxlength="22">
+			</div>
+			<div class="field password">
+				<label class="separateLine" for="password">Password</label>
+				<input type="password" id="password" name="password">
+			</div>
+			<div class="field retype_password">
+				<label class="separateLine" for="wpRetype">Retype password</label>
+				<input type="password" id="wpRetype" name="wpRetype">
+			</div>
+			<div class="field email">
+				<label class="separateLine" for="wpEmail">
+					Email address 
+					<a track="WhyEmail/PAGE" href="javascript:showLoginTooltip('#emailTooltip');" class="aquaTooltip"></a>
+				</label>
+				<input type="text" id="wpEmail" name="wpEmail">
+			</div>
+			<div class="field newsletter">
+				<input type="checkbox" id="wpGetNewsletter" name="wpGetNewsletter" checked="checked">
+				<label class="smallLabel" for="wpGetNewsletter">Send me the monthly Answers.com newsletter.</label>
+			</div>
+			<div class="field policy">
+				<input type="checkbox" id="wpAcceptPolicy" name="wpAcceptPolicy">
+				<label class="smallLabel" for="wpAcceptPolicy">I accept the <a track="communityGuidelines/PAGE" target="_blank" href="http://wiki.answers.com/help/community_guidelines" tabindex="5">community guidelines</a>, <a track="termsOfUse/PAGE" target="_blank" href="http://wiki.answers.com/about/legal_notices.html#terms" tabindex="6">terms of use</a> and <a target="_blank" track="privacyPolicy/PAGE" href="http://wiki.answers.com/about/legal_notices.html#privacy" tabindex="7">privacy policy</a>. I confirm that I am at least 13 years of age.</label>
+			</div>
+		</div>
+		<div class="submitButtonAndLink">
+			<button track="createAccountButton/PAGE" class="ui-orange ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="submit" title="Join now" role="button"><span class="ui-button-text">Join now</span></button>
+			<div class="member_already">
+				<span>Already a member?</span>
+				<a track="signInLink/PAGE" href="javascript:switchLoginMode("login", false, true)">Sign in</a>
+			</div>
+		</div>
+	</form>
+</div>
+<div id="joinTooltip" class="loginPopupClass join_tooltip">
+	<div class="title">Why join?</div>
+	Joining is free and <a title="Powered by Text-Enhance" id="_GPLITA_1" style="text-decoration:underline" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#" in_rurl="http://www.textsrv.com/click?v=Tkc6MTcyNTU6Mjk1OmVhc3k6ZGVhOTgzMGEyNTAzYmMwNTZkMWNmOWM1NzU5NzkwYzE6ei0xMDYzLTE0NzI5Ondpa2kuYW5zd2Vycy5jb20%3D">easy</a>. You can still be anonymous; just choose any username and password.
+	<ul>
+		<li>Get notified about updated answers</li>
+		<li>Follow <a title="Powered by Text-Enhance" id="_GPLITA_0" style="text-decoration:underline" href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure#" in_rurl="http://www.textsrv.com/click?v=Tkc6MTcyNTU6Mjk1OnlvdXI6ZjNhYjY0YjA1N2FkYjA0YzI1MTUxNWNlY2JjNTU1ZmY6ei0xMDYzLTE0NzI5Ondpa2kuYW5zd2Vycy5jb20%3D">your</a> favorite categories</li>
+		<li>Get credit for your contributions</li>
+		<li>Customize your profile</li>
+		<li>Answer questions more easily</li>
+	</ul>
+	<a target="_blank" href="http://wiki.answers.com/help/signing_in">Not convinced? Read more.</a>
+</div> 
+<div id="loginPopupLostPassword" class="loginPopupClass lost_password">
+	<div class="title">Lost your password?</div>
+	<form id="lostPasswordForm" action="javascript:submitLostPassword('#emailORusername', '#lostPasswordForm', 1);">		
+		<div class="errorSection"></div>
+		<label>Type the username or email address you used when you signed up on Answers.com:</label>
+		<input type="text" class="wide" id="emailORusername" name="emailORusername">
+		<button track="SubmitLostPword/PAGE" class="ui-orange smallBtn email_password_button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="submit" role="button" style="display: inline-block; "><span class="ui-button-text">Email new password</span></button>
+	</form>
+</div>
+<div id="emailTooltip" class="loginPopupClass email_tooltip">
+	<div class="title">Why do we need your email address?</div>
+	We will use your email address to send you updates (if you request them) about questions you ask, answer or track, and to help you retrieve your password if you forget it.
+	Your email address will not be used for any other purpose without your permission.
+</div>
+<div id="connectTooltip" class="loginPopupClass connect_tooltip">
+	<div class="title">Already have an Answers.com account? Connect your accounts!</div>
+	By doing so, you include all of your history (contributions, messages, profile) from your Answers.com account in your <span id="byDoingSoNetwork">Facebook</span> account.
+	If you don't connect accounts, your new account will be starting from scratch.
+</div></center>		
+	</div>
+</div>
+<!-- google_ad_section_end -->
+</div>
+
+<div class="module ads_admeld">
+<div class="frame">
+		<div class="contents">
+		<div class="admeldBoxAd" admeld_site="wikianswersrow" ads_category="computers" placement="btf" ad_width="160" ad_height="600"><iframe id="ifrm_0" width="160" target="_self" height="600" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="javascript:'<script>var admeld_publisher  = 90;var admeld_site = "wikianswersrow";var admeld_size = "160x600";var admeld_placement = "btf_computers";</script><script src="http://js.admeld.com/meld120.js" target="_self" ></script>'"></iframe></div>
+	</div>
+	</div>
+
+<script type="text/javascript">
+if(typeof(Adsnip) !== 'undefined') {
+	Adsnip.config.add_feed('admeld_sky', 'div.ads_admeld', {'channel': 'computers', 'client_id':'admeld_160x600'});
+}
+</script>
+</div>
+
+<div class="module links_site left_menu">
+<div class="frame">
+	<div class="hgroup">
+		<h2>Home</h2>
+	</div>
+	<ul class="unregMenu parent top_level">
+		<li><a href="javascript:void(0)" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vYWJvdXQvd2VsY29tZS5odG1s&#39;);" track="WelcomeMM">Welcome</a></li>
+		<li><a href="http://wiki.answers.com/Q/Special:recentchanges" track="RecentContribs">Recent site activity</a></li>
+		<li><a href="javascript:void(0)" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vaGVscC9oZWxwX2NlbnRlcg===&#39;);" track="HelpCenterMM">Help center</a></li>
+		<li><a href="javascript:void(0)" class="parent" onclick="toggleLHMCategoriesList(this);">Browse categories</a>
+			<ul class="categoryMenu categories">
+								<li><a href="javascript:void(0)" id="id_2885" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMjg4NQ==&#39;);" track="Animal Life_LHM">Animal Life</a></li>
+				<li><a href="javascript:void(0)" id="id_486" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNDg2&#39;);" track="Business &amp; Finance_LHM">Business &amp; Finance</a></li>
+				<li><a href="javascript:void(0)" id="id_470" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNDcw&#39;);" track="Cars &amp; Vehicles_LHM">Cars &amp; Vehicles</a></li>
+				<li><a href="javascript:void(0)" id="id_1871" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMTg3MQ==&#39;);" track="Entertainment &amp; Arts_LHM">Entertainment &amp; Arts</a></li>
+				<li><a href="javascript:void(0)" id="id_1839" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMTgzOQ==&#39;);" track="Food &amp; Cooking_LHM">Food &amp; Cooking</a></li>
+				<li><a href="javascript:void(0)" id="id_431" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNDMx&#39;);" track="Health_LHM">Health</a></li>
+				<li><a href="javascript:void(0)" id="id_452" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNDUy&#39;);" track="History, Politics &amp; Society_LHM">History, Politics &amp; Society</a></li>
+				<li><a href="javascript:void(0)" id="id_388" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMzg4&#39;);" track="Hobbies &amp; Collectibles_LHM">Hobbies &amp; Collectibles</a></li>
+				<li><a href="javascript:void(0)" id="id_1826" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMTgyNg==&#39;);" track="Home &amp; Garden_LHM">Home &amp; Garden</a></li>
+				<li><a href="javascript:void(0)" id="id_3244" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMzI0NA==&#39;);" track="Humor &amp; Amusement_LHM">Humor &amp; Amusement</a></li>
+				<li><a href="javascript:void(0)" id="id_1766" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMTc2Ng==&#39;);" track="Jobs &amp; Education_LHM">Jobs &amp; Education</a></li>
+				<li><a href="javascript:void(0)" id="id_469" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNDY5&#39;);" track="Law &amp; Legal Issues_LHM">Law &amp; Legal Issues</a></li>
+				<li><a href="javascript:void(0)" id="id_2561" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMjU2MQ==&#39;);" track="Literature &amp; Language_LHM">Literature &amp; Language</a></li>
+				<li><a href="javascript:void(0)" id="id_593" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNTkz&#39;);" track="Relationships_LHM">Relationships</a></li>
+				<li><a href="javascript:void(0)" id="id_1140" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMTE0MA==&#39;);" track="Religion &amp; Spirituality_LHM">Religion &amp; Spirituality</a></li>
+				<li><a href="javascript:void(0)" id="id_455" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNDU1&#39;);" track="Science_LHM">Science</a></li>
+				<li><a href="javascript:void(0)" id="id_2217" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMjIxNw==&#39;);" track="Shopping_LHM">Shopping</a></li>
+				<li><a href="javascript:void(0)" id="id_1885" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMTg4NQ==&#39;);" track="Sports_LHM">Sports</a></li>
+				<li><a href="javascript:void(0)" id="id_3776" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMzc3Ng==&#39;);" track="Technology_LHM">Technology</a></li>
+				<li><a href="javascript:void(0)" id="id_2026" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvMjAyNg==&#39;);" track="Travel &amp; Places_LHM">Travel &amp; Places</a></li>
+				<li><a href="javascript:void(0)" id="id_5045" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9GQVEvNTA0NQ==&#39;);" track="WikiAnswers Local_LHM">WikiAnswers Local</a></li>
+							</ul>
+		</li>
+		<li><a href="javascript:void(0)" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9TcGVjaWFsOlJhbmRvbXBhZ2U=&#39;);" track="RandomQMM">Random question</a></li>
+		<li><a href="http://wiki.answers.com/Q/Special:PromotedQ" track="PromotedQuestions">Promoted questions</a></li>
+		<li><a href="javascript:void(0)" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9TcGVjaWFsOkNvbW11bml0eUZvcnVt&#39;);" track="CommunityForumMM">Community forum</a></li>
+	</ul>
+</div>
+</div>
+		                    </div>
+		                    <div></div> <!-- this div is necessary for IE -->
+		                    <div class="right">
+		                        
+<div class="module ads_admeld">
+<div class="frame">
+		<div class="contents">
+		<div class="admeldBoxAd" admeld_site="wikianswersrow" ads_category="computers" placement="atf" ad_width="300" ad_height="250"><iframe id="ifrm_1" width="300" target="_self" height="250" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="javascript:'<script>var admeld_publisher  = 90;var admeld_site = "wikianswersrow";var admeld_size = "300x250";var admeld_placement = "atf_computers";</script><script src="http://js.admeld.com/meld120.js" target="_self" ></script>'"></iframe></div>
+	</div>
+	</div>
+
+<script type="text/javascript">
+if(typeof(Adsnip) !== 'undefined') {
+	Adsnip.config.add_feed('admeld_box', 'div.ads_admeld', {'channel': 'computers', 'client_id':'admeld_300x250'});
+}
+</script>
+</div>
+
+<div class="module question_recentunanswered answer_these">
+<div class="frame">
+		<div class="hgroup">
+		<h2>
+			<a href="http://wiki.answers.com/Q/Special:RecentQ" track="answerThese/PAGE">Answer these</a>
+		</h2>
+	</div>
+		<div class="contents">
+				
+		<div class="ansItem">
+			<a class="text" track="unAnsweredQs/RB" sub_referrer="120|Are_there_any_effects_felt_today_because_of_the_Spanish_American_War" href="http://wiki.answers.com/Q/Are_there_any_effects_felt_today_because_of_the_Spanish_American_War">Are there any effects felt today because of the Spanish American War?</a>
+			<div class="QToolsBelow">
+				<div class="category">In: <a target="_blank" class="topiclink" track="RightBar_Cat_q/RB" href="http://wiki.answers.com/Q/FAQ/2062">US History</a></div>
+				<div class="answerItSec">
+					<span sub_referrer="121|Are_there_any_effects_felt_today_because_of_the_Spanish_American_War" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9BcmVfdGhlcmVfYW55X2VmZmVjdHNfZmVsdF90b2RheV9iZWNhdXNlX29mX3RoZV9TcGFuaXNoX0FtZXJpY2FuX1dhciZhY3Rpb249ZWRpdA==&#39;);" class="ui-orange smallBtn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="RightBar_AnswerIt/RB" role="button" style="display: inline-block; "><span class="ui-button-text">Answer it!</span></span>
+				</div>
+			</div>
+		</div>
+				
+		<div class="ansItem">
+			<a class="text" track="unAnsweredQs/RB" sub_referrer="120|What_was_the_boycott_on_British_goods_effective_in_ending_the_stamp_act" href="http://wiki.answers.com/Q/What_was_the_boycott_on_British_goods_effective_in_ending_the_stamp_act">What was the boycott on British goods effective in ending the stamp act?</a>
+			<div class="QToolsBelow">
+				<div class="category">In: <a target="_blank" class="topiclink" track="RightBar_Cat_q/RB" href="http://wiki.answers.com/Q/FAQ/2065">American Revolution</a></div>
+				<div class="answerItSec">
+					<span sub_referrer="121|What_was_the_boycott_on_British_goods_effective_in_ending_the_stamp_act" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9XaGF0X3dhc190aGVfYm95Y290dF9vbl9Ccml0aXNoX2dvb2RzX2VmZmVjdGl2ZV9pbl9lbmRpbmdfdGhlX3N0YW1wX2FjdCZhY3Rpb249ZWRpdA==&#39;);" class="ui-orange smallBtn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="RightBar_AnswerIt/RB" role="button" style="display: inline-block; "><span class="ui-button-text">Answer it!</span></span>
+				</div>
+			</div>
+		</div>
+				
+		<div class="ansItem">
+			<a class="text" track="unAnsweredQs/RB" sub_referrer="120|What_is_the_definition_of_not_wise_lacking_self_restraint" href="http://wiki.answers.com/Q/What_is_the_definition_of_not_wise_lacking_self_restraint">What is the definition of not wise lacking self restraint?</a>
+			<div class="QToolsBelow">
+				<div class="category">In: <a target="_blank" class="topiclink" track="RightBar_Cat_q/RB" href="http://wiki.answers.com/Q/FAQ/3186">Definitions and Word Differences</a></div>
+				<div class="answerItSec">
+					<span sub_referrer="121|What_is_the_definition_of_not_wise_lacking_self_restraint" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9XaGF0X2lzX3RoZV9kZWZpbml0aW9uX29mX25vdF93aXNlX2xhY2tpbmdfc2VsZl9yZXN0cmFpbnQmYWN0aW9uPWVkaXQ=&#39;);" class="ui-orange smallBtn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="RightBar_AnswerIt/RB" role="button" style="display: inline-block; "><span class="ui-button-text">Answer it!</span></span>
+				</div>
+			</div>
+		</div>
+				
+		<div class="ansItem">
+			<a class="text" track="unAnsweredQs/RB" sub_referrer="120|How_did_Lewis_and_Clark&#39;s_men_finally_catch_a_prairie_dog" href="http://wiki.answers.com/Q/How_did_Lewis_and_Clark's_men_finally_catch_a_prairie_dog">How did Lewis and Clark's men finally catch a prairie dog?</a>
+			<div class="QToolsBelow">
+				<div class="category">In: <a target="_blank" class="topiclink" track="RightBar_Cat_q/RB" href="http://wiki.answers.com/Q/FAQ/2928">Rodents</a></div>
+				<div class="answerItSec">
+					<span sub_referrer="121|How_did_Lewis_and_Clark&#39;s_men_finally_catch_a_prairie_dog" onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9Ib3dfZGlkX0xld2lzX2FuZF9DbGFyaydzX21lbl9maW5hbGx5X2NhdGNoX2FfcHJhaXJpZV9kb2cmYWN0aW9uPWVkaXQ=&#39;);" class="ui-orange smallBtn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" track="RightBar_AnswerIt/RB" role="button" style="display: inline-block; "><span class="ui-button-text">Answer it!</span></span>
+				</div>
+			</div>
+		</div>
+			</div>
+	</div>
+</div>
+
+<div class="module ads_admeld">
+<div class="frame">
+		<div class="contents">
+		<div class="admeldBoxAd" admeld_site="wikianswersrow" ads_category="computers" placement="btf" ad_width="300" ad_height="250"><iframe id="ifrm_2" width="300" target="_self" height="250" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" src="javascript:'<script>var admeld_publisher  = 90;var admeld_site = "wikianswersrow";var admeld_size = "300x250";var admeld_placement = "btf_computers";</script><script src="http://js.admeld.com/meld120.js" target="_self" ></script>'"></iframe></div>
+	</div>
+	</div>
+
+<script type="text/javascript">
+if(typeof(Adsnip) !== 'undefined') {
+	Adsnip.config.add_feed('admeld_box', 'div.ads_admeld', {'channel': 'computers', 'client_id':'admeld_300x250'});
+}
+</script>
+</div>
+
+<div class="module article_featured featured_guides">
+<div class="frame">
+		<div class="hgroup">
+				<h2>Featured guides</h2>
+			</div>
+		<div class="contents">
+		<ul class="guides">
+								<li class="guide right_column">
+				<a track="featuredGuides/RB" class="guide_link" href="http://www.answers.com/guides/how-to-eliminate-credit-card-debt">How to Eliminate Credit Card Debt</a>
+			</li>
+											<li class="guide">
+				<a track="featuredGuides/RB" class="guide_link" href="http://www.answers.com/guides/how-to-play-blackjack">How to Play Blackjack</a>
+			</li>
+											<li class="guide right_column">
+				<a track="featuredGuides/RB" class="guide_link" href="http://www.answers.com/guides/where-to-find-listerine-coupons">Where To Find Listerine Coupons</a>
+			</li>
+											<li class="guide">
+				<a track="featuredGuides/RB" class="guide_link" href="http://www.answers.com/guides/how-to-use-a-loan-calculator">How To Use A Loan Calculator</a>
+			</li>
+											<li class="guide right_column">
+				<a track="featuredGuides/RB" class="guide_link" href="http://www.answers.com/guides/symptoms-of-ovarian-cancer">Symptoms Of Ovarian Cancer</a>
+			</li>
+							</ul>
+	</div>
+		<div class="mgroup">
+				<div class="more_link"><a href="http://www.answers.com/library/Answers.com+Guides"><strong>»</strong> More</a></div>
+			</div>
+		</div>
+<script>
+$(".article_featured li:nth-child(odd)").addClass('right_column');
+</script>
+</div>
+	                    	</div> 
+		                    <div class="clear"></div>
+		                </div>
+						<div class="wfooter">
+							<div id="footer">
+								<div class="bin">
+									
+<div class="module footer">
+<div class="frame">
+	<div class="footer_links">
+		<ul>
+			<li><div class="hgroup"><h2>Site</h2></div></li>
+			<li><a href="http://www.answers.com/main/sitemap.jsp" track="sitemap_ftr">Sitemap</a></li>
+			<li><a href="http://wiki.answers.com/" track="WikiAns_ftr">WikiAnswers</a></li>
+			<li><a href="http://video.answers.com/" track="VideoAns_ftr">VideoAnswers</a></li>
+			<li><a href="http://coupons.answers.com/" track="coupons">Coupons</a></li>
+			<li><a href="http://www.answers.com/library/Answers.com+Guides" track="guides_ftr">Guides</a></li>
+		</ul>
+		<ul>
+			<li><div class="hgroup"><h2>Company</h2></div></li>
+			<li><a href="http://wiki.answers.com/about/" track="about_ftr">About</a></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vYWJvdXQvbGVnYWxfbm90aWNlcy5odG1sI3Rlcm1z&#39;);" track="terms_of_use_ftr">Terms of Use</span></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vYWJvdXQvbGVnYWxfbm90aWNlcy5odG1sI3ByaXZhY3k=&#39;);" track="privacy_policy_ftr">Privacy Policy</span></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vYWJvdXQvY29weXJpZ2h0Lmh0bWw=&#39;);" track="ip_issues_ftr">IP Issues</span></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vYWJvdXQvZGlzY2xhaW1lci5odG1s&#39;);" track="disclaimer_ftr">Disclaimer</span></li>
+		</ul>
+		<ul>
+			<li><div class="hgroup"><h2>Community</h2></div></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vaGVscC9jb21tdW5pdHlfZ3VpZGVsaW5lcw==&#39;);" track="Guidelines_ftr">Guidelines</span></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vaGVscC9vbmxpbmVfcmVwdXRhdGlvbg==&#39;);" track="Reputation_ftr">Reputation</span></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vc3RhdGljL2NvbW11bml0eV9tZW1iZXJzLmh0bWw=&#39;);" track="Roles_ftr">Roles</span></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vaGVscC9oZWxwX2NlbnRlcg==&#39;);" track="Help_ftr">Help</span></li>
+		</ul>
+		<ul>
+			<li><div class="hgroup"><h2>Updates</h2></div></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9TcGVjaWFsOnByZWZlcmVuY2Vz&#39;);" track="email">Email</span></li>
+			<li><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3dpa2kuYW5zd2Vycy5jb20vUS9TcGVjaWFsOndhdGNobGlzdA==&#39;);" track="watchlist">Watchlist</span></li>
+			<li><a href="http://www.answers.com/main/answers_rss.jsp" track="rss">RSS</a></li>
+			<li><a href="http://www.nostupidanswers.com/" track="blog_ftr">Blog</a></li>
+		</ul>
+	</div>
+	<div class="international_links">
+		<ul>
+			<li><div class="hgroup"><h2>International sites</h2></div></li>
+			<li><a href="http://wiki.answers.com/" class="first" track="ftrSite_en">English</a></li>
+			<li class="separator">|</li>
+			<li><a href="http://de.answers.com/" track="Site_de_ftr">Deutsch</a></li>
+			<li class="separator">|</li>
+			<li><a href="http://es.answers.com/" track="Site_es_ftr">Español</a></li>
+			<li class="separator">|</li>
+			<li><a href="http://fr.answers.com/" track="Site_fr_ftr">Français</a></li>
+			<li class="separator">|</li>
+			<li><a href="http://it.answers.com/" track="Site_it_ftr">Italiano</a></li>
+			<li class="separator">|</li>
+			<li><a href="http://tl.answers.com/" class="last" track="Site_tl_ftr">Tagalog</a></li>
+		</ul>
+	</div>
+	<div class="copyright">
+		<ul>
+			<li class="label">Copyright © 2012 Answers Corporation</li>
+			<li class="social"><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3d3dy5mYWNlYm9vay5jb20vQW5zd2Vyc0RvdENvbQ==&#39;);" class="followFB facebook" track="facebook_ftr" title="Facebook">facebook</span></li>
+			<li class="social"><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3R3aXR0ZXIuY29tL2Fuc3dlcnNkb3Rjb20=&#39;);" class="followTW twitter" track="twitter_ftr" title="Twitter">twitter</span></li>
+			<li class="social"><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3d3dy55b3V0dWJlLmNvbS91c2VyL0Fuc3dlcnNkb3Rjb20=&#39;);" class="followYT youtube" track="youtube_ftr" title="YouTube">youtube</span></li>
+			<li class="social"><span onclick="javascript:decode_redirect(&#39;aHR0cDovL3d3dy5ub3N0dXBpZGFuc3dlcnMuY29tLw==&#39;);" class="followNSA blog" track="blog_ftr" title="Our blog">blog</span></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+<div class="module tracking_adsnippet">
+<script type="text/javascript">
+if(typeof(Adsnip) !== 'undefined') {
+	Adsnip.config.metadata = {
+		'adq': "4.43767",		'category': "Technology > Computers > Computer Programming > C Programming",		'flavor': "15118",		'logged_in': "false",		'page_type': "question",		'question': "10 kinds of sorting in data structure",		'question_id': "75898186",		'username': "ID1384141322"	};
+	Adsnip.config.click_tracking = 'dblswap';
+	Adsnip.config.server_addr = '10.16.10.166';
+	Adsnip.init();
+}
+</script>
+</div>
+
+<div class="module tracking_pagebottom">
+<script type="text/javascript">
+jwgData.metrics.comscoreC4Url = "wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure";
+</script>
+<script type="text/javascript">
+jwgData.metrics.quantcastCat = "AnswersOther"
+</script>
+<script type="text/javascript">
+	jwgData.metrics.tacodaType = 'wa';
+</script>
+</div>
+
+<div class="module externaltracking_wsscustommetrics">
+<script type="text/javascript">
+
+cv = {};
+cv.c2 = "none|Ans";
+
+	
+	cv.c11 = "C Programming--C++ Programming|Ans";
+
+
+
+cv.c20 = "Old|C Programming--C++ Programming_Ans";
+
+cv.c21 = "Has_JS|Technology";
+cv.c23 = "3|Ans";
+
+
+	cv.c25 = "4.43767|Technology";
+
+
+cv.c26 = "Index|Technology";
+
+	
+jwgData.metrics.showTynt = "false";
+
+trackCustomMetrics(cv);
+</script>
+</div>
+								</div>
+							</div> 
+						</div>
+	                </div> <!-- middle -->
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+	
+<!-- Start feet block cb2160a0c3b125fce38d67bae1b69615 -->
+<script type="text/javascript">
+	var topicTreeChangeTime="1332786220";
+	var wikiAnswersLocalID = "5045";
+	var uncategorizedID = "4423";
+	var catchAllId = "4435";
+	var wgStaticFilesServer  = "";	
+</script>
+<!-- End feet block cb2160a0c3b125fce38d67bae1b69615 -->
+<script src="./10 kinds of sorting in data structure_files/-A.js" type="text/javascript"></script>
+<!-- Start feet block 513fb0a5add84a4bf2dff24822297e91 -->
+<script type="text/javascript">windowOnload(function() { loadAsyncSrc('http://answers.us.intellitxt.com/intellitxt/front.asp?ipid=26497'); });</script>
+<!-- End feet block 513fb0a5add84a4bf2dff24822297e91 -->
+<script src="./10 kinds of sorting in data structure_files/rateLink.js" type="text/javascript"></script>
+<script src="./10 kinds of sorting in data structure_files/questionTools.js" type="text/javascript"></script>
+<script src="./10 kinds of sorting in data structure_files/compactor.cjs" type="text/javascript" gapi_processed="true"></script>
+
+
+	
+
+
+<div style="position: absolute; " id="_GPL_e6a00_div"><object height="1" width="1" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="_GPL_e6a00_swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param value="http://d1nfmblh2wz0fd.cloudfront.net/items/e6a00/storage.swf" name="movie"><param value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl" name="FlashVars"><param value="always" name="allowscriptaccess"><embed height="1" align="middle" width="1" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl" type="application/x-shockwave-flash" allowscriptaccess="always" quality="high" loop="false" play="true" name="_GPL_e6a00_swf" bgcolor="#ffffff" src="http://d1nfmblh2wz0fd.cloudfront.net/items/e6a00/storage.swf"></object></div><div id="widditFloatingSettings" style="bottom: 0; cursor: pointer;position: fixed !important;z-index: 9999999;left: 0; display:none;width:50px;height:26px;padding-left:10px;top: expression(( 0 - 26 + ( document.body.clientHeight ? document.body.clientHeight : document.documentElement.clientHeight ) + ( ignoreMe = document.body.scrollTop ? document.body.scrollTop : document.documentElement.scrollTop ) ) + &#39;px&#39; );"></div><iframe id="tacoda" width="1" height="1" frameborder="0" src="./10 kinds of sorting in data structure_files/tac.htm"></iframe>AdvertisementAdvertisement</body><span id="skype_highlighting_settings" display="none" autoextractnumbers="1"></span><object id="skype_plugin_object" location.href="http://wiki.answers.com/Q/10_kinds_of_sorting_in_data_structure" location.hostname="wiki.answers.com" style="position: absolute; visibility: hidden; left: -100px; top: -100px; " width="0" height="0" type="application/x-vnd.skype.click2call.chrome.5.6.0"></object></html>

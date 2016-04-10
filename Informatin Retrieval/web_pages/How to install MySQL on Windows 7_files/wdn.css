@@ -1,0 +1,265 @@
+body {margin: 0; background: #edead8 url(images/background-gradient.jpg) repeat-x top left; font: 0.75em Arial, Verdana, Sans-serif; color: #000000; text-align: center;}
+
+/* Holiday backgrounds
+body {margin: 0; background: #d4cca5 url(images/background-new-year.jpg) repeat top left; font: 0.75em Arial, Verdana, Sans-serif; color: #000000; text-align: center;}
+body {margin: 0; background: #e9e6d3 url(images/background-christmas.jpg) no-repeat top left; font: 0.75em Arial, Verdana, Sans-serif; color: #000000; text-align: center;}
+body {margin: 0; background: #edead8 url(images/background-gradient.jpg) repeat-x top left; font: 0.75em Arial, Verdana, Sans-serif; color: #000000; text-align: center;}
+*/
+
+h1, h2, h3, h4 {padding: 5px 0px 0px 0px; margin: 0; font-weight: bold; text-align: left; line-height: 125%;}
+h1 {font-size: 1.75em; color: #638429;}
+h1.withlink {font-size: 1em;}
+h2 {font-size: 1.3em; color: #FF6600; padding: 10px 0px 0px 0px;}
+h3 {font-size: 1.2em; color: #666; padding: 15px 0px 0px 0px;}
+h4 {font-size: 1em;}
+
+p {padding: 5px 0px 10px 0px; margin: 0; text-align: left; line-height: 175%;}
+
+p.ms-no {padding: 10px 10px 10px 60px; margin: 10px; background: #eee url("http://www.webdevelopersnotes.com/images/ms-no.gif") no-repeat left; border: 1px solid #999; text-align: justify; line-height: 175%;}
+p.ms-yes {padding: 10px 10px 10px 60px; margin: 10px; background: #eee url("http://www.webdevelopersnotes.com/images/ms-yes.gif") no-repeat left; border: 1px solid #999; text-align: justify; line-height: 175%;}
+
+blockquote {border: 1px dotted #86a339; border-right: none; border-left: none; background: #fff url(images/quotes.gif) no-repeat 0px 8px; margin: 15px 10px 5px 10px; padding: 0px 15px 0px 45px; color: #666;}
+blockquote.question {border: 1px dotted #86a339; border-right: none; border-left: none; background: #fff url(images/question.gif) no-repeat 0px 8px; margin: 15px 10px 5px 10px; padding: 0px 15px 0px 45px; color: #666;}
+
+form {padding: 0px; margin: 0px; margin-bottom: 10px; text-align: left;}
+
+table {padding: 0px; margin: 5px 0px 15px 0px; border: 1px solid #000; border-collapse: collapse;}
+th {background: #cccccc; line-height: 175%; border: 1px solid #ccc; border-collapse: collapse;}
+td {line-height: 175%; border: 1px solid #ccc; border-collapse: collapse;}
+
+table.smalltext {font-size: 0.9em; text-align: left;}
+
+table.borderless, table.borderless td {border: none;}
+
+table.htmltutorial, table.htmltutorial th, table.htmltutorial td {padding: 3px; margin: 5px 0px 15px 0px; border: 1px solid #000; border-collapse: collapse;}
+
+ul {padding: 0px 0px 10px 0px; margin: 0px 0px 0px 40px; text-align: left; line-height: 150%;}
+ol {padding: 0px 0px 10px 0px; margin: 0px 0px 0px 40px; text-align: left; line-height: 150%;}
+
+ul.withbullets {padding: 0px 0px 10px 0px; margin: 0px 0px 0px 20px; list-style: none; text-align: left;}
+ul.withbullets li {background: url(images/bullet.gif) no-repeat top left; padding: 0px 0px 0px 12px; margin: 3px 0px;}
+
+pre, code {padding: 10px 5px; margin: 0px 0px 10px 0px; background: #efefef; border: 1px solid #ccc; font-size: 11px; color: #000; text-align: left;}
+
+.impred {color: #f00; font-weight: bold;}
+
+a {color: #00f; text-decoration: underline;}
+a:link {color: #00f; text-decoration: underline;}
+a:active {color: #f00000;}
+a:visited {color: #00f;}
+a:hover {color: #f00000;}
+
+.leftaligned {float: left; margin: 5px 10px 0px 0px;}
+
+#container {width: 950px; margin: 0 auto; background: #fff; position: relative;}
+#masthead {width: 100%; height: 151px; margin: 0 auto; background: #fff; border-right: 1px solid #666; border-left: 1px solid #666;}
+#maincontent {width: 100%; margin: 0 auto; background: #fff; position: absolute;  top: 151px; border-right: 1px solid #666; border-left: 1px solid #666;}
+
+#leftcolumn {float: left; width: 208px; padding-left: 10px; margin-top: 10px; background: #fff; text-align: left;}
+#rightcolumn {float: right; width: 732px; background: #fff;}
+
+#contentmain {float: left; width: 504px; padding: 0px 15px 0px 15px;}
+#contentright {float: left; width: 183px; padding-left: 5px; margin-top: 10px; text-align: left;}
+
+/* For the HTML pages */
+#contenthtml {width: 500px; padding: 10px; margin-bottom: 150px; text-align: center;}
+
+#footer {background: #eee; border-top: 4px solid #f90; font-size: 0.9em; color: #000;}
+#footer p {color: #666; text-align: center;}
+
+#top {padding: 0.25em 0em; background-color: #efecda; border-bottom: 1px solid #dad1a2; font-size: 0.8em; text-align: center;}
+#logo {float: left; width: 300px; padding: 10px 0px 10px 10px; text-align: left;}
+#logo img {padding: 0px 50px 0px 0px;}
+#topad {float: right; width: 500px; padding: 15px 5px 0px 5px; text-align: center;}
+
+.clr {clear: both;}
+
+#sitenav h5 {display: none;}
+#sitenav ul {padding: 10px 0px 3px 0px; margin: 0px; border-bottom: 8px solid #FF9900; font: 0.95em Arial, Verdana, Sans-serif; text-align: center;}
+#sitenav ul li {list-style: none; display: inline; margin: 0;}
+#sitenav ul li a {padding: 8px 8px 3px 8px; margin-left: 0px; background: #C36D07; border: 1px solid #000; border-bottom: none; font: bold 0.95em Arial, Verdana, Sans-serif; text-decoration: none;}
+#sitenav ul li a:link {background: #C36D07; color: #fff;}
+#sitenav ul li a:visited {background: #C36D07; color: #fff;}
+#sitenav ul li a:link:hover, #sitenav ul li a:visited:hover {color: #fff; background: #f90;}
+#sitenav ul li a#current {padding: 8px 8px 3px 8px; background: #f90; color: #000;}
+
+#sitenav ul li a.blogtab {padding: 21px 20px 3px 20px; margin-left: 0px; background: #C36D07; border: none; font: bold 0.95em Arial, Verdana, Sans-serif; text-decoration: none;}
+#sitenav ul li a:link.blogtab, #sitenav ul li a:visited.blogtab {background: #C36D07 url(images/blog-tab.gif) no-repeat top center; color: #fff;}
+#sitenav ul li a:link:hover.blogtab, #sitenav ul li a:visited:hover.blogtab {color: #fff; background: #f90 url(images/blog-tab-hover.gif) no-repeat top center;}
+
+#sectionnav {width: 198px; padding: 0px; margin: 0px 0px 20px 0px; border: 1px solid #dad1a2; font-family: Arial, Verdana, Sans-serif; color: #000;}
+#sectionnav h3 {padding: 5px; background: #e4dfc2; color: #8f8861;}
+#sectionnav ul {list-style: none; padding: 3px 0px; margin: 0; line-height: 125%;}
+#sectionnav ul li {padding: 5px 10px; margin: 0px; text-align: left;}
+#sectionnav ul li a {width: 100%; padding: 0px; margin: 0; font-size: 1em; color: #00f; text-decoration: none;}
+html>body #sectionnav ul li a {width: auto;}
+#sectionnav ul li a:hover {color: #f00000;}
+
+.pagenav h5 {display: none;}
+.pagenav ul {padding: 5px 5px; margin: 20px 0px; background-color: #fff; font: bold 0.8em Verdana, Arial, Sans-serif; text-align: center;}
+.pagenav ul li {list-style: none; margin: 0; display: inline;}
+.pagenav ul li a {padding: 5px; background: #eee; border: 1px solid #ccc; font: bold 1em Verdana, Arial, Sans-serif; text-decoration: none; color: #999;}
+.pagenav ul li a:link {color: #999;}
+.pagenav ul li a:visited {color: #999;}
+.pagenav ul li a:link:hover, .pagenav ul li a:visited:hover {background: #ccc; border: 1px solid #999; color: #000;}
+.pagenav ul li a.thispage {background: #A0CE41; border: 1px solid #638429; color: #000;}
+
+/* increase top margin to  20px if ad placed on top */
+.recent {width: 178px; padding: 0px; margin: 0px 0px 20px 0px; border: 1px solid #DAD1A2; font: 0.9em Arial, Verdana, Sans-serif; color: #000;}
+.recent h4 {padding: 5px; background: #e4dfc2; color: #846d43;}
+.recent ul {list-style: none; padding: 3px 0px; margin: 0; line-height: 125%;}
+.recent ul li {padding: 5px 10px; margin: 0px; text-align: left;}
+.recent ul li a {width: 100%; padding: 0px; margin: 0; color: #00f; text-decoration: none;}
+html>body .recent ul li a {width: auto;}
+.recent ul li a:hover {color: #f00000;}
+
+.popular {width: 178px; padding: 0px; margin: 20px 0px; border: 1px solid #ccc; font: 0.9em Arial, Verdana, Sans-serif; color: #000;}
+.popular h4 {padding: 5px; background: #ccc; color: #333;}
+.popular ul {list-style: none; padding: 3px 0px; margin: 0; line-height: 125%;}
+.popular ul li {padding: 5px 10px; margin: 0px; text-align: left;}
+.popular ul li a {width: 100%; padding: 0px; margin: 0; color: #00f; text-decoration: none;}
+html>body .popular ul li a {width: auto;}
+.popular ul li a:hover {color: #f00000;}
+
+.related {width: 178px; padding: 0px; margin: 20px 0px; border: 1px solid #bdd28a; font: 0.9em Arial, Verdana, Sans-serif; color: #000;}
+.related h4 {padding: 5px; background: #bdd28a; color: #313e0f;}
+.related ul {list-style: none; padding: 3px 0px; margin: 0; line-height: 125%;}
+.related ul li {padding: 5px 10px; margin: 0px; text-align: left;}
+.related ul li a {width: 100%; padding: 0px; margin: 0; color: #00f; text-decoration: none;}
+html>body .related ul li a {width: auto;}
+.related ul li a:hover {color: #f00000;}
+
+.quicklinks {width: 178px; padding: 0px; margin: 20px 0px; border: 1px solid #e9d955; font: 0.9em Arial, Verdana, Sans-serif; color: #000;}
+.quicklinks h4 {padding: 5px; background: #fff17b; color: #6f5e11;}
+.quicklinks ul {list-style: none; padding: 3px 0px; margin: 0; line-height: 125%;}
+.quicklinks ul li {padding: 5px 10px; margin: 0px; text-align: left;}
+.quicklinks ul li a {width: 100%; padding: 0px; margin: 0; color: #00f; text-decoration: none;}
+html>body .quicklinks ul li a {width: auto;}
+.quicklinks ul li a:hover {color: #f00000;}
+
+/* Much like gas */
+.other {width: 178px; padding: 0px; margin: 5px 0px; font: 0.9em Arial, Verdana, Sans-serif; color: #000;}
+.other h4 {color: #000; text-decoration: underline;}
+.other ul {list-style: none; padding: 0px; margin: 0; line-height: 100%;}
+.other ul li {padding: 2px 6px; margin: 0px; text-align: left;}
+.other ul li a {width: 100%; padding: 0px; margin: 0; color: #00f; text-decoration: underline;}
+
+/* Underlined links with little padding */
+.rightbox {width: 178px; padding: 0px; margin: 0px; border: 1px solid #a0ce41; font: 0.9em Arial, Verdana, Sans-serif; color: #000;}
+.rightbox h4 {padding: 5px; background: #a0ce41; color: #638429;}
+.rightbox ul {list-style: none; padding: 3px 0px; margin: 0; line-height: 100%;}
+.rightbox ul li {padding: 2px 10px; margin: 0px; text-align: left;}
+.rightbox ul li a {width: 100%; padding: 0px; margin: 0; color: #00f; text-decoration: underline;}
+html>body .rightbox ul li a {width: auto;}
+.rightbox ul li a:hover {color: #f00000;}
+
+.pagedetails {margin: 10px 0px 20px 0px; background-color: #fff; border: 2px dotted #f90;}
+.pagedetails p {padding: 0.75em 0.5em; font-size: 0.8em;}
+.pagedetails p.backlink {padding: 20px; text-align: center;}
+ 
+.codeword {font-family: "Courier New", Courier, monospace; font-size: 1.2em;}
+
+.top {width: 475px; height: 13px; margin: 20px 0px 20px 15px; background: #fff url(images/background-backtotop.gif) repeat-x left;}
+.top img {float: right;}
+
+.templatedisplay {text-align: left;}
+
+.hosting_ads {text-align: center;}
+
+/* Can delete the following once all the 301 redirects are done */
+.newerarticle {padding: 15px; background: #333; border: 3px solid #f00; color: #fff; font-weight: bold;}
+.newerarticle a {color: #f00; text-decoration: underline;}
+.newerarticle a:link, .newerarticle a:active, .newerarticle a:visited {color: #f00; text-decoration: underline;}
+.newerarticle a:hover {color: #fff;}
+
+
+/* FORM ELEMENTS */
+.feedback {width: auto; margin: 20px 0px;}
+.feedback p {padding: 0px; margin: 5px 0px; background: #fff; color: #8a754e; font-size: 1.5em; text-align: left;}
+.feedback img {padding: 5px 0px;}
+.feedback form {padding: 0px 0px 15px 0px; margin: 0px; background: #fff; text-align: left;}
+.feedback label {color: #666;}
+.feedback input {width: 200px; padding: 2px 3px; margin: 0px 0px 10px 0px; background: #fff url(images/background-input.jpg) repeat-x top left; border: 1px solid #a5a5a5; font: 1em Arial, Verdana, Sans-serif;}
+.feedback textarea {width: 480px; height: 100px; padding: 2px 3px; margin: 0px 0px 10px 0px; background: #fff url(images/background-input.jpg) repeat-x top left; border: 1px solid #a5a5a5; font: 1em Arial, Verdana, Sans-serif;}
+.feedback .feedbacksubmit {width: 100px; padding: 2px; margin: 10px 0px 0px 0px; background: #98c740; border: 1px solid #739136; color: #fff; font-size: 1.1em;}
+
+/* Visitor Comments */
+.vcomments {width: auto; margin-bottom: 20px;}
+.vcomments p.totalentries {padding: 0px; margin: 30px 0px 20px 0px; background: #fff; color: #8a754e; font-size: 1.5em; font-weight: bold; text-align: left; line-height: 120%;}
+.vcomments p.authorname {padding: 2px 10px; margin: 0px; background: #fff; border: 1px solid #ccc; border-bottom: none; font-size: 1.1em; font-weight: bold; color: #000; text-align: left;}
+.vcomments .vdate {font-weight: normal; font-size: 0.75em; color: #aaa;}
+.vcomments blockquote {padding: 15px 20px 20px 30px; margin: 0px; margin-bottom: 20px; background: #f6f6f6 url(images/background-vcomments.gif) repeat-x top left;  border: 1px solid #ccc; border-top: none; color: #000; text-align: left; line-height: 150%;}
+
+/* BCN */
+.bcn {padding: 10px 0px 0px 0px; text-align: left;}
+.bcn a {padding: 0px; margin: 0; font-size: 0.9em; color: #000; text-decoration: underline;}
+
+/* To change the width of the one below to 175 */
+.luright {width: 180px; padding: 0px; margin: 0px; margin-top: 10px; font-family: Arial, Verdana, Sans-serif; color: #000;}
+
+/* When putting a border - add 5px or whatever as padding-top */
+.adsense_left_lu {width: 193px; padding: 0px 0px 5px 5px;}
+.adsense_top_lu {padding: 5px; border-bottom: 1px solid #dad1a2; text-align: center; background: #fff;}
+.end_of_article {text-align: center;}
+.adsense_top_ad {width: auto; padding: 0px; margin: 5px 0px; background: #fff; border: 1px solid #dad1a2; text-align: left;}
+.adsense_top_ad h3 {padding: 5px; background: #e4dfc2; color: #8f8861; font-size: 1em;}
+.adsense_top_ad .adcontent {padding: 5px 0px 5px 20px; margin: 0px 0px 20px 0px;}
+
+/*
+.adsense_mid_ad {width: auto; padding: 0px; margin: 5px 0px; background: #fff; border: 1px solid #ccc; text-align: left;}
+.adsense_mid_ad h3 {padding: 5px; background: #ccc; color: #666; font-size: 1em;}
+.adsense_mid_ad .aadcontent {padding: 5px 0px 5px 20px; margin: 0px 0px 20px 0px;}
+*/
+.adsense_mid_ad {width: auto; padding: 0px; margin: 5px 0px; background: #fff; border: none; text-align: left;}
+.adsense_mid_ad h3 {padding: 5px; background: #fff; color: #333; font-size: 1em;}
+.adsense_mid_ad .aadcontent {padding: 5px 0px 5px 0px; margin: 0px;}
+
+/* Thumbnail */
+.thumbnail {position: relative; z-index: 0;}
+.thumbnail:hover {z-index: 50;}
+.thumbnail span {position: absolute; background: #fff; padding: 5px; left: -1000px; border: 1px solid gray; visibility: hidden; color: black; font-family: Arial; font-size: 12px; text-decoration: none;}
+.thumbnail span img {border-width: 0; padding: 2px;}
+.thumbnail:hover span {visibility: visible; top: 0px; left: 20px;}
+
+/* Templates Tab - Top Right */
+#templates-bt {font: bold 0.95em Arial, Verdana, Sans-serif; text-align: center; margin: 0px 0px 6px 0px; padding: 0px;}
+#templates-bt a {width: 178px; color: #fff; text-decoration: none; background: #c36d07; border: 1px solid #000; display: block; margin: 0px; padding: 6px 0px 6px 0px;}
+#templates-bt a:hover {background: #ff9900;}
+
+/* icons */
+.sectionicon {width: 180px; font: bold 11px Arial, sans-serif; padding: 0px; margin-bottom: 15px;}
+.sectionicon img {padding: 1px 0px; margin: 0x;}
+.sectioniconleft {float: left; width: 88px; padding: 0px 2px 0px 0px; text-align: center; margin-top: 6px;}
+.sectioniconright {float: right; width: 88px; padding: 0px 0px 0px 2px; text-align: center; margin-top: 6px;}
+.sectionicon a {color: #00f; text-decoration: none; font: bold 11px Arial, sans-serif;}
+.sectionicon a:active {color: #f00000; text-decoration: none;}
+.sectionicon a:visited {color: #00f; text-decoration: none;}
+.sectionicon a:hover {color: #f00000; text-decoration: none;}
+
+.social-links {width: 176px; padding: 0px 2px; margin: 10px 0px 15px 0px;}
+.social-links img {padding: 0px 7px;}
+
+.gads {width: auto; padding: 10px 0px; margin: 5px 0px 10px 0px; border-bottom: 1px solid #efebd6; border-top: 1px solid #efebd6; text-align: left;}
+.ga1 {padding: 5px 0px;}
+.gads .abg a {display: block; margin: 0px 0px 10px 0px; font-size: 11px; color: #000; text-decoration: none;}
+.gads .al2 {font-size: 12px;}
+.gads .albl a {font-weight: bold; font-size: 16px; color: #0000ff;}
+.gads .aubl a {font-size: 14px; text-decoration: none;}
+.gads .albm a {font-weight: bold; font-size: 14px; color: #0000ff;}
+.gads .aubm a {font-size: 12px; text-decoration: none;}
+.gads .albs a {font-weight: bold; font-size: 14px; color: #0000ff; text-decoration: none;}
+.gads .aubs a {font-size: 12px; text-decoration: none;}
+.gads .alol a {font-weight: bold; font-size: 16px; color: #ff6600;}
+.gads .auol a {font-size: 14px; text-decoration: none; color: #ff6600;}
+.gads .alom a {font-weight: bold; font-size: 14px; color: #ff6600;}
+.gads .auom a {font-size: 12px; text-decoration: none; color: #ff6600;}
+.gads .alos a {font-weight: bold; font-size: 14px; color: #ff6600; text-decoration: none;}
+.gads .auos a {font-size: 12px; text-decoration: none; color: #ff6600;}
+
+#plusone {border-top: 1px solid #efebd6; padding: 10px 0px; font-size: 22px; color: #999; font-weight: bold; text-align: center;}
+
+.pm {font-style:italic;}
+
+.mainicons img {padding: 10px; margin: 0px;}
+.mainicons img.st {padding: 10px 10px 10px 4px; margin: 0px;}
+.mainicons img.end {padding: 10px 4px 10px 10px; margin: 0px;}

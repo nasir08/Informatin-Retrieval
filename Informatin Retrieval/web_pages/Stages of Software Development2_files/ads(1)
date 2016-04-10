@@ -1,0 +1,53 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=BQ_gdpZXGT8P5I4uW0AWhj62VA5-cz_QCr4Lp_zXAjbcB4JgXEAEYASDU2agEKAM4AFCA09Xv-P____8BYLe8g4X0MKABra-A5wOyARhzeWx2M3JibGFkZS5odWJwYWdlcy5jb226AQo1MjB4MjAwX2pzyAEB2gFCaHR0cDovL3N5bHYzcmJsYWRlLmh1YnBhZ2VzLmNvbS9odWIvU3RhZ2VzX29mX1NvZnR3YXJlX0RldmVsb3BtZW50gAIBqAMB6AMf6APSAvUDAgAAhPUDAAAAEIgGAQ&amp;num=1&amp;cid=5Gg21Z7DxjmHgVXxivevwUu7&amp;sig=AOD64_3Y4PwzDwG-4fz0lwop0HKP7rz39g&amp;client=ca-pub-6958755572607374&amp;adurl=http://www.bookmybootcamp.com/bootcamp/Microsoft-VB.net-bootcamp"; 
+google_ad.visible_url = "www.bookmybootcamp.com/VB.net-India"; 
+google_ad.line1 = "Microsoft VB.net Training"; 
+google_ad.line2 = "Incl Exam/Hotel/Meals/Training More"; 
+google_ad.line3 = "95% Pass Rate. 50% Cost. Book Now."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=Bkqs5pZXGT8P5I4uW0AWhj62VA6azj-YB1oKvihrWuLutefCTCRACGAIg1NmoBCgDOABQsZHZ7gdgt7yDhfQwoAHijOP2A7IBGHN5bHYzcmJsYWRlLmh1YnBhZ2VzLmNvbboBCjUyMHgyMDBfanPIAQHaAUJodHRwOi8vc3lsdjNyYmxhZGUuaHVicGFnZXMuY29tL2h1Yi9TdGFnZXNfb2ZfU29mdHdhcmVfRGV2ZWxvcG1lbnT4AQGAAgHAAgmoAwHoAx_oA9IC9QMCAACE9QMAAAAQiAYB&amp;num=2&amp;cid=5Gg21Z7DxjmHgVXxivevwUu7&amp;sig=AOD64_1_SUlCAIWBtdtAeZoFpkGPZQ7I6g&amp;client=ca-pub-6958755572607374&amp;adurl=http://www.grammarly.com/%3Fq%3Dgrammar"; 
+google_ad.visible_url = "www.Grammarly.com/Grammar_Checker"; 
+google_ad.line1 = "Instant Grammar Checker"; 
+google_ad.line2 = "Correct All Grammar Errors And"; 
+google_ad.line3 = "Enhance Your Writing. Try Now!"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=B3wXnpZXGT8P5I4uW0AWhj62VA7iWqGKCldbCIMCNtwGQvwUQAxgDINTZqAQoAzgAUILzv5z9_____wFgt7yDhfQwoAHC4bv_A7IBGHN5bHYzcmJsYWRlLmh1YnBhZ2VzLmNvbboBCjUyMHgyMDBfanPIAQHaAUJodHRwOi8vc3lsdjNyYmxhZGUuaHVicGFnZXMuY29tL2h1Yi9TdGFnZXNfb2ZfU29mdHdhcmVfRGV2ZWxvcG1lbnSAAgGoAwHoAx_oA9IC9QMCAACE9QMAAAAQiAYB&amp;num=3&amp;cid=5Gg21Z7DxjmHgVXxivevwUu7&amp;sig=AOD64_3TYr_-rNtWyealQsXkSWhW6M4D0w&amp;client=ca-pub-6958755572607374&amp;adurl=http://www.sparxsystems.com/platforms/mda_tool.html%3Fsource%3Dgoogle%26campaign%3D3%26group%3D1%26creative%3D2%26wcw%3Dgoogle"; 
+google_ad.visible_url = "www.sparxsystems.com"; 
+google_ad.line1 = "Software Development UML"; 
+google_ad.line2 = "Model with Enterprise Architect"; 
+google_ad.line3 = "Download your trial version Today!"; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://sylv3rblade.hubpages.com/hub/Stages_of_Software_Development%26hl%3Den%26client%3Dca-pub-6958755572607374%26adU%3Dwww.bookmybootcamp.com/VB.net-India%26adT%3DMicrosoft%2BVB.net%2BTraining%26adU%3Dwww.Grammarly.com/Grammar_Checker%26adT%3DInstant%2BGrammar%2BChecker%26adU%3Dwww.sparxsystems.com%26adT%3DSoftware%2BDevelopment%2BUML%26gl%3DNG\x26usg\x3dAFQjCNFg1t-sGpjx26cthLvH_twOFIM10Q";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

@@ -1,0 +1,21 @@
+.c-slider {width: 100%; text-align: center; margin: 8px 0px 12px 0px; padding: 7px 0px 0px 0px; border: 1px solid #dad1a2; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background: #e9e7db; background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e9e7db), to(#e4dfc2)); background: -webkit-linear-gradient(#e9e7db, #e4dfc2); background: -moz-linear-gradient(#e9e7db, #e4dfc2); background: -ms-linear-gradient(#e9e7db, #e4dfc2); background: -o-linear-gradient(#e9e7db, #e4dfc2); background: linear-gradient(#e9e7db, #e4dfc2); -pie-background: linear-gradient(#e9e7db, #e4dfc2);}
+
+.svw {background: #fff; margin: 0px; padding: 0px;}
+.svw ul{position: relative; left: -999em; margin: 0px; padding: 0px;}
+
+.stripViewer {position: relative; overflow: hidden; border: 1px solid #bebe98; margin: 0 auto; padding: 0px;}
+
+.stripViewer ul {position: relative; left: 0; top: 0; list-style-type: none; margin: 0 auto; padding: 0px;}
+
+.stripViewer ul li {float:left; width: 488px; margin: 0px; padding: 0px; list-style: none; background: #fff;}
+
+.stripTransmitter {overflow: auto; width: 1%; margin: 0px; padding: 7px 2px 8px 2px;}
+.stripTransmitter ul {position: relative; list-style-type: none; margin: 0px; padding: 0px; text-align: center;}
+.stripTransmitter ul li{display: inline; /*float:left; */margin: 0 1px 1px 0; list-style: none;}
+.stripTransmitter a{color: #898667; margin: 0px; padding: 2px 5px 2px 5px; font: normal 12px Arial; text-align: center; line-height: 20px; text-decoration: none; text-shadow: #fffdf1 1px 0px 0px;}
+.stripTransmitter a:hover {background: #d2ccab; padding: 2px 4px 2px 4px; border: 1px solid #d2ccab; background: -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
+.stripTransmitter a.current, .stripTransmitter a.current:hover {padding: 2px 4px 2px 4px; color: #fff; background: #9ec248; background: -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; color: #fff; border: 1px solid #74a33e; text-decoration: none; text-shadow: #74932a 1px 0px 0px;}
+
+.tooltip {font-size: 0px; display: none; padding: 0px; background: none; border: none;}
+
+img.ldrgif {background: none; text-align: center; margin-top: 130px;}

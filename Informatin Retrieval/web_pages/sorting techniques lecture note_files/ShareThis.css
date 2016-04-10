@@ -1,0 +1,30 @@
+﻿.share_this
+{
+	float:right;
+    border : 1px solid #CDCDCD;	
+    border-bottom-width: 0px;
+    border-bottom-style:none;
+    background-color:#F2F0EC;
+    margin:8px 8px 0 0;
+    padding: 3px 3px 5px;
+}
+
+.div_images_tab
+{
+	vertical-align:middle;
+	float:left;
+	padding-left:3px;
+    padding-right:3px;
+    padding-bottom:1px;
+	border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #FFFFFF;
+    color:#192B52;
+}
+
+.div_images_tab img
+{
+	padding-left:2px;
+	cursor:pointer;
+	vertical-align:middle;
+}

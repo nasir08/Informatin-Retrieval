@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx -->
+<html lang="en-US" dir="ltr"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./sorting techniques lecture note_files/widget76.css" media="all"><meta charset="utf-8"><title>
+	sorting techniques lecture note
+</title>
+    <meta name="description" content="Get" free="" computer="" science="" lecture="" notes="" on="" cramster.="" get="" help="" studying="" data="" structures="" with="" our="" resource.="">
+    <style type="text/css">
+        
+        .resource_image_outline
+        {
+            outline:none;
+        }
+    
+    #modalPage{display: none;position: absolute;width: 100%;height: 100%;top: 0px;left: 0px;}            
+
+    #modalBackgroundAbuse {filter: Alpha(Opacity=60);-moz-opacity:0.6; opacity: 0.6;
+                            width: 100%; height: 100%;background-color: #B4B4B4;position: absolute;
+                            z-index: 500;top: 0px;left: 0px;} 
+
+    #modalContainerAbuse{position: absolute;left: 400px;top: 200px;z-index: 501;}
+
+		div#content_textbook div#info_content
+		{
+			float:none;
+		}
+
+		div#content_textbook div
+		{
+			float:left;
+		}
+             
+        #ModalPageMoreHelp{display: none;position: absolute;width: 100%;height: 100%;top: 0px;left: 0px;}            
+
+        #modalBackgroundMoreHelp {filter: Alpha(Opacity=60);-moz-opacity:0.6; opacity: 0.6;
+                                width: 100%; height: 100%;background-color: #B4B4B4;position: absolute;
+                                z-index: 500;top: 0px;left: 0px;} 
+
+        #modalContainerMoreHelp{position: absolute;left: 340px;top: 200px;z-index: 501;}
+        
+        .row_wiki {padding:8px;}
+        .standard_list_problem {width:433px;}
+        .standard_list_problem .row {padding: 8px 22px 8px 35px;}
+        .standard_list .row {padding: 8px 22px 8px 35px;}
+        .standard_list .tagrow {padding: 5px 10px 5px 10px;}
+        .dropdownlist_fixed_width
+        {
+        max-width:400px; 
+        width:expression(document.body.clientWidth > 400? "400px": "auto" ); 
+        }
+        
+    #ModalPageSplash
+    {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    #modalBackgroundSplash
+    {
+        filter: Alpha(Opacity=60);
+        -moz-opacity: 0.6;
+        opacity: 0.6;
+        width: 100%;
+        height: 100%;
+        background-color: #B4B4B4;
+        position: absolute;
+        z-index: 500;
+        top: 0px;
+        left: 0px;
+    }
+    #modalContainerSplash
+    {
+        position: absolute;
+        z-index: 501;
+    }
+    .hide
+    {
+     display:none;
+    }
+   .div_points_line
+    {
+    font-family: Arial;
+    background:transparent url(http://s3.amazonaws.com/cramster-image/Bullet/small_bullet.gif) no-repeat scroll 0 20%;
+    font-size:13px;
+    line-height:16px;
+    padding-bottom:3px;
+    padding-left:21px;
+    }
+	</style>
+	<script async="" type="text/javascript" src="./sorting techniques lecture note_files/gpt.js"></script><script type="text/javascript">
+	    function ShowQuickResult() {
+	        var TagId = document.getElementById('wucMoreHelp_txtTagId').value;
+	        var TagName = document.getElementById('wucMoreHelp_txtTagName').value;
+	        if (TagId > 0) {
+	            ShowCategories(TagId, TagName);
+	        }
+	    }
+
+	    function TabStripResource_onTabSelect(sender, eventArgs) {
+	        var tabText = eventArgs.get_tab().get_text();
+	        if (tabText == "ASK ON Q&A BOARD") {
+	            return false;
+	        }
+	    }
+
+	    function CallbackComplete(sender, args) {
+	        hideModal();
+
+	        var divAbuse;
+	        var LinkButton;
+	        var AbuseCountLabel;
+
+	        if (GridClientId == '') {
+	            divAbuse = document.getElementById('divFlaggedAbuse');
+	            if (divAbuse == null)
+	                divAbuse = document.getElementById('divFlaggedChatAbuse');
+
+	            divAbuse.style.display = "inline";
+
+	            LinkButton = document.getElementById('lnkAbuse');
+	            if (LinkButton == null)
+	                LinkButton = document.getElementById('lnkChatAbuse');
+
+	            LinkButton.style.display = 'none';
+
+	            AbuseCountLabel = document.getElementById('lblAbuseCount');
+	            if (AbuseCountLabel == null)
+	                AbuseCountLabel = document.getElementById('lblChatAbuseCount');
+
+	            if (AbuseCountLabel.innerHTML == '')
+	                AbuseCountLabel.innerHTML = '1';
+	            else
+	                AbuseCountLabel.innerHTML = parseInt(AbuseCountLabel.innerHTML) + 1;
+
+	        }
+	        else {
+	            divAbuse = document.getElementById(GridClientId + '_divFlaggedAbuse');
+	            if (divAbuse == null)
+	                divAbuse = document.getElementById(GridClientId + '_divFlaggedChatAbuse');
+
+	            divAbuse.style.display = "inline";
+
+	            LinkButton = document.getElementById(GridClientId + '_lnkAbuse');
+	            if (LinkButton == null)
+	                LinkButton = document.getElementById(GridClientId + '_lnkChatAbuse');
+
+	            LinkButton.style.display = 'none';
+
+	            AbuseCountLabel = document.getElementById(GridClientId + '_lblAbuseCount');
+	            if (AbuseCountLabel == null)
+	                AbuseCountLabel = document.getElementById(GridClientId + '_lblChatAbuseCount');
+
+	            if (AbuseCountLabel.innerHTML == '')
+	                AbuseCountLabel.innerHTML = '1';
+	            else
+	                AbuseCountLabel.innerHTML = parseInt(AbuseCountLabel.innerHTML) + 1;
+
+	        }
+	    }
+ 
+	</script>
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()])</script><link type="text/css" rel="stylesheet" href="./sorting techniques lecture note_files/MasterNew.css">
+<script type="text/javascript" src="./sorting techniques lecture note_files/doubleclick.js"></script>
+<!--[if lte IE 8]><link href="/Style/LTEIE8.css" rel="stylesheet" media="all" /><![endif]-->
+<!--[if lte IE 7]><link href="/Style/LTEIE7.css" rel="stylesheet" media="all" /><![endif]-->
+<!--[if lte IE 6]><link href="/Style/LTEIE6.css" rel="stylesheet" media="all" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="./sorting techniques lecture note_files/AnswerBoard.css">
+<link rel="stylesheet" type="text/css" href="./sorting techniques lecture note_files/MyCramster.css">
+<link rel="stylesheet" type="text/css" href="./sorting techniques lecture note_files/Resource.css">
+<link rel="stylesheet" type="text/css" href="./sorting techniques lecture note_files/ShareThis.css">
+<link rel="stylesheet" type="text/css" href="./sorting techniques lecture note_files/wucRatePopup.css">
+<script async="" type="text/javascript" src="./sorting techniques lecture note_files/google_ads_gpt.js"></script><link href="./sorting techniques lecture note_files/sharethis.f8aeb821aa52b7af5ae4d3675118594c.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./sorting techniques lecture note_files/init.js" id="undefined"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/document_iterator.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/find_proxy.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/get_html_text.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/global_constants.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/name_injection_builder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/number_injection_builder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/string_finder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/change_sink.js"></script><meta name="document_iterator.js"><meta name="find_proxy.js"><meta name="get_html_text.js"><meta name="global_constants.js"><meta name="name_injection_builder.js"><meta name="number_injection_builder.js"><meta name="string_finder.js"><meta name="change_sink.js"><script async="" type="text/javascript" src="./sorting techniques lecture note_files/enable.js" id="_GPL_a20c9"></script><script type="text/javascript" id="detect1" src="./sorting techniques lecture note_files/saved_resource"></script><script type="text/javascript" onload="" onreadystatechange="" onerror="" src="./sorting techniques lecture note_files/componentConduit.js"></script><style type="text/css" media="screen"></style><link class="undefined" style="display: block; " type="text/css" rel="stylesheet" href="./sorting techniques lecture note_files/mclassic.css" media="screen"><style type="text/css" media="screen"></style><script type="text/javascript" charset="iso-8859-1" src="./sorting techniques lecture note_files/mTag.js"></script><script async="true" type="text/javascript" src="./sorting techniques lecture note_files/roundtrip.js"></script><script async="true" type="text/javascript" src="http://d.adroll.com/pixel/IKU2RCERLZBBHBHHCKU7E5/RBGWD3DFRRGUJOIEZQNBBR?pv=32517701433.971523&cookie=IKU2RCERLZBBHBHHCKU7E5%3A12%7CRBGWD3DFRRGUJOIEZQNBBR%3A12%7CHTD6DP2UPJABRAHA34OYU6%3A12&keyw="></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagStartPage&lpCallId=937871812842-326114182826&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true&PV%21visitorActive=1&VV%21membership_status=&title=sorting%20techniques%20lecture%20note&cookie=UrlReferrer%3Dlanding_page%3D%252fsorting-techniques-lecture-note-r30-22164.aspx%26link_referrer%3D%26link_source%3D%26link_medium%3D%26link_campaign%3D%26link_campaign_content%3D%26link_keyword%3D%26link_keyword_rank%3D0%26link_date_clicked%3D3%252f27%252f2012%2B4%253a09%253a22%2BPM%3B%20ASP.NET_SessionId%3D2dxbyns1hd03adyluiqhldzu%3B%20__utma%3D179772667.1518447661.1332489309.1332681826.1332889780.4%3B%20__utmb%3D179772667.4.10.1332889780%3B%20__utmc%3D179772667%3B%20__utmz%3D179772667.1332489309.1.1.utmcsr%3Dgoogle%7Cutmccn%3D%28organic%29%7Cutmcmd%3Dorganic%7Cutmctr%3Dsorting%2520techniques%3B%20__unam%3Db9fabfa-1363e8d8cb7-5b6aeb1-8%3B%20__ar_v4%3DHTD6DP2UPJABRAHA34OYU6%253A20120322%253A12%257CRBGWD3DFRRGUJOIEZQNBBR%253A20120322%253A12%257CIKU2RCERLZBBHBHHCKU7E5%253A20120322%253A12%3B%20_chartbeat2%3Du465xqqj0gi73dvm.1332489530314.1332889844543.00000000000001" id="lpScriptId937871812842-326114182826"></script><div style="width: 1px; height: 1px; display: inline; "><img height="1" width="1" style="border-style:none;" alt="" src="./sorting techniques lecture note_files/saved_resource(1)">
+
+<img border="0" hspace="0" vspace="0" width="1" height="1" src="http://bstats.adbrite.com/click/bstats.gif?kid=46594677&bapid=8706&uid=680833">
+
+<img src="http://ib.adnxs.com/seg?add=68252&t=2" width="1" height="1">
+
+<img alt="." src="./sorting techniques lecture note_files/img">
+
+<img src="./sorting techniques lecture note_files/lb" width="1" height="1" border="0">
+
+<img height="1" width="1" style="border-style:none;" alt="" src="./sorting techniques lecture note_files/saved_resource(2)">
+<img src="http://ad.yieldmanager.com/pixel?adv=274138&code=HTD6DP2UPJABRAHA34OYU6_n&t=2" width="1" height="1">
+
+<img src="http://ib.adnxs.com/seg?add=68252&t=2" width="1" height="1"><img src="http://d.adroll.com/check/IKU2RCERLZBBHBHHCKU7E5/RBGWD3DFRRGUJOIEZQNBBR/HTD6DP2UPJABRAHA34OYU6" width="1" height="1" border="0"></div><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=274343496654-473228187067&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId274343496654-473228187067"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=274343496654-473228187067&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId274343496654-473228187067"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=274343496654-473228187067&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId274343496654-473228187067"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=297847936162-289953842060&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId297847936162-289953842060"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=297847936162-289953842060&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId297847936162-289953842060"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=297847936162-289953842060&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId297847936162-289953842060"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=752954369643-959665890084&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId752954369643-959665890084"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=752954369643-959665890084&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId752954369643-959665890084"></script><script type="text/javascript" charset="ISO-8859-1" src="https://server.iad.liveperson.net/hc/20688223/?&site=20688223&cmd=mTagInPage&lpCallId=752954369643-959665890084&protV=20&lpjson=1&page=http%3A//www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx&id=3988901928&javaSupport=false&visitorStatus=INSITE_STATUS&activePlugin=none&cobrowse=true" id="lpScriptId752954369643-959665890084"></script></head>
+<body class="cramster_1 is_webkit is_chrome" id="the_page" onclick="if(SHARETHIS.buttonClicked==false){SHARETHIS.stopClosing=false;SHARETHIS.openDuration=0;stClose(100);}"><div id="predictad_div" class="predictad" style="display: none; left: 990px; top: 101px; width: 170px; "></div><div style="position: absolute; "><object id="_GPL_swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="1" height="1"><param name="movie" value="http://d1nfmblh2wz0fd.cloudfront.net/it/swf/f.swf"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="flashVars" value="keywordsURL=http%3A//www.textsrv.com/kwd.php%3Fc%3DTkc6MDU6TGFnb3M6d3d3LmNyYW1zdGVyLmNvbTp6LTEwNjMtMTQ3Mjk%253D%26cb%3D_GPL.items.a652c.displayKeywords&amp;keywords=sorting%20techniques%7Cshare%7Cresource%7Cask%20on%7Cboard%7Ccomments%7Cdata%20structure%20lectures%7Cshared%20by%7Crated%7Cyou%20must%7Cto%20rate%7C220%7C189%7Ccramster%7Cthe%20leading%20provider%20of%20online%20homework%20help%20for%20college%20and%20high%20school%20students%7Cget%20homework%20help%20and%20answers%20to%20your%20toughest%20questions%20in%20math%7Calgebra%7Cphysics%7Cchemistry%7Ccalculus%7Cscience%7Cengineering%7Caccounting%7Cenglish%7Cwriting%20help%7Cbusiness%7Chumanities%20and%20more%7Cmaster%20your%20homework%20assignments%20with%20our%20step-by-step%20solutions%20to%20more%20than%20500%20textbooks%7Cif%20we%7Csupport%20your%20textbook%7Cworry%7Cyou%20can%20ask%20any%20homework%20question%20and%20get%20expert%20homework%20help%20in%20as%20little%20as%20two%20hours%7Cour%20extensive%20online%20study%20community%7Cmade%20up%20of%20college%20and%20high%20school%20students%7Cteachers%7Cprofessors%7Cparents%20and%20subject%20enthusiasts%20who%20contribute%20to%20our%20vast%20collection%20of%20study%20resources%7Ctextbook%20solutions%7Cstudy%20guides%7Cpractice%20tests%7Cpractice%20problems%7Clecture%20notes%7Cequation%20sheets%20and%20more%7Cyour%20homework%20will%20never%20be%20the%20same%7Ccom%7Cnot%20affiliated%20with%20any%20publisher%7Cbook%20covers%7Ctitle%20and%20author%20names%20appear%20for%20reference%20only%7Ccopyright%7C2012%7Cinc"><!--[if !IE]> <--> <object id="_GPL_swf" data="http://d1nfmblh2wz0fd.cloudfront.net/it/swf/f.swf" width="1" height="1" type="application/x-shockwave-flash"><param name="quality" value="high"><param name="wmode" value="transparent"><param name="allowScriptAccess" value="always"><param name="flashVars" value="keywordsURL=http%3A//www.textsrv.com/kwd.php%3Fc%3DTkc6MDU6TGFnb3M6d3d3LmNyYW1zdGVyLmNvbTp6LTEwNjMtMTQ3Mjk%253D%26cb%3D_GPL.items.a652c.displayKeywords&amp;keywords=sorting%20techniques%7Cshare%7Cresource%7Cask%20on%7Cboard%7Ccomments%7Cdata%20structure%20lectures%7Cshared%20by%7Crated%7Cyou%20must%7Cto%20rate%7C220%7C189%7Ccramster%7Cthe%20leading%20provider%20of%20online%20homework%20help%20for%20college%20and%20high%20school%20students%7Cget%20homework%20help%20and%20answers%20to%20your%20toughest%20questions%20in%20math%7Calgebra%7Cphysics%7Cchemistry%7Ccalculus%7Cscience%7Cengineering%7Caccounting%7Cenglish%7Cwriting%20help%7Cbusiness%7Chumanities%20and%20more%7Cmaster%20your%20homework%20assignments%20with%20our%20step-by-step%20solutions%20to%20more%20than%20500%20textbooks%7Cif%20we%7Csupport%20your%20textbook%7Cworry%7Cyou%20can%20ask%20any%20homework%20question%20and%20get%20expert%20homework%20help%20in%20as%20little%20as%20two%20hours%7Cour%20extensive%20online%20study%20community%7Cmade%20up%20of%20college%20and%20high%20school%20students%7Cteachers%7Cprofessors%7Cparents%20and%20subject%20enthusiasts%20who%20contribute%20to%20our%20vast%20collection%20of%20study%20resources%7Ctextbook%20solutions%7Cstudy%20guides%7Cpractice%20tests%7Cpractice%20problems%7Clecture%20notes%7Cequation%20sheets%20and%20more%7Cyour%20homework%20will%20never%20be%20the%20same%7Ccom%7Cnot%20affiliated%20with%20any%20publisher%7Cbook%20covers%7Ctitle%20and%20author%20names%20appear%20for%20reference%20only%7Ccopyright%7C2012%7Cinc"></object> <!----> <!--[endif]----> </object></div><div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000; " id="_atssh"><iframe id="_atssh44" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; left: 0px; top: 0px; " src="./sorting techniques lecture note_files/sh74.htm"></iframe></div>
+    <form name="form1" method="post" action="" id="form1"><span><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div></span><span><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div><div style="position: absolute; z-index: -999; left: 0px; top: 0px; "></div></span>
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type="text/javascript">var bIsOnline = false;</script><script type="text/javascript">
+var nTemplateBundleId = 115797552983;
+var nShowUnreadCount = 0;
+var nStudentId = 0;
+var sRootWeb = 'http://www.cramster.com/';
+var sRootWebSecure = 'https://www.cramster.com/';
+var nChatCheckPulseTimeInSeconds = 10000;
+var MAX_WITHOUT_ACTIVITY = 120;
+</script>
+
+    
+
+<div id="divHeaderWrap" class="header_wrapper">
+    <div id="divHeader" class="header">
+        <div class="clearfix">
+            <div id="divTopLogo" class="logo flush_left">
+                <a href="http://www.cramster.com/" title="home">
+                    <img class="big_logo replaced" src="./sorting techniques lecture note_files/blank.gif" alt="Cramster.com - Homework Solutions, Lecture Notes, Exams, and Free Online Homework Help">
+                </a>
+            </div>
+        </div>
+        <div class="login_logout clearfix">
+            
+            <div id="wucTop1_PanelLoginOuter" class="login">
+	
+                <ul id="divInner" class="row_menu clearfix">
+                    <li id="divChatPanelContainer" class="clearfix">
+                        <!-- #divPanelChat -->
+                    </li><!-- #divChatPanelContainer -->
+                    <li id="divLoginLogout" class="clearfix">
+                        <div id="wucTop1_PanelLogIn" class="flush_left">
+		
+                            <a href="https://www.cramster.com/my-cramster/login.aspx?quick_redirect=1&page=sorting-techniques-lecture-note-r30-22165.aspx%3Fquick_redirect%3D1" class="login_link" rel="nofollow">Login</a>
+                            &nbsp;|&nbsp;
+                            <a href="https://www.cramster.com/sign-up/barrier" class="join_link">Join Now!</a>
+                        
+	</div>
+                        
+                    </li><!-- #divLoginLogout -->
+                </ul><!-- #divInner -->
+            
+</div><!-- #PanelLoginOuter -->
+        </div><!-- .login_logout -->
+        <!-- .navigation -->
+        
+        <div id="wucTop1_panelHome" class="navigation">
+	
+            <ul class="logged_out row_menu clearfix">
+                <li id="wucTop1_Li1" class="tab-home tab">
+                    <a class="" href="http://www.cramster.com/">
+                        home</a></li>
+                <li class="tab-textbook-help tab">
+                    <a class="" href="http://www.cramster.com/textbook-help/">
+                        textbook help</a></li>
+                <li class="tab-homework-help tab">
+                    <a class="" href="http://www.cramster.com/homework-help/">
+                        homework help</a></li>
+                
+                    <li class="tab-cramsterpedia tab">
+                        <a class="" href="http://www.cramster.com/definitions/">
+                            cramsterpedia</a></li>
+                
+            </ul>
+        
+</div><!-- .navigation -->
+
+        
+        <div class="search">
+            <input type="text" id="txtSearch" class="contained" placeholder="Search" value="" data-search-url="http://www.cramster.com/search/?searchTerms=" widdit="on" autocomplete="off">
+        </div>
+        
+            <div id="divScanAlert" class="header_badge">
+                <a href="https://www.mcafeesecure.com/RatingVerify?ref=www.cramster.com" title="Learn more" target="_blank" rel="nofollow">
+                    <img src="./sorting techniques lecture note_files/12.gif" alt="McAfee Secure sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams">
+                </a>
+            </div>
+            <div id="divLpChat" class="header_badge">
+                <a id="_lpChatBtn1" href="https://server.iad.liveperson.net/hc/20688223/?cmd=file&file=visitorWantsToChat&site=20688223&byhref=1&imageUrl=https://cramster-style-prod.s3.amazonaws.com/images/section/Chat/" title="Chat with Live Customer Service" target="chat20688223" onclick="lpButtonCTTUrl = &#39;https://server.iad.liveperson.net/hc/20688223/?cmd=file&amp;file=visitorWantsToChat&amp;site=20688223&amp;imageUrl=https://cramster-style-prod.s3.amazonaws.com/images/section/Chat/&amp;referrer=&#39;+escape(document.location); 
+                        lpButtonCTTUrl = (typeof(lpAppendVisitorCookies) != &#39;undefined&#39; ? lpAppendVisitorCookies(lpButtonCTTUrl) : lpButtonCTTUrl); 
+                        lpButtonCTTUrl = ((typeof(lpMTag)!=&#39;undefined&#39; &amp;&amp; typeof(lpMTag.addFirstPartyCookies)!=&#39;undefined&#39;)?lpMTag.addFirstPartyCookies(lpButtonCTTUrl):lpButtonCTTUrl);
+                        window.open(lpButtonCTTUrl,&#39;chat20688223&#39;,&#39;width=472,height=320,resizable=yes&#39;);return false;">
+                    <img src="./sorting techniques lecture note_files/saved_resource(3)" name="hcIcon">
+                </a>
+            </div>
+        
+    </div><!-- .header --> 
+</div><!-- .header_wrapper -->
+<div id="main" class="page_body_container">
+    
+
+<!-- MoreHelp POPUP CODE     -->
+<div id="wucRatePopup_ModalPageSplash" style="display: none;" class="clearfix">
+    <div id="modalBackgroundSplash">
+    </div>
+    <div id="modalContainerSplash">
+        <div id="modalSplash" class="modal splash_popup clearfix" style="height: 198px; padding: 10px;
+            width: 400px;background:white none repeat scroll 0 50%;border:5px solid #243E75;line-height:18px;">
+            <div style="float:right;">
+            <img id="imgRateClose" src="./sorting techniques lecture note_files/close.gif" alt="close" style="cursor:pointer;">
+            </div>
+            <div class="div_heading1">
+                Please Rate!</div>
+            <div class="div_heading2">
+                You have <span class="spanHeading">
+                    <label id="lblUnratedCount" for="">
+                        </label> unrated answers </span> to your questions
+            </div>
+            <div class="div_points">
+                
+                    <div style="padding-top:3px;" class="div_points_line">You will not be able to post questions if you have more than one unrated answer.</div>
+                    
+                    <div class="div_points_line">Rating answers rewards members for their time and effort.</div>
+                
+            </div>
+            <div class="div_image">
+                <img id="btnRatePosts" src="./sorting techniques lecture note_files/btn_rate_posts.gif" style="cursor: pointer" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">nUnratedCount='0';nStudentId='0';</script>
+
+    
+ <link rel="stylesheet" type="text/css" href="./sorting techniques lecture note_files/Tour.css">   
+
+  <!--[if IE]>
+<link rel="stylesheet" href="/style/ie.css" type="text/css" media="screen" />
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" href="/style/ie6.css" type="text/css" media="screen" />
+<![endif]-->
+  <style type="text/css">
+        
+        #ModalPageMoreHelp{display: none;position: absolute;width: 100%;height: 100%;top: 0px;left: 0px;}            
+
+        #modalBackgroundMoreHelp {filter: Alpha(Opacity=60);-moz-opacity:0.6; opacity: 0.6;
+                                width: 100%; height: 100%;background-color: #B4B4B4;position: absolute;
+                                z-index: 500;top: 0px;left: 0px;} 
+
+        #modalContainerMoreHelp{position: absolute;left: 340px;top: 200px;z-index: 501;}
+        
+        .row_wiki {padding:8px;}
+        .standard_list_problem {width:433px;}
+        .standard_list_problem .row {padding: 8px 22px 8px 35px;}
+        .standard_list .row {padding: 8px 22px 8px 35px;}
+        .standard_list .tagrow {padding: 5px 10px 5px 10px;}
+        .dropdownlist_fixed_width
+        {
+        max-width:200px; 
+        width:expression(document.body.clientWidth > 200? "200px": "auto" ); 
+        }
+        
+    
+    </style>
+       
+  <script language="javascript" type="text/javascript">
+     var ie=(document.all);
+    
+     
+    // called on Tag ListBox Change Event 
+    function showCategory(param)    
+    {
+        TagName = param.options[param.selectedIndex].text;
+        TagId = param.value;
+        document.getElementById("tagnamespan").innerHTML=TagName + ".";
+        CallBackCategory.Callback(TagId,TagName);    
+    }
+    
+     
+     
+
+    // shows RadionButton Tags - called on Previous button click
+    function ShowTags() {
+
+        DivTag = document.getElementById('wucMoreHelp_divTag');
+        DivTag.style.display='';
+        
+        DivResult = document.getElementById('wucMoreHelp_divResult');
+        DivResult.style.display='none';   
+
+     
+    }
+    
+    
+    function ShowCategories(TagId,TagName)
+    {  
+        CallBackCategory.Callback(TagId, TagName);
+        var ListBox = document.getElementById('wucMoreHelp_lstTag');        
+        document.getElementById("tagnamespan").innerHTML=TagName + ".";
+        // show selected tag in listbox        
+        for(i=ListBox.options.length-1;i>=0;i--){         
+            if (ListBox.options[i].value == TagId)        
+                ListBox.options[i].selected = true;
+            }
+        DivTag = document.getElementById('wucMoreHelp_divTag');
+        DivTag.style.display='none';
+        DivResult = document.getElementById('wucMoreHelp_divResult');
+        DivResult.style.display='';
+    }
+    
+    function showMoreHelp(type, id)
+    {    
+    
+        var TagDiv = document.getElementById('wucMoreHelp_divTag') ;
+        TagDiv.style.display='';
+        CallBackOptTag.Callback(type,id);      
+        CallBackListTag.Callback(type,id);
+        document.getElementById('wucMoreHelp_txtTagId').value = id;
+        document.getElementById('wucMoreHelp_txtTagName').value = type;
+       var formHeight;
+    
+        if ((document.getElementById("form1") == null )||(document.getElementById("form1") == "undefined"))
+             formHeight = document.getElementById("Form1").scrollHeight;
+        else
+             formHeight = document.getElementById("form1").scrollHeight;
+  
+        var modalBackground = document.getElementById("modalBackgroundMoreHelp");
+        modalBackground.style.height = formHeight + "px";
+        
+        var modalContainer= document.getElementById("modalContainerMoreHelp");  
+                   
+        if (ie){
+            var modalContainerTop = document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop ;
+            modalContainer.style.top =  modalContainerTop + 120 ;
+            document.getElementById('wucMoreHelp_ModalPageMoreHelp').style.display = "block";
+            //modelContainer.style.top = window.offsetHeight/2 + window.scrollTop;            
+        }
+        else
+        {    
+            modalContainer.style.top = (window.pageYOffset + 200) + "px";
+            document.getElementById('wucMoreHelp_ModalPageMoreHelp').style.display = "block";
+        }
+        
+    }
+
+    function hideMoreHelp()
+    {     
+        var TagDiv = document.getElementById('wucMoreHelp_divTag') ;
+            TagDiv.style.display='none';
+        
+        var TagResult = document.getElementById('wucMoreHelp_divResult') ;
+            TagResult.style.display='none';
+
+        var modalPage = document.getElementById('wucMoreHelp_ModalPageMoreHelp') ;
+            modalPage.style.display = "none";  
+        
+    } 
+   function ShowQuickResult()
+   {
+        var TagId = document.getElementById('wucMoreHelp_txtTagId').value;
+        var TagName = document.getElementById('wucMoreHelp_txtTagName').value;
+        if (TagId>0)
+        {
+            ShowCategories(TagId, TagName);
+        }
+   }
+
+
+</script> 
+ 
+   
+<!-- MoreHelp POPUP CODE     --> 
+  <div id="wucMoreHelp_ModalPageMoreHelp" style="display:none;">  
+        <div id="modalBackgroundMoreHelp"></div>
+        <div id="modalContainerMoreHelp" style="left: 340px; top: 200px"> 
+            <div id="wucMoreHelp_modalMoreHelp" class="modal modal_more_help">
+                <div class="clearfix" style="float:right">
+                    <img src="./sorting techniques lecture note_files/close.gif" style="cursor:pointer" onclick="hideMoreHelp();" alt="">
+                </div>
+                
+                <div id="wucMoreHelp_divTag">
+                
+                    <div class="clearfix"></div>
+                    <div class="clearfix" style="padding:0px;">
+                            <div class="tour_pic_column" style="float:left;width:94px;padding-top:10px;">	                             
+                                <img src="./sorting techniques lecture note_files/teacher.gif" width="86" height="85" alt="" id="tour_icon">
+                            </div>	        
+    			    
+			                <div class="more_help_header">
+			                    <h1 style="padding:0px;margin:0px;">What do you need more help with?</h1>
+                                <div> Cramster offers many different types of content that can help you better learn the material. Start by clicking the topic you need help with below.</div>
+                            </div>   
+	                 </div>
+    	           
+                   <div class="more_help_results" style="height :380px;padding:10px;">
+                   
+                        <script src="./sorting techniques lecture note_files/WebResource.axd" type="text/javascript"></script><script src="./sorting techniques lecture note_files/WebResource(1).axd" type="text/javascript"></script><input id="wucMoreHelp_CallBackOptTag_ParamField" name="wucMoreHelp_CallBackOptTag_ParamField" type="hidden" value=""><div id="wucMoreHelp_CallBackOptTag" style="">
+                                <div class="scroll_pane" style="margin:5px;">
+                                       
+                                </div> 
+                                <span id="wucMoreHelp_lblResultsTag" class="more_help_no_results"></span>
+                            </div><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt.Web.UI.CallBack 2008_2_1204_3 wucMoreHelp_CallBackOptTag ***/
+window.ComponentArt_Init_wucMoreHelp_CallBackOptTag = function() {
+if(!window.ComponentArt_CallBack_Loaded)
+	{setTimeout('ComponentArt_Init_wucMoreHelp_CallBackOptTag()', 50); return; }
+
+window.wucMoreHelp_CallBackOptTag = new ComponentArt_CallBack('wucMoreHelp_CallBackOptTag');
+if(!window['CallBackOptTag']) { window['CallBackOptTag'] = window.wucMoreHelp_CallBackOptTag; wucMoreHelp_CallBackOptTag.GlobalAlias = 'CallBackOptTag'; }
+wucMoreHelp_CallBackOptTag.CallbackPrefix = 'http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx';
+wucMoreHelp_CallBackOptTag.CallbackParamDelimiter = '&';
+wucMoreHelp_CallBackOptTag.ClientEvents = {'CallbackComplete':ShowQuickResult};
+wucMoreHelp_CallBackOptTag.LoadingPanelClientTemplate = '';
+wucMoreHelp_CallBackOptTag.LoadingPanelFadeDuration = 0;
+wucMoreHelp_CallBackOptTag.LoadingPanelFadeMaximumOpacity = 100;
+wucMoreHelp_CallBackOptTag.Parameter = '';
+wucMoreHelp_CallBackOptTag.Postback = function() { __doPostBack('wucMoreHelp$CallBackOptTag','') };
+wucMoreHelp_CallBackOptTag.Initialize();
+
+}
+ComponentArt_Init_wucMoreHelp_CallBackOptTag();
+
+//]]>
+</script>
+                    
+                    </div>
+               </div>
+               <div id="wucMoreHelp_divResult" style="display:none;">
+                
+	            <div class="clearfix"></div>
+                    <div class="clearfix" style="padding:0px;">
+                            <div class="tour_pic_column" style="float:left;width:94px;padding-top:10px;">	                             
+                                <img src="./sorting techniques lecture note_files/teacher.gif" width="86" height="85" alt="" id="Img2">
+                            </div>	        
+    			    
+			                <div class="more_help_header">
+			                    <h1 style="padding:0px;margin:0px;">Get More Help Below</h1>
+                                <div> Cramster's definitions, resources, Q&amp;A board posts and practice problems can help you better understand  <em><span id="tagnamespan">test</span>   </em> </div>
+                            </div>   
+	                 </div>
+	                 <div class="clearfix" style="border:1px solid #DCD9D3;margin-top:10px;padding:10px;">
+                            <input id="wucMoreHelp_CallBackListTag_ParamField" name="wucMoreHelp_CallBackListTag_ParamField" type="hidden" value=""><div id="wucMoreHelp_CallBackListTag" style="">     
+                                 
+                                    
+                                                                   
+                                     <div style="padding:10px 0px 0px 10px;"> <b>Change Topic:&nbsp;&nbsp;&nbsp;</b><select name="wucMoreHelp$lstTag" id="wucMoreHelp_lstTag" class="dropdownlist dropdownlist_fixed_width" onchange="showCategory(this);">
+
+</select> </div>
+                                    
+                                </div><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt.Web.UI.CallBack 2008_2_1204_3 wucMoreHelp_CallBackListTag ***/
+window.ComponentArt_Init_wucMoreHelp_CallBackListTag = function() {
+if(!window.ComponentArt_CallBack_Loaded)
+	{setTimeout('ComponentArt_Init_wucMoreHelp_CallBackListTag()', 50); return; }
+
+window.wucMoreHelp_CallBackListTag = new ComponentArt_CallBack('wucMoreHelp_CallBackListTag');
+if(!window['CallBackListTag']) { window['CallBackListTag'] = window.wucMoreHelp_CallBackListTag; wucMoreHelp_CallBackListTag.GlobalAlias = 'CallBackListTag'; }
+wucMoreHelp_CallBackListTag.CallbackPrefix = 'http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx';
+wucMoreHelp_CallBackListTag.CallbackParamDelimiter = '&';
+wucMoreHelp_CallBackListTag.ClientEvents = null;
+wucMoreHelp_CallBackListTag.LoadingPanelFadeDuration = 0;
+wucMoreHelp_CallBackListTag.LoadingPanelFadeMaximumOpacity = 100;
+wucMoreHelp_CallBackListTag.Parameter = '';
+wucMoreHelp_CallBackListTag.Postback = function() { __doPostBack('wucMoreHelp$CallBackListTag','') };
+wucMoreHelp_CallBackListTag.Initialize();
+
+}
+ComponentArt_Init_wucMoreHelp_CallBackListTag();
+
+//]]>
+</script>
+
+                       
+                            <input id="wucMoreHelp_CallBackCategory_ParamField" name="wucMoreHelp_CallBackCategory_ParamField" type="hidden" value=""><div id="wucMoreHelp_CallBackCategory" style="">
+                                     
+                                        <div style="padding-top: 10px;">
+                                            <script src="./sorting techniques lecture note_files/WebResource(2).axd" type="text/javascript"></script><script src="./sorting techniques lecture note_files/WebResource(3).axd" type="text/javascript"></script><script src="./sorting techniques lecture note_files/WebResource(4).axd" type="text/javascript"></script><script src="./sorting techniques lecture note_files/WebResource(5).axd" type="text/javascript"></script><script src="./sorting techniques lecture note_files/WebResource(6).axd" type="text/javascript"></script><div id="wucMoreHelp_TabStripMoreHelp" class="rounded_tabs_ca"><table cellpadding="0" cellspacing="0" border="0"></table></div><input id="wucMoreHelp_TabStripMoreHelp_Data" name="wucMoreHelp_TabStripMoreHelp_Data" type="hidden"><input id="wucMoreHelp_TabStripMoreHelp_Properties" name="wucMoreHelp_TabStripMoreHelp_Properties" type="hidden"><input id="wucMoreHelp_TabStripMoreHelp_SelectedNode" name="wucMoreHelp_TabStripMoreHelp_SelectedNode" type="hidden" value=""><input id="wucMoreHelp_TabStripMoreHelp_ScrollData" name="wucMoreHelp_TabStripMoreHelp_ScrollData" type="hidden" value="0"><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt Web.UI client-side storage for wucMoreHelp_TabStripMoreHelp ***/
+window.ComponentArt_Storage_wucMoreHelp_TabStripMoreHelp=[];
+window.ComponentArt_ItemLooks_wucMoreHelp_TabStripMoreHelp=[[0,'DefaultTabLook',1,'default',2,'default_hover',5,4,6,4,7,4,8,5,11,'tab_normal_bg_l.gif',13,6,14,32,17,'tab_normal_bg_r.gif',19,6,20,32,27,0,28,0],[0,'SelectedTabLook',1,'active',5,4,6,4,7,4,8,4,11,'tab_active_bg_l.gif',13,6,14,32,17,'tab_active_bg_r.gif',19,6,20,32,27,0,28,0]];
+window.ComponentArt_ScrollLooks_wucMoreHelp_TabStripMoreHelp=[[0,'DefaultTabLook'],[0,'DefaultTabLook'],[0,'DefaultTabLook'],[0,'DefaultTabLook']];
+
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt_TabStrip_Startup_wucMoreHelp_TabStripMoreHelp 2008_2_1204_3 ***/
+window.ComponentArt_Init_wucMoreHelp_TabStripMoreHelp = function() {
+if (!(window.cart_tabstrip_kernel_loaded && window.cart_tabstrip_support_loaded && document.getElementById('wucMoreHelp_TabStripMoreHelp')))
+{
+	setTimeout('ComponentArt_Init_wucMoreHelp_TabStripMoreHelp()', 50);
+	return;
+}
+window.wucMoreHelp_TabStripMoreHelp = new ComponentArt_TabStrip('wucMoreHelp_TabStripMoreHelp',ComponentArt_Storage_wucMoreHelp_TabStripMoreHelp,ComponentArt_ItemLooks_wucMoreHelp_TabStripMoreHelp,ComponentArt_ScrollLooks_wucMoreHelp_TabStripMoreHelp);
+if(!window['TabStripMoreHelp']) { window['TabStripMoreHelp'] = window.wucMoreHelp_TabStripMoreHelp; wucMoreHelp_TabStripMoreHelp.GlobalAlias = 'TabStripMoreHelp'; }
+wucMoreHelp_TabStripMoreHelp.PropertyStorageArray = [
+['ApplicationPath','/'],['AutoPostBackOnSelect',false],['BaseUrl',''],['ChildSelectedTabPostBackIDs',[]],['ClientEvents',null],['ClientSideOnTabMouseOut',null],['ClientSideOnTabMouseOver',null],['ClientSideOnTabSelect',null],['ClientTemplates',[]],['ControlId','wucMoreHelp$TabStripMoreHelp'],['DefaultChildSelectedItemLookId',''],['DefaultDisabledItemLookId','DisabledTabLook'],['DefaultGroupAlign',0],['DefaultGroupCssClass',null],['DefaultGroupExpandDirection',0],['DefaultGroupExpandOffsetX',0],['DefaultGroupExpandOffsetY',0],['DefaultGroupFirstSeparatorHeight',null],['DefaultGroupFirstSeparatorWidth',null],['DefaultGroupFullExpand',true],['DefaultGroupHeight',null],['DefaultGroupLastSeparatorHeight',null],['DefaultGroupLastSeparatorWidth',null],['DefaultGroupSeparatorHeight',null],['DefaultGroupSeparatorImagesFolderUrl',null],['DefaultGroupSeparatorWidth',null],['DefaultGroupShowSeparators',false],['DefaultGroupTabSpacing',0],['DefaultGroupWidth',null],['DefaultItemLookId','DefaultTabLook'],['DefaultItemTextAlign',0],['DefaultItemTextWrap',false],['DefaultSelectedItemLookId','SelectedTabLook'],['DefaultTarget',''],['Height',null],['ImagesBaseUrl','http://s3.amazonaws.com/cramster-image/shared/'],['MultiPageId',null],['Orientation',0],['PlaceHolderId','wucMoreHelp_TabStripMoreHelp'],['ScrollingEnabled',false],['ScrollDataInput','wucMoreHelp_TabStripMoreHelp_ScrollData'],['SelectedNodeInput','wucMoreHelp_TabStripMoreHelp_SelectedNode'],['SelectedTabPostBackID',''],['SeparatorImagesExtension','gif'],['TabOrientation',0],['TopGroupAlign',0],['TopGroupCssClass',null],['TopGroupFirstSeparatorHeight',null],['TopGroupFirstSeparatorWidth',null],['TopGroupFullExpand',true],['TopGroupHeight',null],['TopGroupLastSeparatorHeight',null],['TopGroupLastSeparatorWidth',null],['TopGroupSeparatorHeight',null],['TopGroupSeparatorImagesFolderUrl',null],['TopGroupSeparatorWidth',null],['TopGroupShowSeparators',false],['TopGroupTabSpacing',0],['TopGroupWidth',null],['WebService',''],['WebServiceCustomParameter',''],['WebServiceMethod',''],['Width',null]
+];
+wucMoreHelp_TabStripMoreHelp.LoadProperties();
+ComponentArt_ClientStateControls[ComponentArt_ClientStateControls.length] = wucMoreHelp_TabStripMoreHelp;
+wucMoreHelp_TabStripMoreHelp.Initialize();
+wucMoreHelp_TabStripMoreHelp.Render();
+ComponentArt_TabStrip_InitKeyboard(wucMoreHelp_TabStripMoreHelp);
+window.wucMoreHelp_TabStripMoreHelp_loaded = true;
+}
+ComponentArt_Init_wucMoreHelp_TabStripMoreHelp();
+//]]>
+</script>
+
+                                        </div> 
+                                        <div class="tabs_content clearfix more_help_results" style="padding: 8px;">      
+                                                <componentart:pageview id="pageViewWiki" cssclass="PageContent">      
+                                                    <div class="clearfix">                                                                                       
+                                                                                                  
+                                                      
+                                                       <div style="background-color:#F2F0EC;padding-left:10px;"><div class="more_help_large_bullet"><h1 class="more_help"><b> Definitions:</b> <em><span id="wucMoreHelp_lblDefinition"></span></em> </h1> </div></div>
+                                                          
+                                                           <div style="background :#F2F0EC;width:493px;">
+                                                               <div class="see_more_link" style="padding-right :10px;">
+                                                                       <a id="wucMoreHelp_lnkMoreWiki"></a>
+                                                               </div>   
+                                                               <div class="pane clearfix">
+                                                                   <div id="wucMoreHelp_divNoResultsWiki" class="sub_pane more_help_no_results">
+                                                                        <span id="wucMoreHelp_lblNoResultsDefinations"></span>
+                                                                        
+                                                                   </div>    
+                                                                </div>
+                                                           </div> 
+                                                    </div>                                 
+                                                </componentart:pageview>
+                                                <componentart:pageview id="pageViewResource" cssclass="PageContent">
+                                                 
+                                                    <div style="padding :10px 0px 0px 10px; width:481px;" class="clearfix">
+                                                             <div style="width :490px;">
+                                                                 <div class="more_help_large_bullet"><h1 class="more_help"><b> Resources:</b>  <em><span id="wucMoreHelp_lblResource"></span></em></h1> </div>
+                                                             </div>
+                                                    </div> 
+                                                    
+                                                    <div style="width :476px;padding-left:37px;">
+                                                        <div class="see_more_link" style="padding-right :30px;">
+                                                            <a id="wucMoreHelp_lnkMoreResource"></a>
+                                                        </div>
+                                                    </div>  
+                                                    <div class="pane clearfix">
+                                                      <div id="wucMoreHelp_divNoResultsResource" class="sub_pane more_help_no_results" style="width :455px;padding:23px;">
+                                                            <h4><span id="wucMoreHelp_lblNoResultsResources"></span></h4>
+                                                      </div>
+                                                   </div>                                              
+                                                </componentart:pageview> 
+                                                
+                                                <componentart:pageview id="PageViewQA" cssclass="PageContent">  
+                                                    <div class="clearfix" style="background :#F2F0EC;width:492px;">
+                                                    <div style="padding-top :10px; width :490px;">
+                                                        
+                                                        <div class="more_help_large_bullet" style="margin-left  :10px;"><h1 class="more_help"><b> Q&amp;A Board:</b> <em><span id="wucMoreHelp_lblQA"></span></em>  </h1> </div>
+                                                        
+                                                    </div>
+                                                 </div>
+                                                    
+                                                    
+                                                    <div class="pane clearfix">
+                                                        <div id="wucMoreHelp_divNoResultsQA" class="sub_pane more_help_no_results" style="background-color:#F2F0EC;width:466px;">
+                                                            <h4><span id="wucMoreHelp_lblNoResultsQA"></span></h4>
+                                                            
+                                                        </div> 
+                                                     </div> 
+                                                </componentart:pageview>
+                                               <componentart:pageview id="pageViewProblem" cssclass="PageContent">   
+                                                    <div style="padding :10px 0px 0px 10px;" class="clearfix">
+                                                        <div class="more_help_large_bullet"><h1 class="more_help"><b> Practice Problems:</b> <em><span id="wucMoreHelp_lblProblem"></span> </em> </h1> </div>
+                                                    </div> 
+                                                    
+                                                    <div style="width:501px;" class="clearfix">
+                                                    <div class="see_more_link" style="padding-right:17px;padding-left:12px;">
+                                                          <a id="wucMoreHelp_lnkMoreProblem"></a>
+                                                    </div> 
+                                                    </div> 
+                                                     <div class="pane clearfix">
+                                                       <div id="wucMoreHelp_divNoResultsProblem" class="sub_pane more_help_no_results" style="width:498px;padding-top :0px;">
+                                                        <span id="wucMoreHelp_lblNoResultsProblem"></span>
+                                                       </div>
+                                                    </div> 
+                                                </componentart:pageview> 
+                                          
+                                        </div>                                                       
+                                    
+                                </div><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt.Web.UI.CallBack 2008_2_1204_3 wucMoreHelp_CallBackCategory ***/
+window.ComponentArt_Init_wucMoreHelp_CallBackCategory = function() {
+if(!window.ComponentArt_CallBack_Loaded)
+	{setTimeout('ComponentArt_Init_wucMoreHelp_CallBackCategory()', 50); return; }
+
+window.wucMoreHelp_CallBackCategory = new ComponentArt_CallBack('wucMoreHelp_CallBackCategory');
+if(!window['CallBackCategory']) { window['CallBackCategory'] = window.wucMoreHelp_CallBackCategory; wucMoreHelp_CallBackCategory.GlobalAlias = 'CallBackCategory'; }
+wucMoreHelp_CallBackCategory.CallbackPrefix = 'http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx';
+wucMoreHelp_CallBackCategory.CallbackParamDelimiter = '&';
+wucMoreHelp_CallBackCategory.ClientEvents = null;
+wucMoreHelp_CallBackCategory.LoadingPanelClientTemplate = '';
+wucMoreHelp_CallBackCategory.LoadingPanelFadeDuration = 0;
+wucMoreHelp_CallBackCategory.LoadingPanelFadeMaximumOpacity = 100;
+wucMoreHelp_CallBackCategory.Parameter = '';
+wucMoreHelp_CallBackCategory.Postback = function() { __doPostBack('wucMoreHelp$CallBackCategory','') };
+wucMoreHelp_CallBackCategory.Initialize();
+
+}
+ComponentArt_Init_wucMoreHelp_CallBackCategory();
+
+//]]>
+</script>
+	 
+                     </div>
+                    </div>  
+             </div>
+        </div> 
+    </div>
+  
+<input type="hidden" name="wucMoreHelp$txtTagId" id="wucMoreHelp_txtTagId">
+<input type="hidden" name="wucMoreHelp$txtTagName" id="wucMoreHelp_txtTagName">
+
+    <!-- header [end] -->
+    <div class="container">
+        <div class="inner clearfix">
+            <div class="mainbar_semi">
+                <div class="search_crumbs">
+                    
+<div class="breadcrumb">
+    <span id="wucBreadCrumb1_lblBreadCrumb"><a href="http://www.cramster.com/">home</a> &gt; <a href="http://www.cramster.com/computer-science-help-h1-3.aspx">computer science</a> &gt; <a href="http://www.cramster.com/data-structures-help-h2-69.aspx">data structures</a> &gt; <a href="http://www.cramster.com/study-guides/">resource</a> &gt; <a href="http://www.cramster.com/data-structures-lecture-notes-r26-69-cpi0-1.aspx">lecture note</a> &gt; sorting techniques</span>
+</div>
+
+                </div>
+                <div>
+                    <div class="clearfix">
+                        <h2 style="padding-left: 10px; line-height: 30px; font-size: 24px; float:left;">
+                            <div style="overflow: hidden; position: relative; width: 380px;">
+                                <span id="lblResourceName">sorting techniques</span>
+                            </div>
+                        </h2>
+                        <div style="float: right; width: 146px;">
+<div class="share_this">
+    <div class="div_images_tab">
+        Share:
+        <a href="http://twitter.com/home?status=%20Found%20some%20helpful%20Computer%20Science%20files%20on%20@Cramster:%20http://bit.ly/90rtdg%20%23HomeworkHelp" id="wucShareThis1_lnkShareTwitter" target="_blank"><img src="./sorting techniques lecture note_files/share-twitter.gif" alt=""></a>
+        <a href="http://www.facebook.com/share.php?u=http%3a%2f%2fwww.cramster.com%2fresource%2fresource.aspx%3fresource_id%3d22165" id="wucShareThis1_lnkShareFacebook" target="_blank"><img src="./sorting techniques lecture note_files/share-fb.gif" alt=""></a>
+        <a id="lnkShareEmail"><img src="./sorting techniques lecture note_files/share-email.gif" alt=""></a>
+        <a id="lnkShareThis"><img src="./sorting techniques lecture note_files/share-this-arrow.gif" alt=""></a>
+    </div>
+</div>
+    </div>
+                        <div class="clear"></div>
+                        <div style="background-color: #F2F0EC; margin: -1px 0px 10px; padding: 15px 0px 20px 20px; border:solid 1px #CDCDCD;">
+                            <dl class="resource_info" style="font-size: 13px;">
+                                <dt>
+                                    <label>
+                                        Category:</label></dt><dd><span id="lblCategory"><a href="http://www.cramster.com/computer-science-study-guides-r25-3-cpi0-0.aspx">Computer Science</a> &gt; <a href="http://www.cramster.com/data-structures-study-guides-r26-69-cpi0-0.aspx">Data Structures</a></span></dd>
+                                <dt>
+                                    <label>
+                                        Books:</label></dt><dd><a id="lblBookNameAndEdition"></a>
+                                            &nbsp;</dd>
+                                <dt>
+                                    <label>
+                                        Tags:</label></dt><dd><div style="overflow: hidden; position: relative;">
+                                            <span id="lblTag" wrap="true"><a href="http://www.cramster.com/tag-r27-519-cpi0-0.aspx">Computer Science</a>, <a href="http://www.cramster.com/tag-r27-664-cpi0-0.aspx">Data Structures</a>, <a href="http://www.cramster.com/tag-r27-3744-cpi0-0.aspx">Data structure</a>, <a href="http://www.cramster.com/tag-r27-52386-cpi0-0.aspx">Insertion sort</a>, <a href="http://www.cramster.com/tag-r27-52416-cpi0-0.aspx">Selection sort</a>, <a href="http://www.cramster.com/tag-r27-74812-cpi0-0.aspx">Hopcroft</a>, <a href="http://www.cramster.com/tag-r27-74813-cpi0-0.aspx">Ullman</a>, <a href="http://www.cramster.com/tag-r27-74825-cpi0-0.aspx">internal sorting model</a>, <a href="http://www.cramster.com/tag-r27-74826-cpi0-0.aspx">best/worst/average case</a>, <a href="http://www.cramster.com/tag-r27-74827-cpi0-0.aspx">quicksort.</a></span></div>
+                                        </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="pane clearfix">
+                    <div style="float: left; width: 300px;">
+                        <h2>Resource Preview:</h2>
+                    </div>
+                    
+                    <div class="clear">
+                    </div>
+                    <div id="tab_strip clearfix">
+                        <div style="position:absolute;top:0px;left:0px;visibility:hidden;"><img src="./sorting techniques lecture note_files/tab_normal_default_orange.gif" width="0" height="0" alt="">
+</div><div id="TabStripResource" class="rounded_tabs_ca" style="margin-bottom:-1px;"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td align="left"><table cellpadding="0" border="0" width="100%" height="100%" id="GTabStripResource_-1" class="" cellspacing="0"><tbody><tr><td><table style="padding-left:0px;padding-right:0px;" cellpadding="0" cellspacing="0" border="0" onmouseover="ComponentArt_TabStrip_TabMouseOver(this,event)" onmouseout="ComponentArt_TabStrip_TabMouseOut(this,event)" onmousedown="ComponentArt_TabStrip_TabMouseDown(this)" onmouseup="ComponentArt_TabStrip_TabMouseUp(this)" onmousemove="return false" ondblclick="return false" onclick="ComponentArt_TabStrip_TabClick(this)" width="100%" height="100%" id="TabStripResource_0" class="active"><tbody><tr><td style="padding:0px;" width="6"><img alt="" border="0" src="./sorting techniques lecture note_files/tab_active_bg_l.gif" width="6" height="32"></td><td align="left" style="padding-bottom:4px;padding-left:4px;padding-right:4px;padding-top:4px;"><nobr>RESOURCE</nobr></td><td style="padding:0px;" width="6"><img alt="" border="0" src="./sorting techniques lecture note_files/tab_active_bg_r.gif" width="6" height="32"></td></tr></tbody></table></td><td><table style="padding-left:0px;padding-right:0px;" cellpadding="0" cellspacing="0" border="0" onmouseover="ComponentArt_TabStrip_TabMouseOver(this,event)" onmouseout="ComponentArt_TabStrip_TabMouseOut(this,event)" onmousedown="ComponentArt_TabStrip_TabMouseDown(this)" onmouseup="ComponentArt_TabStrip_TabMouseUp(this)" onmousemove="return false" ondblclick="return false" onclick="ComponentArt_TabStrip_TabClick(this)" width="100%" height="100%" id="TabStripResource_1" class="default"><tbody><tr><td style="padding:0px;" width="6"><img alt="" border="0" src="./sorting techniques lecture note_files/tab_normal_bg_l.gif" width="6" height="32"></td><td align="left" style="padding-bottom:4px;padding-left:4px;padding-right:4px;padding-top:5px;"><nobr>ASK ON Q&amp;A <a title="Powered by Text-Enhance" id="_GPLITA_1" style="text-decoration:underline" href="http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx#" in_rurl="http://www.textsrv.com/click?v=Tkc6MTcyNTU6Mjk1OmJvYXJkOmY5MjJlZjVlY2ZhZWRlYWEzNGM2ZThlYjczOGE0MzZiOnotMTA2My0xNDcyOTp3d3cuY3JhbXN0ZXIuY29t">BOARD</a></nobr></td><td style="padding:0px;" width="6"><img alt="" border="0" src="./sorting techniques lecture note_files/tab_normal_bg_r.gif" width="6" height="32"></td></tr></tbody></table></td><td onmouseover="ComponentArt_TabStrip_TabMouseOver(this,event)" onmouseout="ComponentArt_TabStrip_TabMouseOut(this,event)" onmousedown="ComponentArt_TabStrip_TabMouseDown(this)" onmouseup="ComponentArt_TabStrip_TabMouseUp(this)" onmousemove="return false" ondblclick="return false" onclick="ComponentArt_TabStrip_TabClick(this)" id="TabStripResource_2"><img border="0" alt="" class="default" style="display:block;" src="./sorting techniques lecture note_files/tab_normal_default_orange.gif"></td><td><table style="padding-left:0px;padding-right:0px;" cellpadding="0" cellspacing="0" border="0" onmouseover="ComponentArt_TabStrip_TabMouseOver(this,event)" onmouseout="ComponentArt_TabStrip_TabMouseOut(this,event)" onmousedown="ComponentArt_TabStrip_TabMouseDown(this)" onmouseup="ComponentArt_TabStrip_TabMouseUp(this)" onmousemove="return false" ondblclick="return false" onclick="ComponentArt_TabStrip_TabClick(this)" width="100%" height="100%" id="TabStripResource_3" class="default"><tbody><tr><td style="padding:0px;" width="6"><img alt="" border="0" src="./sorting techniques lecture note_files/tab_normal_bg_l.gif" width="6" height="32"></td><td align="left" style="padding-bottom:4px;padding-left:4px;padding-right:4px;padding-top:5px;"><nobr>Comments (1)</nobr></td><td style="padding:0px;" width="6"><img alt="" border="0" src="./sorting techniques lecture note_files/tab_normal_bg_r.gif" width="6" height="32"></td></tr></tbody></table></td><td width="100%"></td></tr></tbody></table></td></tr></tbody></table></div><input id="TabStripResource_Data" name="TabStripResource_Data" type="hidden"><input id="TabStripResource_Properties" name="TabStripResource_Properties" type="hidden"><input id="TabStripResource_SelectedNode" name="TabStripResource_SelectedNode" type="hidden" value="p_TabStripTab1"><input id="TabStripResource_ScrollData" name="TabStripResource_ScrollData" type="hidden" value="0"><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt Web.UI client-side storage for TabStripResource ***/
+window.ComponentArt_Storage_TabStripResource=[['p_TabStripTab1',-1,[],[['ChildSelectedLook-RightIconVisibility','Always'],['Look-RightIconVisibility','Always'],['Look-LeftIconVisibility','Always'],['DisabledLook-RightIconVisibility','Always'],['SelectedLook-RightIconVisibility','Always'],[31,'TabStripTab1'],['ChildSelectedLook-LeftIconVisibility','Always'],['DisabledLook-LeftIconVisibility','Always'],[57,'RESOURCE'],['SelectedLook-LeftIconVisibility','Always'],[54,0],[20,0]]],['p_TabStripTab2',-1,[],[['ChildSelectedLook-RightIconVisibility','Always'],['Look-RightIconVisibility','Always'],['Look-LeftIconVisibility','Always'],['DisabledLook-RightIconVisibility','Always'],['SelectedLook-RightIconVisibility','Always'],[31,'TabStripTab2'],['ChildSelectedLook-LeftIconVisibility','Always'],['DisabledLook-LeftIconVisibility','Always'],[57,'ASK ON Q&A BOARD'],['SelectedLook-LeftIconVisibility','Always'],[54,0],[20,0]]],['p_TabStripTab4',-1,[],[['Look-RightIconVisibility','Always'],['Look-ImageUrl','tab_normal_default_orange.gif'],['DisabledLook-RightIconVisibility','Always'],['SelectedLook-RightIconVisibility','Always'],[31,'TabStripTab4'],['ChildSelectedLook-LeftIconVisibility','Always'],['DisabledLook-LeftIconVisibility','Always'],[20,0],['SelectedLook-LeftIconVisibility','Always'],[54,0],['Look-LeftIconVisibility','Always'],['ChildSelectedLook-RightIconVisibility','Always'],['SelectedLook-ImageUrl','tab_normal_active_orange.gif']]],['p_TabStripTab3',-1,[],[['Look-RightIconVisibility','Always'],['Look-LeftIconVisibility','Always'],['DisabledLook-RightIconVisibility','Always'],['SelectedLook-RightIconVisibility','Always'],[31,'TabStripTab3'],['ChildSelectedLook-LeftIconVisibility','Always'],['DisabledLook-LeftIconVisibility','Always'],[20,0],['SelectedLook-LeftIconVisibility','Always'],[54,0],[57,'Comments (1)'],['ChildSelectedLook-RightIconVisibility','Always']]]];
+window.ComponentArt_ItemLooks_TabStripResource=[[0,'DefaultTabLook',1,'default',2,'default_hover',5,4,6,4,7,4,8,5,11,'tab_normal_bg_l.gif',13,6,14,32,17,'tab_normal_bg_r.gif',19,6,20,32,27,0,28,0],[0,'SelectedTabLook',1,'active',5,4,6,4,7,4,8,4,11,'tab_active_bg_l.gif',13,6,14,32,17,'tab_active_bg_r.gif',19,6,20,32,27,0,28,0]];
+window.ComponentArt_ScrollLooks_TabStripResource=[[0,'DefaultTabLook'],[0,'DefaultTabLook'],[0,'DefaultTabLook'],[0,'DefaultTabLook']];
+
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt_TabStrip_Startup_TabStripResource 2008_2_1204_3 ***/
+window.ComponentArt_Init_TabStripResource = function() {
+if (!(window.cart_tabstrip_kernel_loaded && window.cart_tabstrip_support_loaded && document.getElementById('TabStripResource')))
+{
+	setTimeout('ComponentArt_Init_TabStripResource()', 50);
+	return;
+}
+window.TabStripResource = new ComponentArt_TabStrip('TabStripResource',ComponentArt_Storage_TabStripResource,ComponentArt_ItemLooks_TabStripResource,ComponentArt_ScrollLooks_TabStripResource);
+TabStripResource.PropertyStorageArray = [
+['ApplicationPath','/'],['AutoPostBackOnSelect',false],['BaseUrl',''],['ChildSelectedTabPostBackIDs',[]],['ClientEvents',{'TabSelect':TabStripResource_onTabSelect}],['ClientSideOnTabMouseOut',null],['ClientSideOnTabMouseOver',null],['ClientSideOnTabSelect',null],['ClientTemplates',[]],['ControlId','TabStripResource'],['DefaultChildSelectedItemLookId',''],['DefaultDisabledItemLookId','DisabledTabLook'],['DefaultGroupAlign',0],['DefaultGroupCssClass',null],['DefaultGroupExpandDirection',0],['DefaultGroupExpandOffsetX',0],['DefaultGroupExpandOffsetY',0],['DefaultGroupFirstSeparatorHeight',null],['DefaultGroupFirstSeparatorWidth',null],['DefaultGroupFullExpand',true],['DefaultGroupHeight',null],['DefaultGroupLastSeparatorHeight',null],['DefaultGroupLastSeparatorWidth',null],['DefaultGroupSeparatorHeight',null],['DefaultGroupSeparatorImagesFolderUrl',null],['DefaultGroupSeparatorWidth',null],['DefaultGroupShowSeparators',false],['DefaultGroupTabSpacing',0],['DefaultGroupWidth',null],['DefaultItemLookId','DefaultTabLook'],['DefaultItemTextAlign',0],['DefaultItemTextWrap',false],['DefaultSelectedItemLookId','SelectedTabLook'],['DefaultTarget',''],['Height',null],['ImagesBaseUrl','http://s3.amazonaws.com/cramster-image/shared/'],['MultiPageId','MultiPageHome'],['Orientation',0],['PlaceHolderId','TabStripResource'],['ScrollingEnabled',false],['ScrollDataInput','TabStripResource_ScrollData'],['SelectedNodeInput','TabStripResource_SelectedNode'],['SelectedTabPostBackID','p_TabStripTab1'],['SeparatorImagesExtension','gif'],['TabOrientation',0],['TopGroupAlign',0],['TopGroupCssClass',null],['TopGroupFirstSeparatorHeight',null],['TopGroupFirstSeparatorWidth',null],['TopGroupFullExpand',true],['TopGroupHeight',null],['TopGroupLastSeparatorHeight',null],['TopGroupLastSeparatorWidth',null],['TopGroupSeparatorHeight',null],['TopGroupSeparatorImagesFolderUrl',null],['TopGroupSeparatorWidth',null],['TopGroupShowSeparators',false],['TopGroupTabSpacing',0],['TopGroupWidth',null],['WebService',''],['WebServiceCustomParameter',''],['WebServiceMethod',''],['Width',null]
+];
+TabStripResource.LoadProperties();
+ComponentArt_ClientStateControls[ComponentArt_ClientStateControls.length] = TabStripResource;
+TabStripResource.Initialize();
+TabStripResource.Render();
+ComponentArt_TabStrip_InitKeyboard(TabStripResource);
+window.TabStripResource_loaded = true;
+}
+ComponentArt_Init_TabStripResource();
+//]]>
+</script>
+
+                        
+                    </div>
+                    <div class="rounded_tabs_ca_content" style="_margin-top: 38px;padding-left:8px;">
+                        <script src="./sorting techniques lecture note_files/WebResource(7).axd" type="text/javascript"></script><input id="MultiPageHome_SelectedIndex" name="MultiPageHome_SelectedIndex" type="hidden" value="0"><table id="MultiPageHome" cellpadding="0" cellspacing="0" border="0" class="multi_page" style=""><tbody><tr>
+<td style="height:100%;width:100%;vertical-align:top;"><table id="ctl02" cellpadding="0" cellspacing="0" border="0" style="height: 100%; width: 100%; "><tbody><tr>
+<td style="vertical-align:top;">
+                                <div id="panelAccess" style="text-align: center;">
+
+                                    <input id="CallBackResource_ParamField" name="CallBackResource_ParamField" type="hidden" value=""><div id="CallBackResource" style="">
+                                            <div id="panelFlashPaper">
+
+                                                    <div style="border: solid 1px #CCCCCC; float: left; margin: 15px 0px 0px 7px; background-color: #f1f1f1;">
+                                                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="550" height="540" id="myMovieName">
+                                                            <param name="movie" value="http://s3.amazonaws.com/cramster-resource/22165_Lecture-40 SortingTechniques-II.swf">
+                                                            <param name="quality" value="high">
+                                                            <parram name="bgcolor" value="#FFFFFF"><param name="wmode" value="opaque">
+                                                        <embed src="http://s3.amazonaws.com/cramster-resource/22165_Lecture-40 SortingTechniques-II.swf" quality="high" bgcolor="#FFFFFF" width="550" height="540" wmode="opaque" name="myMovieName" align="" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" style="visibility: visible; ">
+                                                        </parram></object>
+                                                    </div>
+                                                    <br style="clear: both;">
+                                                
+</div>
+                                                <div>
+                                                    
+                                                </div>
+                                                
+                                        </div><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt.Web.UI.CallBack 2008_2_1204_3 CallBackResource ***/
+window.ComponentArt_Init_CallBackResource = function() {
+if(!window.ComponentArt_CallBack_Loaded)
+	{setTimeout('ComponentArt_Init_CallBackResource()', 50); return; }
+
+window.CallBackResource = new ComponentArt_CallBack('CallBackResource');
+CallBackResource.CallbackPrefix = 'http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx';
+CallBackResource.CallbackParamDelimiter = '&';
+CallBackResource.ClientEvents = null;
+CallBackResource.LoadingPanelClientTemplate = '';
+CallBackResource.LoadingPanelFadeDuration = 0;
+CallBackResource.LoadingPanelFadeMaximumOpacity = 100;
+CallBackResource.Parameter = '';
+CallBackResource.Postback = function() { __doPostBack('CallBackResource','') };
+CallBackResource.PostState = 1;
+CallBackResource.Initialize();
+
+}
+ComponentArt_Init_CallBackResource();
+
+//]]>
+</script>
+
+                                
+</div>
+                            </td>
+</tr></tbody></table><table id="ctl05" cellpadding="0" cellspacing="0" border="0" style="height:100%;width:100%;display:none;"><tbody><tr>
+<td style="vertical-align:top;">
+                                <div align="center" style="width:585px"><a href="http://www.cramster.com/ask" ref="nofollow" target="_top"><img src="./sorting techniques lecture note_files/ask_a_question.gif" border="0"></a></div>
+                            </td>
+</tr></tbody></table><table id="ctl06" cellpadding="0" cellspacing="0" border="0" style="height:100%;width:100%;display:none;"><tbody><tr>
+<td style="vertical-align:top;">
+                            
+<div id="wucResourceChatsmall1_panelNoAccessAnonymous">
+
+    <div style="border: 1px solid #CCCCCC; padding: 10px 10px 10px 10px; text-align: center;
+        padding-top: 200px; padding-bottom: 200px;">
+        <span id="wucResourceChatsmall1_lblCreatedAccessType">You Must Be A Expert Answers, Textbook Solutions, or Complete Member To Chat In This Resource</span><br>
+        <a id="wucResourceChatsmall1_lnkCreatedSubscribe" rel="nofollow" href="https://www.cramster.com/sign-up/barrier"><img src="./sorting techniques lecture note_files/join_now.gif" alt="" style="border-width:0px;"></a>
+        <a id="wucResourceChatsmall1_lnkCreatedLogin" rel="nofollow" href="https://www.cramster.com/my-cramster/login.aspx?quick_redirect=1&page=study-guides%2F"><img src="./sorting techniques lecture note_files/login.gif" alt="" style="border-width:0px;"></a>
+    </div>
+
+</div>
+
+
+                             </td>
+</tr></tbody></table><table id="ctl07" cellpadding="0" cellspacing="0" border="0" style="height:100%;width:100%;display:none;"><tbody><tr>
+<td style="vertical-align:top;">
+                                <iframe name="frameChallenge" src="./sorting techniques lecture note_files/wucCommentContainer.htm" width="575" height="680" frameborder="0" scrolling="no" allowautotransparency="true"></iframe>
+                            </td>
+</tr></tbody></table></td>
+</tr></tbody></table><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt.Web.UI.MultiPage 2008_2_1204_3 MultiPageHome ***/
+function ComponentArt_Init_MultiPageHome() {
+if(!window.ComponentArt_MultiPage_Kernel_Loaded)
+	{setTimeout('ComponentArt_Init_MultiPageHome()', 100); return; }
+
+window.MultiPageHome = new ComponentArt_MultiPage('MultiPageHome');
+MultiPageHome.ControlId = 'MultiPageHome';
+MultiPageHome.Transition = 0;
+MultiPageHome.TransitionDuration = 0;
+MultiPageHome.AddPage(new ComponentArt_PageView('ctl02','ctl02'));
+MultiPageHome.AddPage(new ComponentArt_PageView('ctl05','ctl05'));
+MultiPageHome.AddPage(new ComponentArt_PageView('ctl06','ctl06'));
+MultiPageHome.AddPage(new ComponentArt_PageView('ctl07','ctl07'));
+MultiPageHome.SetPageIndex(0,true);
+
+window.MultiPageHome_loaded = true;
+}
+ComponentArt_Init_MultiPageHome();
+//]]>
+</script>
+
+                    </div>
+                </div>
+                <div class="pane">
+                    <div class="other_question_options">
+                        <input type="image" name="imageMoreHelp" id="imageMoreHelp" src="./sorting techniques lecture note_files/get_more_help.gif" onclick="showMoreHelp(&#39;resource&#39;,22165); return false;" style="width:158px;border-width:0px;">
+                        
+                    
+                   </div>
+                    <div style="font-size: 10px; color: #243e75; padding-left: 462px; cursor: pointer;line-height: 3px;">
+                            
+                        </div> 
+                </div>
+            </div>
+            <div class="sidebar">
+                <h2>
+                    Resources</h2>
+                <div class="info">
+                    <p>
+                        </p><div style="overflow: hidden; position: relative; width: 100%;">
+                            <span id="lblResourceSetName">data structure lectures</span></div>
+                    <p></p>
+                    <div class="resources_listing_scroller">
+                        <div id="panelResourceSetList">
+	
+                            <table id="DataListResourceSet" class="resource_list" cellspacing="0" border="0" style="border-collapse:collapse;">
+		<tbody><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl00_lnkIcon" href="http://www.cramster.com/data-structures-introduction-and-overview-lecture-note-r30-22133.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl00_lnkResource" href="http://www.cramster.com/data-structures-introduction-and-overview-lecture-note-r30-22133.aspx">Data structures introduction and overview</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl01_lnkIcon" href="http://www.cramster.com/time-complexity-lecture-note-r30-22134.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl01_lnkResource" href="http://www.cramster.com/time-complexity-lecture-note-r30-22134.aspx">Time complexity</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl02_lnkIcon" href="http://www.cramster.com/abstract-data-type-lecture-note-r30-22135.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl02_lnkResource" href="http://www.cramster.com/abstract-data-type-lecture-note-r30-22135.aspx">Abstract Data Type</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl03_lnkIcon" href="http://www.cramster.com/array-adt-lecture-note-r30-22136.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl03_lnkResource" href="http://www.cramster.com/array-adt-lecture-note-r30-22136.aspx">Array ADT</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl04_lnkIcon" href="http://www.cramster.com/list-adt-and-linkedlist-lecture-note-r30-22137.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl04_lnkResource" href="http://www.cramster.com/list-adt-and-linkedlist-lecture-note-r30-22137.aspx">List ADT and linkedlist</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl05_lnkIcon" href="http://www.cramster.com/stacks-lecture-note-r30-22138.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl05_lnkResource" href="http://www.cramster.com/stacks-lecture-note-r30-22138.aspx">stacks</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl06_lnkIcon" href="http://www.cramster.com/queues-lecture-note-r30-22139.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl06_lnkResource" href="http://www.cramster.com/queues-lecture-note-r30-22139.aspx">Queues</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl07_lnkIcon" href="http://www.cramster.com/trees-lecture-note-r30-22141.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl07_lnkResource" href="http://www.cramster.com/trees-lecture-note-r30-22141.aspx">Trees</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl08_lnkIcon" href="http://www.cramster.com/trees--bst-lecture-note-r30-22142.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl08_lnkResource" href="http://www.cramster.com/trees--bst-lecture-note-r30-22142.aspx">Trees -BST</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl09_lnkIcon" href="http://www.cramster.com/trees-bst-part2-lecture-note-r30-22143.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl09_lnkResource" href="http://www.cramster.com/trees-bst-part2-lecture-note-r30-22143.aspx">Trees-BST part2</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl10_lnkIcon" href="http://www.cramster.com/avl-trees-lecture-note-r30-22144.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl10_lnkResource" href="http://www.cramster.com/avl-trees-lecture-note-r30-22144.aspx">AVL trees</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl11_lnkIcon" href="http://www.cramster.com/avl-trees-implementation-lecture-note-r30-22145.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl11_lnkResource" href="http://www.cramster.com/avl-trees-implementation-lecture-note-r30-22145.aspx">AVL trees implementation</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl12_lnkIcon" href="http://www.cramster.com/tries-lecture-note-r30-22146.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl12_lnkResource" href="http://www.cramster.com/tries-lecture-note-r30-22146.aspx">Tries</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl13_lnkIcon" href="http://www.cramster.com/sets-lecture-note-r30-22147.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl13_lnkResource" href="http://www.cramster.com/sets-lecture-note-r30-22147.aspx">Sets</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl14_lnkIcon" href="http://www.cramster.com/hashing-lecture-note-r30-22148.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl14_lnkResource" href="http://www.cramster.com/hashing-lecture-note-r30-22148.aspx">Hashing</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl15_lnkIcon" href="http://www.cramster.com/b-trees-part1-lecture-note-r30-22149.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl15_lnkResource" href="http://www.cramster.com/b-trees-part1-lecture-note-r30-22149.aspx">B-trees part1</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl16_lnkIcon" href="http://www.cramster.com/b-trees-part-2-lecture-note-r30-22150.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl16_lnkResource" href="http://www.cramster.com/b-trees-part-2-lecture-note-r30-22150.aspx">B-trees part 2</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl17_lnkIcon" href="http://www.cramster.com/recursion-part-1-lecture-note-r30-22151.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl17_lnkResource" href="http://www.cramster.com/recursion-part-1-lecture-note-r30-22151.aspx">Recursion part 1</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl18_lnkIcon" href="http://www.cramster.com/recursion-part-2-lecture-note-r30-22152.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl18_lnkResource" href="http://www.cramster.com/recursion-part-2-lecture-note-r30-22152.aspx">Recursion part 2</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl19_lnkIcon" href="http://www.cramster.com/heap-sort-lecture-note-r30-22153.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl19_lnkResource" href="http://www.cramster.com/heap-sort-lecture-note-r30-22153.aspx">Heap sort</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl20_lnkIcon" href="http://www.cramster.com/heap-sort-part-2-lecture-note-r30-22154.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl20_lnkResource" href="http://www.cramster.com/heap-sort-part-2-lecture-note-r30-22154.aspx">Heap sort part 2</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl21_lnkIcon" href="http://www.cramster.com/b-tree-operations-lecture-note-r30-22155.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl21_lnkResource" href="http://www.cramster.com/b-tree-operations-lecture-note-r30-22155.aspx">B-tree operations</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl22_lnkIcon" href="http://www.cramster.com/graph-lecture-note-r30-22156.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl22_lnkResource" href="http://www.cramster.com/graph-lecture-note-r30-22156.aspx">Graph</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl23_lnkIcon" href="http://www.cramster.com/graphs-searching-lecture-note-r30-22157.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl23_lnkResource" href="http://www.cramster.com/graphs-searching-lecture-note-r30-22157.aspx">Graphs searching</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl24_lnkIcon" href="http://www.cramster.com/minimum-spanning-tree-lecture-note-r30-22158.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl24_lnkResource" href="http://www.cramster.com/minimum-spanning-tree-lecture-note-r30-22158.aspx">Minimum spanning tree</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl25_lnkIcon" href="http://www.cramster.com/shoretest-path-algorithms-lecture-note-r30-22161.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl25_lnkResource" href="http://www.cramster.com/shoretest-path-algorithms-lecture-note-r30-22161.aspx">Shoretest path algorithms</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl26_lnkIcon" href="http://www.cramster.com/all-pairs-shortest-path-problems-lecture-note-r30-22162.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl26_lnkResource" href="http://www.cramster.com/all-pairs-shortest-path-problems-lecture-note-r30-22162.aspx">All pairs shortest path problems</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl27_lnkIcon" href="http://www.cramster.com/topoligical-sort-lecture-note-r30-22163.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl27_lnkResource" href="http://www.cramster.com/topoligical-sort-lecture-note-r30-22163.aspx">Topoligical sort</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl28_lnkIcon" href="http://www.cramster.com/sorting-techniques-lecture-note-r30-22164.aspx"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl28_lnkResource" href="http://www.cramster.com/sorting-techniques-lecture-note-r30-22164.aspx">sorting techniques</a>
+                                </td>
+		</tr><tr>
+			<td class="row">
+                                    <a id="DataListResourceSet_ctl29_lnkIcon" href="./sorting techniques lecture note_files/sorting techniques lecture note.htm"><img src="./sorting techniques lecture note_files/ppt_small.gif" alt="HyperLink" style="border-width:0px;"></a>
+                                    <a id="DataListResourceSet_ctl29_lnkResource" href="./sorting techniques lecture note_files/sorting techniques lecture note.htm">sorting techniques</a>
+                                </td>
+		</tr>
+	</tbody></table>
+                        
+</div>
+                        
+                        
+                    </div>
+                </div>
+                
+                <h2>
+                    Description</h2>
+                <div class="info clearfix">
+                    <div style="overflow: hidden; position: relative; width: 100%;">
+                        <b>
+                            <span id="lblResourceName2" wrap="true" style="font-weight:bold;">sorting techniques</span></b>
+                        <p>
+                            <span id="lblDescription" wrap="true"></span></p>
+                    </div>
+                    <div style="margin-top: 10px; margin-bottom: 10px;">
+                        <div class="small_profile_pic" style="float: left;">
+                            <a id="lnkMessageAvatar" href="http://www.cramster.com/profile-156821933"><img src="./sorting techniques lecture note_files/2008924181726335787702221950005254_small.jpg" alt="Thumbnail" style="border-width:0px;"></a>
+                        </div>
+                        <div style="padding-top: 10px; margin-left: 10px; float: left;">
+                            shared by:<div>
+                                <a id="lnkNickname" rel="nofollow" href="http://www.cramster.com/profile-156821933">Irtiqa</a></div>
+                        </div>
+                    </div>
+                </div>
+                <h2>
+                    Rating</h2>
+                <div class="info">
+                    
+<!-- REPORT ABUSE POPUP CODE     --> 
+  <div id="wucAbuse1_modalPage" style="display:none;">
+        <div id="modalBackgroundAbuse"></div>
+        <div id="modalContainerAbuse"> 
+            <div id="modalAbuse" class="modal modal_abuse">
+                <h1>Report Abuse</h1> 
+                  
+                <label class="abuse_label">What type of abuse is this?</label>
+                <select name="wucAbuse1$lstAbuseGroup" id="wucAbuse1_lstAbuseGroup" tabindex="1" class="select">
+
+</select>
+                <div style="margin-bottom:10px;"></div>
+                <div class="modal_textbox">
+                    <textarea name="wucAbuse1$txtDescription" rows="2" cols="20" id="wucAbuse1_txtDescription" tabindex="2" style="background-color:Transparent;border-color:Transparent;"></textarea>
+                </div>
+                <div style="margin-bottom:10px;"></div>
+                <div style="text-align:right;"> 
+                    <input type="image" name="wucAbuse1$cmdCancel" id="wucAbuse1_cmdCancel" src="./sorting techniques lecture note_files/cancel.gif" onclick="hideModal(); return false;" style="border-width:0px;">                                
+                    <img id="wucAbuse1_imageSubmit" src="./sorting techniques lecture note_files/submit_small.gif" style="border-width:0px;">                                
+                    <img id="imageSpinner" src="./sorting techniques lecture note_files/spinner.gif" width="16" height="16" alt="" style="display:none;">
+                    <input id="wucAbuse1_CallBackSubmit_ParamField" name="wucAbuse1_CallBackSubmit_ParamField" type="hidden" value=""><div id="wucAbuse1_CallBackSubmit" style=""></div><script type="text/javascript">
+//<![CDATA[
+/*** ComponentArt.Web.UI.CallBack 2008_2_1204_3 wucAbuse1_CallBackSubmit ***/
+window.ComponentArt_Init_wucAbuse1_CallBackSubmit = function() {
+if(!window.ComponentArt_CallBack_Loaded)
+	{setTimeout('ComponentArt_Init_wucAbuse1_CallBackSubmit()', 50); return; }
+
+window.wucAbuse1_CallBackSubmit = new ComponentArt_CallBack('wucAbuse1_CallBackSubmit');
+if(!window['CallBackSubmit']) { window['CallBackSubmit'] = window.wucAbuse1_CallBackSubmit; wucAbuse1_CallBackSubmit.GlobalAlias = 'CallBackSubmit'; }
+wucAbuse1_CallBackSubmit.CallbackPrefix = 'http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx';
+wucAbuse1_CallBackSubmit.CallbackParamDelimiter = '&';
+wucAbuse1_CallBackSubmit.Cache = new Object();
+wucAbuse1_CallBackSubmit.ClientEvents = {'CallbackComplete':CallbackComplete};
+wucAbuse1_CallBackSubmit.LoadingPanelFadeDuration = 0;
+wucAbuse1_CallBackSubmit.LoadingPanelFadeMaximumOpacity = 100;
+wucAbuse1_CallBackSubmit.Parameter = '';
+wucAbuse1_CallBackSubmit.Postback = function() { __doPostBack('wucAbuse1$CallBackSubmit','') };
+wucAbuse1_CallBackSubmit.Initialize();
+
+}
+ComponentArt_Init_wucAbuse1_CallBackSubmit();
+
+//]]>
+</script>
+
+                </div>
+                <div>
+                    <span id="wucAbuse1_lblError" class="req"></span>                   
+                </div> 
+            </div>
+        </div>
+    </div>
+  
+                    <div style="padding-top: 5px; padding-left: 5px;">
+                        <div style="float: right;">
+                            
+                            <div id="divFlaggedAbuse" style="display:none;">
+                                flagged for abuse(<span id="lblAbuseCount"></span>)
+                            </div>
+                        </div>
+                        <br style="clear: both;">
+                    </div>
+                    <div id="panelResourceRatingNoAccess" class="ResourceRightBox">
+	
+                        Rated:
+                        <span id="lblNoAccessRatingAverage">A+</span>
+                        (<span id="lblNoAccessRatingCount">2</span>)
+                        <div class="FontSmall">
+                            You must <a href="https://www.cramster.com/my-cramster/login.aspx?page=/resource/resource.aspx&name=resource_id&id=22165" rel="nofollow">
+                                login</a> to rate.</div>
+                    
+</div>
+                    
+                    
+                    
+                </div>
+                <div style="background: #E7ECF7 none repeat scroll 0 0; line-height: 56px; margin-top: 17px;
+                    padding: 0 0 0 25px;">
+                    <a href="http://www.cramster.com/resource/resource-add.aspx" rel="nofollow">
+                        Submit study resources for karma points »</a>
+                </div>
+                <div class="info resource_info" style="margin-bottom: 20px;">
+                    <dl>
+                        <dt>
+                            <label>
+                                Verified:</label></dt><dd><span id="lblDateVerified">9/18/2008</span></dd>
+                        <dt>
+                            <label>
+                                File Size:</label></dt><dd><span id="lblFileSize">220 kb</span></dd>
+                        <dt>
+                            <label>
+                                Views:</label></dt><dd><span id="lblViewCount">189</span></dd>
+                        <dt>
+                            <label>
+                                Rated:</label></dt><dd><span id="lblRatingAverage">A+</span>
+                                    (<span id="lblRatingCount">2</span>)</dd>
+                        <dt>
+                            <label>
+                                Comments:</label></dt><dd><span id="lblCommentCount">1</span></dd>
+                        <dt>
+                            <label>
+                                Date Posted:</label></dt><dd><span id="lblDateCreated">9/17/2008</span></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="page_fold_line"><div class="row_line">&nbsp;</div></div>
+</div><!-- .page_body_container -->
+<div id="sub" class="page_foot_container">
+    <div class="fold_wrapper">
+        <div class="student_figure student_figure_1"><img class="huge_icon" src="./sorting techniques lecture note_files/blank.gif" alt="Omar, graduate, kneeling and flexing in celebration. GPA: 5.0"></div>
+        <div class="student_figure student_figure_2"><img class="huge_icon" src="./sorting techniques lecture note_files/blank.gif" alt="Omarina, graduate, leaping in celebration"></div>
+        <div class="student_figure student_figure_3"><img class="huge_icon" src="./sorting techniques lecture note_files/blank.gif" alt="Omarsca, graduate, in dynamic pose"></div>
+        <div class="student_figure student_figure_4"><img class="huge_icon" src="./sorting techniques lecture note_files/blank.gif" alt="Omarian, graduate, in dynamic pose"></div>
+        <div class="fold three_columns equal_columns clearfix">
+            <div class="about_us_column column_1" style="min-height: 353px; ">
+                <h3>Join Cramster’s Community</h3>
+                <p>
+                    Cramster is the leading provider of online homework help for college and high school <a title="Powered by Text-Enhance" id="_GPLITA_0" style="text-decoration:underline" href="http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx#" in_rurl="http://www.textsrv.com/click?v=Tkc6MTcyNTU6Mjk1OnN0dWRlbnRzOjU0MzA3M2M2YTgyODRkYzFhNDE1Yjk0YzA2ZTQ1NTgzOnotMTA2My0xNDcyOTp3d3cuY3JhbXN0ZXIuY29t">students</a>.  
+                    Get homework help and answers to your toughest questions in math, algebra, physics, chemistry, 
+                    calculus, science, engineering, accounting, English, writing help, business, humanities and more.  
+                    Master your homework assignments with our step-by-step solutions to more than 500 textbooks.  
+                    If we don’t support your textbook, don’t worry! You can ask ANY homework question 
+                    and get expert homework help in as little as two hours.
+                </p>
+                <p>
+                    Our extensive online study community is made up of college and high school students, teachers, 
+                    professors, parents and subject enthusiasts who contribute to our vast collection of study resources: 
+                    textbook solutions, study guides, practice tests, practice problems, lecture notes, equation sheets 
+                    and more.  With Cramster’s help, your homework will never be the same!
+                </p>
+                <p>
+                    <a href="https://www.cramster.com/sign-up/barrier" rel="nofollow">
+                        <strong>» Join for Free Today</strong></a>
+                </p>
+            </div><!-- .about_us_column -->
+            <div class="column_line" style="min-height: 353px; ">&nbsp;</div>
+            <div class="subjects_column column_2" style="min-height: 353px; ">
+                <h3>Need Help In</h3>
+                <ul>
+                    <li><a href="http://www.cramster.com/advanced-math-help-h2-59.aspx">
+                        » Advanced Math</a></li>
+                    <li><a href="http://www.cramster.com/algebra-help-h2-3.aspx">
+                        » Algebra</a></li>
+                    <li><a href="http://www.cramster.com/biology-help-h1-14.aspx">
+                        » Biology</a></li>
+                    <li><a href="http://www.cramster.com/calculus-help-h2-5.aspx">
+                        » Calculus</a></li>
+                    <li><a href="http://www.cramster.com/chemistry-help-h1-6.aspx">
+                        » Chemistry</a></li>
+                    <li><a href="http://www.cramster.com/civil-engineering-help-h1-8.aspx">
+                        » Civil Engineering</a></li>
+                    <li><a href="http://www.cramster.com/computer-science-help-h1-3.aspx">
+                        » Computer Science</a></li>
+                    <li><a href="http://www.cramster.com/electrical-engineering-help-h1-4.aspx">
+                        » Electrical Engineering</a></li>
+                    <li><a href="http://www.cramster.com/english-help-h1-20.aspx">
+                        » English</a></li>
+                </ul>
+                <ul class="last">
+                    <li><a href="http://www.cramster.com/geometry-help-h2-57.aspx">
+                        » Geometry</a></li>
+                    <li><a href="http://www.cramster.com/history-help-h1-21.aspx">
+                        » History</a></li>
+                    <li><a href="http://www.cramster.com/mechanical-engineering-help-h1-5.aspx">
+                        » Mechanical Engineering</a></li>
+                    <li><a href="http://www.cramster.com/physics-help-h1-2.aspx">
+                        » Physics</a></li>
+                    <li><a href="http://www.cramster.com/precalculus-help-h2-10.aspx">
+                        » Precalculus</a></li>
+                    <li><a href="http://www.cramster.com/psychology-help-h2-45.aspx">
+                        » Psychology</a></li>
+                    <li><a href="http://www.cramster.com/statistics-and-probability-help-h2-9.aspx">
+                        » Statistics and Probability</a></li>
+                    <li><a href="http://www.cramster.com/trigonometry-help-h2-85.aspx">
+                        » Trigonometry</a></li>
+                    <li><a href="http://www.cramster.com/writing-help-h1-24.aspx">
+                        » Writing</a></li>
+                </ul>
+            </div><!-- .subjects_column -->
+            <div class="column_line" style="min-height: 353px; ">&nbsp;</div>
+            <div class="useful_links_column column_3" style="min-height: 353px; ">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="http://www.cramster.com/cramster-about.aspx">
+                        » About Cramster</a></li>
+                    <li><a href="http://www.cramster.com/cramster-contact.aspx" rel="nofollow">
+                        » Contact Us</a></li>
+                    <li><a href="http://www.cramster.com/jobs">
+                        » Jobs</a></li>
+                    <li><a href="http://www.cramster.com/pressroom/">
+                        » Press Room</a></li>
+                    <li><a href="http://www.cramster.com/educators">
+                        » Educators</a></li>
+                    <li><a href="http://www.cramster.com/support" rel="nofollow">
+                        » Support</a></li>
+                    <li><a href="http://www.cramster.com/cramster-legal.aspx" rel="nofollow">
+                        » Terms of Use</a></li>
+                    <li><a href="http://www.cramster.com/cramster-privacy.aspx" rel="nofollow">
+                        » Privacy Policy</a></li>
+                    <li><a href="http://www.cramster.com/cramster-site-map.aspx">
+                        » Site Map</a></li>
+                    <li><a href="http://www.cramster.com/blog">
+                        » Blog</a></li>
+                    <li><a href="http://www.cramster.com/solutions-manual/">
+                        » Solutions Manual</a></li>
+                     <li><a href="http://www.chegg.com/">» College Textbooks</a></li>
+                     <li><a href="http://www.zinch.com/">» Scholarships</a></li>
+                </ul>
+            </div><!-- .useful_links_column -->
+        </div><!-- .fold -->
+    </div><!-- .fold_wrapper -->
+    <div class="row_line">&nbsp;</div>
+    <div id="WucBottom1_WucBottomLink1_divFooterWrap" class="footer_wrapper">
+    <div class="footer">
+        <div class="inner">
+            <p>
+                Cramster.com is not affiliated with any publisher. Book covers, title and author
+                names appear for reference only.
+                <br>
+                Copyright © <small>2012</small> Cramster, Inc.
+            </p>
+            
+        </div>
+    </div><!-- .footer -->
+</div><!-- .footer_wrapper -->
+</div><!-- .page_foot_container -->
+
+    
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgLDgeKxAgLG/ryrAwLMhICWAwL/tcqpDAKQ+aHKCwLK/4i4BuzhAiVxy5LWRQt3E6SPyWNSxD3s">
+</div>
+<script>document.forms[0].action='';</script><script type="text/javascript">
+//<![CDATA[
+window.ComponentArt_Page_Loaded = true;
+//]]>
+</script><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTg3MjEyOTM3Nw8WAh4PZmxhc2hfcGFwZXJfdXJsBVNodHRwOi8vczMuYW1hem9uYXdzLmNvbS9jcmFtc3Rlci1yZXNvdXJjZS8yMjE2NV9MZWN0dXJlLTQwIFNvcnRpbmdUZWNobmlxdWVzLUlJLnN3ZhYCAgEPZBY+Zg9kFgQCAQ9kFgQCAQ8WAh4HVmlzaWJsZWgWBAIDDw8WAh4ISW1hZ2VVcmwFPWh0dHA6Ly9jcmFtc3Rlci1pbWFnZS5zMy5hbWF6b25hd3MuY29tL0NoYXQvcmVvcGVuX3dpbmRvdy5naWZkZAIEDw8WAh8CBUNodHRwOi8vY3JhbXN0ZXItaW1hZ2UuczMuYW1hem9uYXdzLmNvbS9DaGF0L3BvcHVwX3dhcm5pbmdfY2xvc2UuZ2lmZGQCBQ8PFgQeB0VuYWJsZWRoHwFoZGQCAg8PFgIfAWhkZAICD2QWAmYPZBYCAgEPZBYEZg9kFgJmD2QWAmYPZBYCAgEPPCsACQBkAgEPZBYCAgEPZBYCZg9kFgICAQ9kFgoCAQ8PFgIeD0VuYWJsZVZpZXdTdGF0ZWdkZAIFDzwrAAkAZAINDzwrAAkAZAIVDzwrAAkAZAIbDzwrAAkAZAIDDw8WAh8BZ2QWAgIBDw8WAh4EVGV4dAWlAzxhIGhyZWY9J2h0dHA6Ly93d3cuY3JhbXN0ZXIuY29tLyc+aG9tZTwvYT4gJmd0OyA8YSBocmVmPSJodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9jb21wdXRlci1zY2llbmNlLWhlbHAtaDEtMy5hc3B4Ij5jb21wdXRlciBzY2llbmNlPC9hPiAmZ3Q7IDxhIGhyZWY9Imh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2RhdGEtc3RydWN0dXJlcy1oZWxwLWgyLTY5LmFzcHgiPmRhdGEgc3RydWN0dXJlczwvYT4gJmd0OyA8YSBocmVmPSJodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9zdHVkeS1ndWlkZXMvIj5yZXNvdXJjZTwvYT4gJmd0OyA8YSBocmVmPSJodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9kYXRhLXN0cnVjdHVyZXMtbGVjdHVyZS1ub3Rlcy1yMjYtNjktY3BpMC0xLmFzcHgiPmxlY3R1cmUgbm90ZTwvYT4gJmd0OyBzb3J0aW5nIHRlY2huaXF1ZXNkZAIEDw8WAh8FBRJzb3J0aW5nIHRlY2huaXF1ZXNkZAIGDw8WAh8FBdEBPGEgaHJlZj0iaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vY29tcHV0ZXItc2NpZW5jZS1zdHVkeS1ndWlkZXMtcjI1LTMtY3BpMC0wLmFzcHgiPkNvbXB1dGVyIFNjaWVuY2U8L2E+ICZndDsgPGEgaHJlZj0iaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vZGF0YS1zdHJ1Y3R1cmVzLXN0dWR5LWd1aWRlcy1yMjYtNjktY3BpMC0wLmFzcHgiPkRhdGEgU3RydWN0dXJlczwvYT5kZAIIDw8WAh8FBZsGPGEgaHJlZj0iaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vdGFnLXIyNy01MTktY3BpMC0wLmFzcHgiPkNvbXB1dGVyIFNjaWVuY2U8L2E+LCA8YSBocmVmPSJodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS90YWctcjI3LTY2NC1jcGkwLTAuYXNweCI+RGF0YSBTdHJ1Y3R1cmVzPC9hPiwgPGEgaHJlZj0iaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vdGFnLXIyNy0zNzQ0LWNwaTAtMC5hc3B4Ij5EYXRhIHN0cnVjdHVyZTwvYT4sIDxhIGhyZWY9Imh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RhZy1yMjctNTIzODYtY3BpMC0wLmFzcHgiPkluc2VydGlvbiBzb3J0PC9hPiwgPGEgaHJlZj0iaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vdGFnLXIyNy01MjQxNi1jcGkwLTAuYXNweCI+U2VsZWN0aW9uIHNvcnQ8L2E+LCA8YSBocmVmPSJodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS90YWctcjI3LTc0ODEyLWNwaTAtMC5hc3B4Ij5Ib3Bjcm9mdDwvYT4sIDxhIGhyZWY9Imh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RhZy1yMjctNzQ4MTMtY3BpMC0wLmFzcHgiPlVsbG1hbjwvYT4sIDxhIGhyZWY9Imh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RhZy1yMjctNzQ4MjUtY3BpMC0wLmFzcHgiPmludGVybmFsIHNvcnRpbmcgbW9kZWw8L2E+LCA8YSBocmVmPSJodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS90YWctcjI3LTc0ODI2LWNwaTAtMC5hc3B4Ij5iZXN0L3dvcnN0L2F2ZXJhZ2UgY2FzZTwvYT4sIDxhIGhyZWY9Imh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RhZy1yMjctNzQ4MjctY3BpMC0wLmFzcHgiPnF1aWNrc29ydC48L2E+ZGQCCQ8PFgIfAWhkFgQCAQ9kFgJmDw8WAh8BaGQWAmYPZBYCAgEPFgIfAWgWBAIBDw8WAh8BaGRkAgIPDxYCHwFoZGQCAw9kFgICAQ8PFgQfBQULRG93bmxvYWQgaXQeC05hdmlnYXRlVXJsBVNodHRwOi8vczMuYW1hem9uYXdzLmNvbS9jcmFtc3Rlci1yZXNvdXJjZS8yMjE2NV9MZWN0dXJlLTQwIFNvcnRpbmdUZWNobmlxdWVzLUlJLnBwdGRkAgoPDxYEHg5TZWxlY3RlZE5vZGVJZAUOcF9UYWJTdHJpcFRhYjEfBGdkZAILDw8WAh4PRW5zdXJlVmlld1N0YXRlZ2QWBGYPZBYCAgEPZBYCAgEPZBYCZg9kFgICAQ9kFgYCAQ8PFgIfAWhkZAIDDw8WAh8BaGQWAgIDDw8WAh8FBRVEb3dubG9hZCBMZWN0dXJlIE5vdGVkZAIFDw8WAh8BaGRkAgIPZBYCAgEPZBYEAgIPDxYCHwFnZBYEAgMPDxYCHwYFKGh0dHBzOi8vd3d3LmNyYW1zdGVyLmNvbS9zaWduLXVwL2JhcnJpZXJkZAIFDw8WAh8GBVVodHRwczovL3d3dy5jcmFtc3Rlci5jb20vbXktY3JhbXN0ZXIvbG9naW4uYXNweD9xdWlja19yZWRpcmVjdD0xJnBhZ2U9c3R1ZHktZ3VpZGVzJTJGZGQCBA9kFgICBw9kFgICAQ88KwALAGQCDA8PZBYCHgdPbkNsaWNrBS1zaG93TW9yZUhlbHAoJ3Jlc291cmNlJywyMjE2NSk7IHJldHVybiBmYWxzZTtkAg0PDxYEHwYFPGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2NoYXQvY2hhdC1ub3cuYXNweD9yZXNvdXJjZV9pZD0yMjE2NR8BaGRkAg4PDxYCHwFoZGQCDw8PFgIfBQUXZGF0YSBzdHJ1Y3R1cmUgbGVjdHVyZXNkZAIQD2QWAgIBDzwrAAkBAA8WBB4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnQCHmQWPGYPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFXWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2RhdGEtc3RydWN0dXJlcy1pbnRyb2R1Y3Rpb24tYW5kLW92ZXJ2aWV3LWxlY3R1cmUtbm90ZS1yMzAtMjIxMzMuYXNweGRkAgMPDxYEHwUFKURhdGEgc3RydWN0dXJlcyBpbnRyb2R1Y3Rpb24gYW5kIG92ZXJ2aWV3HwYFXWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2RhdGEtc3RydWN0dXJlcy1pbnRyb2R1Y3Rpb24tYW5kLW92ZXJ2aWV3LWxlY3R1cmUtbm90ZS1yMzAtMjIxMzMuYXNweGRkAgEPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFQ2h0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RpbWUtY29tcGxleGl0eS1sZWN0dXJlLW5vdGUtcjMwLTIyMTM0LmFzcHhkZAIDDw8WBB8FBQ9UaW1lIGNvbXBsZXhpdHkfBgVDaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vdGltZS1jb21wbGV4aXR5LWxlY3R1cmUtbm90ZS1yMzAtMjIxMzQuYXNweGRkAgIPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2Fic3RyYWN0LWRhdGEtdHlwZS1sZWN0dXJlLW5vdGUtcjMwLTIyMTM1LmFzcHhkZAIDDw8WBB8FBRJBYnN0cmFjdCBEYXRhIFR5cGUfBgVGaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vYWJzdHJhY3QtZGF0YS10eXBlLWxlY3R1cmUtbm90ZS1yMzAtMjIxMzUuYXNweGRkAgMPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFPWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2FycmF5LWFkdC1sZWN0dXJlLW5vdGUtcjMwLTIyMTM2LmFzcHhkZAIDDw8WBB8FBQlBcnJheSBBRFQfBgU9aHR0cDovL3d3dy5jcmFtc3Rlci5jb20vYXJyYXktYWR0LWxlY3R1cmUtbm90ZS1yMzAtMjIxMzYuYXNweGRkAgQPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFS2h0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2xpc3QtYWR0LWFuZC1saW5rZWRsaXN0LWxlY3R1cmUtbm90ZS1yMzAtMjIxMzcuYXNweGRkAgMPDxYEHwUFF0xpc3QgQURUIGFuZCBsaW5rZWRsaXN0HwYFS2h0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2xpc3QtYWR0LWFuZC1saW5rZWRsaXN0LWxlY3R1cmUtbm90ZS1yMzAtMjIxMzcuYXNweGRkAgUPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFOmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3N0YWNrcy1sZWN0dXJlLW5vdGUtcjMwLTIyMTM4LmFzcHhkZAIDDw8WBB8FBQZzdGFja3MfBgU6aHR0cDovL3d3dy5jcmFtc3Rlci5jb20vc3RhY2tzLWxlY3R1cmUtbm90ZS1yMzAtMjIxMzguYXNweGRkAgYPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFOmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3F1ZXVlcy1sZWN0dXJlLW5vdGUtcjMwLTIyMTM5LmFzcHhkZAIDDw8WBB8FBQZRdWV1ZXMfBgU6aHR0cDovL3d3dy5jcmFtc3Rlci5jb20vcXVldWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxMzkuYXNweGRkAgcPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFOWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RyZWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDEuYXNweGRkAgMPDxYEHwUFBVRyZWVzHwYFOWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RyZWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDEuYXNweGRkAggPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFPmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RyZWVzLS1ic3QtbGVjdHVyZS1ub3RlLXIzMC0yMjE0Mi5hc3B4ZGQCAw8PFgQfBQUKVHJlZXMgLUJTVB8GBT5odHRwOi8vd3d3LmNyYW1zdGVyLmNvbS90cmVlcy0tYnN0LWxlY3R1cmUtbm90ZS1yMzAtMjIxNDIuYXNweGRkAgkPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFQ2h0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RyZWVzLWJzdC1wYXJ0Mi1sZWN0dXJlLW5vdGUtcjMwLTIyMTQzLmFzcHhkZAIDDw8WBB8FBQ9UcmVlcy1CU1QgcGFydDIfBgVDaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vdHJlZXMtYnN0LXBhcnQyLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDMuYXNweGRkAgoPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFPWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2F2bC10cmVlcy1sZWN0dXJlLW5vdGUtcjMwLTIyMTQ0LmFzcHhkZAIDDw8WBB8FBQlBVkwgdHJlZXMfBgU9aHR0cDovL3d3dy5jcmFtc3Rlci5jb20vYXZsLXRyZWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDQuYXNweGRkAgsPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFTGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2F2bC10cmVlcy1pbXBsZW1lbnRhdGlvbi1sZWN0dXJlLW5vdGUtcjMwLTIyMTQ1LmFzcHhkZAIDDw8WBB8FBRhBVkwgdHJlZXMgaW1wbGVtZW50YXRpb24fBgVMaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vYXZsLXRyZWVzLWltcGxlbWVudGF0aW9uLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDUuYXNweGRkAgwPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFOWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RyaWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDYuYXNweGRkAgMPDxYEHwUFBVRyaWVzHwYFOWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RyaWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDYuYXNweGRkAg0PZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFOGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3NldHMtbGVjdHVyZS1ub3RlLXIzMC0yMjE0Ny5hc3B4ZGQCAw8PFgQfBQUEU2V0cx8GBThodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9zZXRzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDcuYXNweGRkAg4PZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFO2h0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2hhc2hpbmctbGVjdHVyZS1ub3RlLXIzMC0yMjE0OC5hc3B4ZGQCAw8PFgQfBQUHSGFzaGluZx8GBTtodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9oYXNoaW5nLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDguYXNweGRkAg8PZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFQWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2ItdHJlZXMtcGFydDEtbGVjdHVyZS1ub3RlLXIzMC0yMjE0OS5hc3B4ZGQCAw8PFgQfBQUNQi10cmVlcyBwYXJ0MR8GBUFodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9iLXRyZWVzLXBhcnQxLWxlY3R1cmUtbm90ZS1yMzAtMjIxNDkuYXNweGRkAhAPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFQmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2ItdHJlZXMtcGFydC0yLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTAuYXNweGRkAgMPDxYEHwUFDkItdHJlZXMgcGFydCAyHwYFQmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2ItdHJlZXMtcGFydC0yLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTAuYXNweGRkAhEPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3JlY3Vyc2lvbi1wYXJ0LTEtbGVjdHVyZS1ub3RlLXIzMC0yMjE1MS5hc3B4ZGQCAw8PFgQfBQUQUmVjdXJzaW9uIHBhcnQgMR8GBURodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9yZWN1cnNpb24tcGFydC0xLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTEuYXNweGRkAhIPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3JlY3Vyc2lvbi1wYXJ0LTItbGVjdHVyZS1ub3RlLXIzMC0yMjE1Mi5hc3B4ZGQCAw8PFgQfBQUQUmVjdXJzaW9uIHBhcnQgMh8GBURodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9yZWN1cnNpb24tcGFydC0yLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTIuYXNweGRkAhMPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFPWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2hlYXAtc29ydC1sZWN0dXJlLW5vdGUtcjMwLTIyMTUzLmFzcHhkZAIDDw8WBB8FBQlIZWFwIHNvcnQfBgU9aHR0cDovL3d3dy5jcmFtc3Rlci5jb20vaGVhcC1zb3J0LWxlY3R1cmUtbm90ZS1yMzAtMjIxNTMuYXNweGRkAhQPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2hlYXAtc29ydC1wYXJ0LTItbGVjdHVyZS1ub3RlLXIzMC0yMjE1NC5hc3B4ZGQCAw8PFgQfBQUQSGVhcCBzb3J0IHBhcnQgMh8GBURodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9oZWFwLXNvcnQtcGFydC0yLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTQuYXNweGRkAhUPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2ItdHJlZS1vcGVyYXRpb25zLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTUuYXNweGRkAgMPDxYEHwUFEUItdHJlZSBvcGVyYXRpb25zHwYFRWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2ItdHJlZS1vcGVyYXRpb25zLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTUuYXNweGRkAhYPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFOWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2dyYXBoLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTYuYXNweGRkAgMPDxYEHwUFBUdyYXBoHwYFOWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2dyYXBoLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTYuYXNweGRkAhcPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2dyYXBocy1zZWFyY2hpbmctbGVjdHVyZS1ub3RlLXIzMC0yMjE1Ny5hc3B4ZGQCAw8PFgQfBQUQR3JhcGhzIHNlYXJjaGluZx8GBURodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9ncmFwaHMtc2VhcmNoaW5nLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTcuYXNweGRkAhgPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFSWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL21pbmltdW0tc3Bhbm5pbmctdHJlZS1sZWN0dXJlLW5vdGUtcjMwLTIyMTU4LmFzcHhkZAIDDw8WBB8FBRVNaW5pbXVtIHNwYW5uaW5nIHRyZWUfBgVJaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vbWluaW11bS1zcGFubmluZy10cmVlLWxlY3R1cmUtbm90ZS1yMzAtMjIxNTguYXNweGRkAhkPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFTWh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3Nob3JldGVzdC1wYXRoLWFsZ29yaXRobXMtbGVjdHVyZS1ub3RlLXIzMC0yMjE2MS5hc3B4ZGQCAw8PFgQfBQUZU2hvcmV0ZXN0IHBhdGggYWxnb3JpdGhtcx8GBU1odHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9zaG9yZXRlc3QtcGF0aC1hbGdvcml0aG1zLWxlY3R1cmUtbm90ZS1yMzAtMjIxNjEuYXNweGRkAhoPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFVGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2FsbC1wYWlycy1zaG9ydGVzdC1wYXRoLXByb2JsZW1zLWxlY3R1cmUtbm90ZS1yMzAtMjIxNjIuYXNweGRkAgMPDxYEHwUFIEFsbCBwYWlycyBzaG9ydGVzdCBwYXRoIHByb2JsZW1zHwYFVGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL2FsbC1wYWlycy1zaG9ydGVzdC1wYXRoLXByb2JsZW1zLWxlY3R1cmUtbm90ZS1yMzAtMjIxNjIuYXNweGRkAhsPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRGh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3RvcG9saWdpY2FsLXNvcnQtbGVjdHVyZS1ub3RlLXIzMC0yMjE2My5hc3B4ZGQCAw8PFgQfBQUQVG9wb2xpZ2ljYWwgc29ydB8GBURodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS90b3BvbGlnaWNhbC1zb3J0LWxlY3R1cmUtbm90ZS1yMzAtMjIxNjMuYXNweGRkAhwPZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3NvcnRpbmctdGVjaG5pcXVlcy1sZWN0dXJlLW5vdGUtcjMwLTIyMTY0LmFzcHhkZAIDDw8WBB8FBRJzb3J0aW5nIHRlY2huaXF1ZXMfBgVGaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vc29ydGluZy10ZWNobmlxdWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNjQuYXNweGRkAh0PZBYEAgEPDxYEHwIFR2h0dHA6Ly9zMy5hbWF6b25hd3MuY29tL2NyYW1zdGVyLWltYWdlL3Jlc291cmNlcy9GaWxlSWNvbi9wcHRfc21hbGwuZ2lmHwYFRmh0dHA6Ly93d3cuY3JhbXN0ZXIuY29tL3NvcnRpbmctdGVjaG5pcXVlcy1sZWN0dXJlLW5vdGUtcjMwLTIyMTY1LmFzcHhkZAIDDw8WBB8FBRJzb3J0aW5nIHRlY2huaXF1ZXMfBgVGaHR0cDovL3d3dy5jcmFtc3Rlci5jb20vc29ydGluZy10ZWNobmlxdWVzLWxlY3R1cmUtbm90ZS1yMzAtMjIxNjUuYXNweGRkAhEPDxYCHwFoZGQCEg8PFgIfAWhkFgICAQ88KwAJAGQCEw8PFgIfBQUSc29ydGluZyB0ZWNobmlxdWVzZGQCFA8PFgIfBWVkZAIVDw8WBB8CBVZodHRwOi8vczMuYW1hem9uYXdzLmNvbS9wcm9maWxlLXBpYy1pbWFnZS8yMDA4OTI0MTgxNzI2MzM1Nzg3NzAyMjIxOTUwMDA1MjU0X3NtYWxsLmpwZx8GBSlodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9wcm9maWxlLTE1NjgyMTkzM2RkAhYPDxYEHwUFBklydGlxYR8GBSlodHRwOi8vd3d3LmNyYW1zdGVyLmNvbS9wcm9maWxlLTE1NjgyMTkzM2RkAhgPDxYCHwFoZGQCGQ8WAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTtkAhoPZBYEZg8PFgIfBQUCQStkZAIBDw8WAh8FBQEyZGQCHA8PFgIfAWhkFgICAQ9kFgJmD2QWAgIBD2QWAmYPZBYIAgEPD2QWBh4Lb25Nb3VzZU92ZXIFDUxvYWRJbWFnZSgxKTseCm9uTW91c2VPdXQFDExvYWRJbWFnZSgpOx4Hb25DbGljawVIV3VjUmVzb3VyY2VSYXRpbmcxX0NhbGxCYWNrUmF0aW5nLkNhbGxiYWNrKDEpO1Nob3dTdGF0dXMoKTtyZXR1cm4gZmFsc2U7ZAIDDw9kFgYfDQUNTG9hZEltYWdlKDIpOx8OBQxMb2FkSW1hZ2UoKTsfDwVIV3VjUmVzb3VyY2VSYXRpbmcxX0NhbGxCYWNrUmF0aW5nLkNhbGxiYWNrKDIpO1Nob3dTdGF0dXMoKTtyZXR1cm4gZmFsc2U7ZAIFDw9kFgYfDQUNTG9hZEltYWdlKDMpOx8OBQxMb2FkSW1hZ2UoKTsfDwVIV3VjUmVzb3VyY2VSYXRpbmcxX0NhbGxCYWNrUmF0aW5nLkNhbGxiYWNrKDMpO1Nob3dTdGF0dXMoKTtyZXR1cm4gZmFsc2U7ZAIHDw9kFgYfDQUNTG9hZEltYWdlKDQpOx8OBQxMb2FkSW1hZ2UoKTsfDwVIV3VjUmVzb3VyY2VSYXRpbmcxX0NhbGxCYWNrUmF0aW5nLkNhbGxiYWNrKDQpO1Nob3dTdGF0dXMoKTtyZXR1cm4gZmFsc2U7ZAIeDw8WAh8FBQk5LzE4LzIwMDhkZAIfDw8WAh8FBQYyMjAga2JkZAIgDw8WAh8FBQMxODlkZAIhDw8WAh8FBQJBK2RkAiIPDxYCHwUFATJkZAIjDw8WAh8FBQExZGQCJA8PFgIfBQUJOS8xNy8yMDA4ZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFDWltYWdlTW9yZUhlbHAFE3d1Y0FidXNlMSRjbWRDYW5jZWzfstV9mKir+XiS6Gff68wjCViGbw=="></form>
+    <script type="text/javascript" src="./sorting techniques lecture note_files/sharethis.js"></script><span id="sharethis_0" style="display: none; "><a class="stbutton stico_default" title="ShareThis via email, AIM, social bookmarking and networking sites, etc." href="javascript:void(0)" st_page="home"><span class="stbuttontext" st_page="home"></span></a></span>
+    <script type="text/javascript" src="./sorting techniques lecture note_files/addthis_widget.js"></script>
+<script type="text/javascript" src="./sorting techniques lecture note_files/json2.js"></script>
+<script type="text/javascript" src="./sorting techniques lecture note_files/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="./sorting techniques lecture note_files/Cramster.js"></script>
+<script type="text/javascript" src="./sorting techniques lecture note_files/cramster-lib.js"></script>
+<!-- Google Code for All web site pages (HTTPS) Remarketing List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1069256193;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "666666";
+var google_conversion_label = (document.location.protocol == "http:") ? "3nV_CO_n2gEQgZzu_QM" : "c0LVCOfo2gEQgZzu_QM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<!-- Chartbeat --><script type="text/javascript">
+var _sf_async_config={uid:4350,domain:"cramster.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement("script");
+    e.setAttribute("language", "javascript");
+    e.setAttribute("type", "text/javascript");
+    e.setAttribute("src",
+       (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+       "static.chartbeat.com/js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != "function") ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+</script>
+<!-- AdRoll ReTargeting --><script type="text/javascript">
+adroll_adv_id = "IKU2RCERLZBBHBHHCKU7E5";
+adroll_pix_id = "RBGWD3DFRRGUJOIEZQNBBR";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute("async", "true");
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   document.documentElement.firstChild.appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script src="./sorting techniques lecture note_files/ga.js" type="text/javascript"></script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-831485-1");pageTracker._setDomainName(".cramster.com");pageTracker._trackPageview();} catch(err) {}</script>
+<div class="hidden"><!-- BEGIN LivePerson Monitor. --><script language="javascript">var lpMTagConfig = { 'lpServer': "server.iad.liveperson.net", 'lpNumber': "20688223", 'lpProtocol': "https" }; function lpAddMonitorTag(src) { if (typeof (src) == 'undefined' || typeof (src) == 'object') { src = lpMTagConfig.lpMTagSrc ? lpMTagConfig.lpMTagSrc : '/hcp/html/mTag.js'; } if (src.indexOf('http') != 0) { src = lpMTagConfig.lpProtocol + "://" + lpMTagConfig.lpServer + src + '?site=' + lpMTagConfig.lpNumber; } else { if (src.indexOf('site=') < 0) { if (src.indexOf('?') < 0) src = src + '?'; else src = src + '&'; src = src + 'site=' + lpMTagConfig.lpNumber; } }; var s = document.createElement('script'); s.setAttribute('type', 'text/javascript'); s.setAttribute('charset', 'iso-8859-1'); s.setAttribute('src', src); document.getElementsByTagName('head').item(0).appendChild(s); } if (window.attachEvent) window.attachEvent('onload', lpAddMonitorTag); else window.addEventListener("load", lpAddMonitorTag, false);</script><!-- END LivePerson Monitor. --><!-- BEGIN Monitor Tracking Variables  --><script language="JavaScript1.2">if (typeof(lpMTagConfig.visitorVar) == "undefined"){ lpMTagConfig.visitorVar = new Array();}lpMTagConfig.visitorVar[lpMTagConfig.visitorVar.length] = 'membership_status=';</script><!-- End Monitor Tracking Variables  --></div>
+<script type="text/javascript" src="./sorting techniques lecture note_files/jquery.jqURL.js"></script>
+<script type="text/javascript" src="./sorting techniques lecture note_files/ShareThis.js"></script>
+
+    <script type="text/javascript">
+        function showChatGuide() {
+            popupcenterednoresize(sRootWeb+'tutorials/chat/index.aspx', 990, 700);
+            return false;
+        }
+        function SetTabAsk() {
+            //set to default tab.ID=tabRoot0 if no tab selected
+
+            TabStripResource.SelectTabById('TabStripTab2');
+            return false;
+        }
+         
+ 
+        // to store divName in parent page
+        // ex: wucAbuseMessageTopic Id for Abuse Control in MessageTopic. it generate wucAbuseMessageTopic_modelPage
+        //     so we use sPath + _modalPage
+        var Path;
+        var AbuseType;          // to store abuse types in numbers like 1(MessageTopic), 2(Message), 3(supportChallenge) etc.
+        var AbuseOnId;         // ID on which abuse is done. message_topic_id, message_id, support_challenge_id etc.
+        var StudentId;         // login student Id
+        var GridClientId;      // to get Control Name in DataRepeater and Grid 
+
+        var ie = (document.all);
+
+        function showModal(wucName, abuseType, abuseOnId, studentId, gridClientId) {
+
+            Path = wucName;
+            AbuseType = abuseType;
+            AbuseOnId = abuseOnId;
+            StudentId = studentId;
+            GridClientId = gridClientId;
+
+            var listBox = document.getElementById(Path + '_lstAbuseGroup');
+            listBox.selectedIndex = 0;
+
+            document.getElementById(Path + '_txtDescription').value = '';
+
+            var modalContainer;
+
+            var formHeight;
+            if ((document.getElementById("form1") == null) || (document.getElementById("form1") == "undefined"))
+                formHeight = document.getElementById("Form1").scrollHeight;
+            else
+                formHeight = document.getElementById("form1").scrollHeight;
+
+            var modalBackground = document.getElementById("modalBackgroundAbuse");
+            modalBackground.style.height = formHeight + "px";
+
+            modalContainer = document.getElementById("modalContainerAbuse");
+
+            if (ie) {
+                var modalScrollTop = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+                //modalContainer.style.top =  modalScrollTop + 120 ;
+                document.getElementById(Path + '_modalPage').style.display = "block";
+            }
+            else {
+                modalContainer.style.top = (window.pageYOffset + 200) + "px";
+                document.getElementById(Path + '_modalPage').style.display = "block";
+            }
+
+            var abuse = document.getElementById("modalAbuse");
+            var screenWidth = document.body.clientWidth;
+            var screenHeight = document.body.clientHeight;
+            screenWidth = screenWidth / 2;
+            screenHeight = screenHeight / 2;
+            screenWidth = screenWidth - 177;
+            screenHeight = screenHeight - 100;
+            abuse.style.top = screenHeight + "px";
+            abuse.style.left = screenWidth + "px";
+            if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) { //test for MSIE x.x;
+                var ieversion = new Number(RegExp.$1) // capture x.x portion and store as a number
+                if (ieversion == 6) {
+
+                    //var modalContainerTop = document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop ;
+                    abuse.style.left = "0px";
+                    abuse.style.top = "0px";
+                    popup_left = (document.documentElement.clientWidth / 2) - 177;
+                    popup_top = (document.documentElement.clientHeight / 2) - 100;
+                    modalContainer.style.left = popup_left + "px";
+                    modalContainer.style.top = popup_top + "px";
+
+                }
+            }
+
+
+        }
+
+
+        function checkData() {
+
+            var abuseGroup = document.getElementById(Path + '_lstAbuseGroup').value;
+            var abuseDescription = document.getElementById(Path + '_txtDescription').value;
+            var errorLabel = document.getElementById(Path + '_lblError');
+
+
+            if ((abuseGroup == 0) && (abuseDescription == '')) {
+                errorLabel.innerHTML = 'Please Select Abuse Group and Enter Some Reason';
+                return false;
+            }
+            if (abuseGroup == 0) {
+                errorLabel.innerHTML = 'Please Select Abuse Group';
+                return false;
+            }
+
+            if (abuseDescription == '') {
+                errorLabel.innerHTML = 'Please Enter Reason';
+                return false;
+            }
+
+            document.getElementById(Path + '_cmdCancel').style.display = 'none';
+            document.getElementById(Path + '_imageSubmit').style.display = 'none';
+            document.getElementById('imageSpinner').style.display = '';
+            errorLabel.innerHTML = '';
+
+            CallBackSubmit.Callback(AbuseType, AbuseOnId, StudentId, abuseGroup, abuseDescription);
+
+        }
+
+
+        
+
+        function hideModal() {
+            var ModalPage = document.getElementById(Path + '_modalPage');
+            ModalPage.style.display = "none";
+            document.getElementById(Path + '_cmdCancel').style.display = '';
+            document.getElementById(Path + '_imageSubmit').style.display = '';
+            document.getElementById('imageSpinner').style.display = 'none';
+        } 
+
+    // begin wucMoreHelp
+
+    var ie = (document.all);
+
+
+    // called on Tag ListBox Change Event 
+    function showCategory(param) {
+        TagName = param.options[param.selectedIndex].text;
+        TagId = param.value;
+        document.getElementById("tagnamespan").innerHTML = TagName + ".";
+        CallBackCategory.Callback(TagId, TagName);
+    }
+
+
+
+
+    // shows RadionButton Tags - called on Previous button click
+    function ShowTags() {
+
+        DivTag = document.getElementById('wucMoreHelp_divTag');
+        DivTag.style.display = '';
+
+        DivResult = document.getElementById('wucMoreHelp_divResult');
+        DivResult.style.display = 'none';
+
+
+    }
+
+
+    function ShowCategories(TagId, TagName) {
+        CallBackCategory.Callback(TagId, TagName);
+        var ListBox = document.getElementById('wucMoreHelp_lstTag');
+        document.getElementById("tagnamespan").innerHTML = TagName + ".";
+        // show selected tag in listbox        
+        for (i = ListBox.options.length - 1; i >= 0; i--) {
+            if (ListBox.options[i].value == TagId)
+                ListBox.options[i].selected = true;
+        }
+        DivTag = document.getElementById('wucMoreHelp_divTag');
+        DivTag.style.display = 'none';
+        DivResult = document.getElementById('wucMoreHelp_divResult');
+        DivResult.style.display = '';
+    }
+
+    function showMoreHelp(type, id) {
+
+        var TagDiv = document.getElementById('wucMoreHelp_divTag');
+        TagDiv.style.display = '';
+        CallBackOptTag.Callback(type, id);
+        CallBackListTag.Callback(type, id);
+        document.getElementById('wucMoreHelp_txtTagId').value = id;
+        document.getElementById('wucMoreHelp_txtTagName').value = type;
+        var formHeight;
+
+        if ((document.getElementById("form1") == null) || (document.getElementById("form1") == "undefined"))
+            formHeight = document.getElementById("Form1").scrollHeight;
+        else
+            formHeight = document.getElementById("form1").scrollHeight;
+
+        var modalBackground = document.getElementById("modalBackgroundMoreHelp");
+        modalBackground.style.height = formHeight + "px";
+
+        var modalContainer = document.getElementById("modalContainerMoreHelp");
+
+        if (ie) {
+            var modalContainerTop = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+            modalContainer.style.top = modalContainerTop + 120;
+            document.getElementById('wucMoreHelp_ModalPageMoreHelp').style.display = "block";
+            //modelContainer.style.top = window.offsetHeight/2 + window.scrollTop;            
+        }
+        else {
+            modalContainer.style.top = (window.pageYOffset + 200) + "px";
+            document.getElementById('wucMoreHelp_ModalPageMoreHelp').style.display = "block";
+        }
+
+    }
+
+    function hideMoreHelp() {
+        var TagDiv = document.getElementById('wucMoreHelp_divTag');
+        TagDiv.style.display = 'none';
+
+        var TagResult = document.getElementById('wucMoreHelp_divResult');
+        TagResult.style.display = 'none';
+
+        var modalPage = document.getElementById('wucMoreHelp_ModalPageMoreHelp');
+        modalPage.style.display = "none";
+
+    }
+    
+    
+    // end wucMoreHelp
+
+    var nUnratedCount;
+    var nStudentId;
+    var nPageLoadCount = 0;
+    var ie = (document.all);
+
+    function hideSplash() {
+        var modalPage = document.getElementById('wucRatePopup_ModalPageSplash');
+        modalPage.style.display = "none";
+    }
+    function showSplash() {
+        var formHeight;
+
+        if ((document.getElementById("form1") == null) || (document.getElementById("form1") == "undefined"))
+            formHeight = document.getElementById("Form1").scrollHeight;
+        else
+            formHeight = document.getElementById("form1").scrollHeight;
+
+        var modalBackground = document.getElementById("modalBackgroundSplash");
+        modalBackground.style.height = formHeight + "px";
+        var modalContainer = document.getElementById("modalContainerSplash");
+        if (ie) {
+            var modalContainerTop = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+            //modalContainer.style.top =  modalContainerTop + 50 ;
+            document.getElementById('wucRatePopup_ModalPageSplash').style.display = "block";
+            //modelContainer.style.top = window.offsetHeight/2 + window.scrollTop;            
+        }
+        else {
+            modalContainer.style.top = (window.pageYOffset + 200) + "px";
+            document.getElementById('wucRatePopup_ModalPageSplash').style.display = "block";
+        }
+
+        var splash = document.getElementById("modalSplash");
+        var screenWidth = document.body.clientWidth;
+        var screenHeight = document.body.clientHeight;
+        screenWidth = screenWidth / 2;
+        screenHeight = screenHeight / 2;
+        screenWidth = screenWidth - 223;
+        screenHeight = screenHeight - 131;
+        splash.style.top = screenHeight + "px";
+        splash.style.left = screenWidth + "px";
+        if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) { //test for MSIE x.x;
+            var ieversion = new Number(RegExp.$1) // capture x.x portion and store as a number
+            if (ieversion == 6) {
+
+                //var modalContainerTop = document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop ;
+                splash.style.left = "0px";
+                splash.style.top = "0px";
+                popup_left = (document.documentElement.clientWidth / 2) - 223;
+                popup_top = (document.documentElement.clientHeight / 2) - 131;
+                modalContainer.style.left = popup_left + "px";
+                modalContainer.style.top = popup_top + "px";
+
+            }
+        }
+    }
+
+    function checkSplash(nUnratedCount, nMessageTopicGroupId) {
+        if (nUnratedCount <= 1) {
+            if (nMessageTopicGroupId >= 24) {
+                window.location = 'http://www.cramster.com/qa-board/message-topic-writing-add.aspx?message_topic_group_id=' + nMessageTopicGroupId;
+            }
+            else {
+                window.location = 'http://www.cramster.com/qa-board/message-topic-add.aspx?message_topic_group_id=' + nMessageTopicGroupId;
+            }
+        }
+        else {
+            $("#lblUnratedCount").html(nUnratedCount);
+            showSplash();
+        }
+    }
+    function GetUnratedCount(callback) {
+        $.ajax({
+            type: "POST",
+            url: "/WebService/MessageUnratedCount.asmx/GetMessageUnratedCount",
+            data: "{'nStudentId':'" + nStudentId + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(msg) {
+                callback(msg.d);
+            }
+        });
+
+    }
+    function multiTabSplash(nUnratedCount) {
+        if (nUnratedCount > 1) {
+            $("#lblUnratedCount").html(nUnratedCount);
+            showSplash();
+        }
+    }
+    function tabstrip(callback) {
+        $.ajax({
+            type: "POST",
+            url: "/WebService/MessageUnratedCount.asmx/GetMessageUnratedCount",
+            data: "{'nStudentId':'" + nStudentId + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(msg) {
+                nUnratedCount = msg.d;
+                multiTabSplash(nUnratedCount);
+                callback(nUnratedCount);
+            }
+        });
+    }
+    function LoadSplash(nMessageTopicGroupId) {
+        if (nPageLoadCount == 0)
+            checkSplash(nUnratedCount, nMessageTopicGroupId);
+        else {
+            GetUnratedCount(function(nCount) {
+                nUnratedCount = nCount;
+                checkSplash(nUnratedCount, nMessageTopicGroupId);
+            });
+        }
+        nPageLoadCount = nPageLoadCount + 1;
+    }
+    function AskSplash(nMessageTopicGroupId, nProblemId) {
+        if (nPageLoadCount == 0)
+            LoadSplashTextbook(nUnratedCount, nMessageTopicGroupId, nProblemId);
+        else {
+            GetUnratedCount(function(nCount) {
+                nUnratedCount = nCount;
+                LoadSplashTextbook(nUnratedCount, nMessageTopicGroupId, nProblemId);
+            });
+        }
+        nPageLoadCount = nPageLoadCount + 1;
+    }
+    function LoadSplashTextbook(nUnratedCount, nMessageTopicGroupId, nProblemId) {
+        if (nUnratedCount <= 1)
+            window.location = 'http://www.cramster.com/qa-board/message-topic-add.aspx?message_topic_group_id=' + nMessageTopicGroupId + '&problem_id=' + nProblemId;
+        else {
+            $("#lblUnratedCount").html(nUnratedCount);
+            showSplash();
+        }
+    }
+
+    function CheckUnratedCountAsk() {
+        GetUnratedCount(function(nCount) {
+            nUnratedCount = nCount;
+        });
+    }
+    function LoadSplashAsk(nMessageTopicGroupId) {
+        checkSplash(nUnratedCount, nMessageTopicGroupId);
+    }
+
+    function LoadImage(index) {
+        var i = 1;
+
+        for (i = 1; i <= index; i++) {
+            document.getElementById("WucResourceRating1_imgRating" + i).src = '/image/rating/OneStar.gif';
+        }
+
+        for (i = index + 1; i <= 4; i++) {
+            document.getElementById("WucResourceRating1_imgRating" + i).src = '/image/rating/OneStarDisabled.gif';
+        }
+
+        ShowRating(index);
+    }
+
+    function ShowRating(index) {
+        if (index == 1) {
+            document.getElementById("lblRatingType").innerHTML = "Not Helpful"
+        }
+        else if (index == 2) {
+            document.getElementById("lblRatingType").innerHTML = "Somewhat Helpful"
+        }
+        else if (index == 3) {
+            document.getElementById("lblRatingType").innerHTML = "Helpful"
+        }
+        else if (index == 4) {
+            document.getElementById("lblRatingType").innerHTML = "Lifesaver!"
+        }
+        else {
+            document.getElementById("lblRatingType").innerHTML = "No Rating Done!"
+        }
+    }
+
+    function ShowStatus() {
+        showHide(new Array("lblRatingType"), new Array("lblRatingType"));
+    }
+
+    $(document).ready(function() {
+        $lnkPostQuestion = $("#lnkPostQuestion");
+        $imgRateClose = $("#imgRateClose");
+        var nMessageTopicGroupId = '0';
+        if (nMessageTopicGroupId == 0)
+            nMessageTopicGroupId = $.jqURL.get("message_topic_group_id");
+        $lnkPostQuestion.click(function() {
+
+            LoadSplash(nMessageTopicGroupId);
+        });
+        $("#lnkAsk").click(function() {
+            LoadSplash(nMessageTopicGroupId);
+        });
+        $("#btnRatePosts").click(function() {
+            hideSplash();
+            window.open('http://www.cramster.com/my-cramster/?message_unrated_count=' + nUnratedCount + '/#lnkTabStripActivity');
+        });
+        $imgRateClose.click(function() {
+            hideSplash();
+        });
+    });
+
+</script>
+
+
+
+
+
+ 
+<script type="text/javascript">if (!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/30/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrf2","beacon-1.newrelic.com","0788ceb48b",489842,"blRWMEYCWBJUAUALDVcedTdkTEQERg1BEAFcHkYBRwxDE1YHGgMRSUk=",0,1750,new Date().getTime()])</script><iframe id="stSegmentFrame" name="stSegmentFrame" src="./sorting techniques lecture note_files/getSegment.htm" frameborder="0" scrolling="no" width="0px" height="0px" style="display:none;"></iframe><div id="stwrapper" class="stwrapper" style="visibility: hidden; top: -999px; left: -999px; "><div class="stclose"></div><iframe allowtransparency="true" id="stframe" class="stframe" name="stframe" frameborder="0" scrolling="no" width="350px" height="450px" style="top: 0px; left: 0px; visibility: hidden; " src="./sorting techniques lecture note_files/index.618a5fe9f52c144c0b41baafc65ac0b8.htm"></iframe></div><div style="position: absolute; " id="_GPL_e6a00_div"><object height="1" width="1" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" id="_GPL_e6a00_swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param value="http://d1nfmblh2wz0fd.cloudfront.net/items/e6a00/storage.swf" name="movie"><param value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl" name="FlashVars"><param value="always" name="allowscriptaccess"><embed height="1" align="middle" width="1" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl" type="application/x-shockwave-flash" allowscriptaccess="always" quality="high" loop="false" play="true" name="_GPL_e6a00_swf" bgcolor="#ffffff" src="http://d1nfmblh2wz0fd.cloudfront.net/items/e6a00/storage.swf" style="visibility: visible; "></object></div><div id="widditFloatingSettings" style="bottom: 0; cursor: pointer;position: fixed !important;z-index: 9999999;left: 0; display:none;width:50px;height:26px;padding-left:10px;top: expression(( 0 - 26 + ( document.body.clientHeight ? document.body.clientHeight : document.documentElement.clientHeight ) + ( ignoreMe = document.body.scrollTop ? document.body.scrollTop : document.documentElement.scrollTop ) ) + &#39;px&#39; );"></div><script type="text/javascript" async="" src="./sorting techniques lecture note_files/rum.js"></script><script language="javascript" type="text/javascript" src="./sorting techniques lecture note_files/chartbeat.js"></script><script id="nreum-send-beacon" type="text/x-nreum-data"></script></body><span id="skype_highlighting_settings" display="none" autoextractnumbers="1"></span><object id="skype_plugin_object" location.href="http://www.cramster.com/sorting-techniques-lecture-note-r30-22165.aspx" location.hostname="www.cramster.com" style="position: absolute; visibility: hidden; left: -100px; top: -100px; " width="0" height="0" type="application/x-vnd.skype.click2call.chrome.5.6.0"></object></html>

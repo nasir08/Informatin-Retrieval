@@ -1,0 +1,89 @@
+body
+{
+    font-family: Arial, Sans, sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: #039;
+}
+
+#content
+{
+    
+    border-top: 1px solid #000;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#footer
+{
+    font-size: 80%;
+    text-align: center;
+}
+
+#frm input[type="text"] {
+    width: 800px;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+#frm input[type="submit"] {
+    padding: 10px;
+}
+
+#frm {
+    margin: 0 10% 0 15%;
+}
+
+#image {
+    margin: 8em 0 0 0;
+}
+
+hr{
+    display: none;
+}
+#container
+{
+    border:2px ridge green;
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+#adminSubBtn
+{
+    width: 100px;
+    height: 34px;
+    border: 1px solid #039;
+    background-color:#039;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:14px;
+    color:white;
+}
+.txtArea
+{
+    width: 450px;
+    height: 90px;
+    border: 1px solid #CCCCCC;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+#indexerHeader
+{
+    background-color: green;
+}
+#indexer
+{
+   border: 2px solid green;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+    color: white; 
+	background-color:#f1f2f2;
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.indexerBody
+{
+    color: black;
+}

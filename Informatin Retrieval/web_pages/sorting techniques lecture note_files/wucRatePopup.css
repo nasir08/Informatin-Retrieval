@@ -1,0 +1,33 @@
+﻿
+#divRatePopup.hide
+{
+	display:none;
+}
+.div_heading1
+{
+	padding-top:20px;
+	font-family: Georgia, "Palatino", "Century Schoolbook", serif;
+	font-size:21px;
+	color:#243e75;
+}
+.div_heading2
+{
+	padding-top:20px;
+	font-family: Arial;
+	font-size:18px;
+	color:Black;	
+}
+.div_points 
+{
+	padding-top:10px;
+	
+}
+.div_image
+{
+	padding-left:122px;
+	padding-top:20px;
+}
+.spanHeading
+{
+	color:#3b5998;
+}

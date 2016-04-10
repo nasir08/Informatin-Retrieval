@@ -1,0 +1,168 @@
+﻿.login_message
+{
+	/*background-color:#E8EAEE;*/
+	clear:both;
+	color:#555555;
+	margin-bottom:10px;
+	padding: 10px 10px 10px 23px;
+	
+	
+}
+.posts 
+{
+	border:1px solid #DCD9D3;
+	margin-top:18px;
+	margin-bottom:20px;
+	padding:0;
+}
+.post_separator
+{
+	border-bottom:15px solid #F2F0EC;
+}
+.post 
+{
+	padding:24px 32px 32px;
+}
+.submit_comment
+{
+	float:right;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:25px;
+}
+.entry {
+	margin: 18px 0 18px 0;
+	padding-top:6px;
+	border-top: 1px solid #ddd;
+	font: 13px/1.46em Georgia, "Palatino", serif;
+	color: #303938;
+}
+.entry p, .entry li {
+	margin-top: 1.67em;
+	margin-bottom: 1.67em;
+}
+.entry ol li {
+	list-style: decimal inside;
+}
+p.post_metadata {
+	font: 12px/1.67em Georgia, "Palatino", serif;
+	color: #666;
+}
+
+p.post_metadata em, p.post_metadata strong {
+	color: #333;
+	font-weight: normal;
+}
+
+p.post_metadata a {
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+p.post_metadata small {
+	font-size: 11px;
+}
+
+p.post_metadata small#permalink {
+	margin-left: 6px;
+}
+
+p.post_metadata a.comments {
+	color: #de7e02;
+	padding-left: 28px;
+	display: block;
+	text-decoration: underline;
+	background: transparent url('http://s3.amazonaws.com/cramster-image/blog/comments_icon.gif') center left no-repeat scroll;
+}
+
+div.post p.head {
+	word-spacing: 1px;
+}
+
+/* ----------------------------------------------------------------------
+
+	_sidebar_blog
+
+---------------------------------------------------------------------- */
+
+.sidebar_blog {
+	padding-bottom: 0;
+}
+.sidebar_blog h2 {
+	font: 18px/40px Georgia, "Palatino", serif;
+	padding-left: 26px;
+}
+.recent_posts h2 {
+	background: #E69E41 url('http://s3.amazonaws.com/cramster-image/blog/recentposts_header.gif') top left repeat-x scroll;
+	color: #7E4700;
+}
+.sub_recent_posts{
+	font: 11px/26px Helvetica, Arial, Verdana, sans-serif;
+	padding: 18px 24px 18px 24px;
+	color: #de7e02;
+}
+.recent_posts a {
+	color: #de7e02;
+	text-decoration: underline;
+	height:2.19em;
+}
+.categories h2 {
+	background: #ABCFCD url('http://s3.amazonaws.com/cramster-image/blog/categories_header.gif') top left repeat-x scroll;
+	color: #1F5554;
+}
+.archives h2 {
+	background: #E8E199 url('http://s3.amazonaws.com/cramster-image/blog/archives_header.gif') top left repeat-x scroll;
+	color: #655D11;	
+}
+.facebook h2 {
+    background: #3b5998;
+    color: #EDEFF4;
+}
+.twitter h2 {
+    background:#C0DEED;
+}
+.facebook h2, .twitter h2 {
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); /* FF3.6 */
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255, 255, 255, 0.5)),color-stop(1, rgba(255, 255, 255, 0))); /* Saf4+, Chrome */
+}
+
+.categories {
+	background: #DCECEC url('http://s3.amazonaws.com/cramster-image/blog/categories_bg.gif') bottom left repeat-x scroll;
+}
+.archives {
+	background: #F5F2D6 url('http://s3.amazonaws.com/cramster-image/blog/archives_bg.gif') bottom left repeat-x scroll;
+}
+.categories h2, .archives h2 {
+	margin-bottom: 24px;
+}
+.categories, .archives {
+	height: 110px;
+}
+.categories select, .archives select {
+	margin-left: 24px;
+	width: 215px;
+}
+.table_heading {
+      background:#D1CDC4 url(http://s3.amazonaws.com/cramster-image/home/explore_hdr_bg.gif) repeat-x scroll 0 0;
+      color:#323C3B;
+      line-height:40px;
+      width:50%;
+      }
+.table_border{
+     border:1px solid #DCD9D3;
+       }
+.table_border_right
+  {
+  border-right:1px solid #DCD9D3;
+  }
+.bullet_space
+ {
+padding-bottom:5px;
+ }
+ 
+ a.rss {
+	color: #192B52;
+	padding-left: 20px;
+	/* margin-left:352px; */
+	display: inline;
+	background: transparent url('http://s3.amazonaws.com/cramster-image/blog/feed.gif') center left no-repeat scroll;
+}
